@@ -19,6 +19,12 @@ const Documentation = () => {
         window.history.pushState({}, '', documentationItemSelected?.href)
     }, [documentationItemSelected])
 
+    /**
+     * TODO:
+     * When the user scrolls past main "Documentation" title,
+     * make the list position fixed so it scrolls with user
+     */
+
     return (
         <section id="section-documentation">
             <h1 className='text-center pt-10'>Documentation</h1>
