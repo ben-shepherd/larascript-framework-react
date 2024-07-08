@@ -246,6 +246,20 @@ header {
     }
   }
 
+  
+  &.sidebar-fixed {
+    .docs-list {
+      position:fixed;
+      padding:15px;
+    }
+  }
+  @media screen and (max-width: 2100px) {
+    .content-container {
+      margin-left:200px;
+      max-width: 100%;
+    }
+  }
+
   .docs-container .divider {
     width: 80%;
     margin: 35px auto;
@@ -253,10 +267,13 @@ header {
 
   .docs-flex {
     display: flex;
+    position: relative;
   }
 
   .docs-list {
     flex-basis: 200px;
+    top:0;
+    left:0;
 
     a {
       color: #405d96;
@@ -294,14 +311,21 @@ header {
     color: #222;
     padding-left: 15px;
     white-space: nowrap;
+
+    h1,h2,h3 {
+      font-weight:bold;
+      margin-top:10px 0;
+      padding:10px 0;
+    }
   }
 
   code {
     padding: 5px;
-    margin: 10px 0;
+    margin: 7px 0;
     background-color: #f3f3f3;
     outline: 1px solid #e7e7e7;
     border-radius: 3px;
+    display:inline-block;
   }
 
   .codeBlock {
@@ -328,6 +352,10 @@ header {
 }
 
 #section-about {
+  h1,h2,h3,p {
+    color: var(--seasalt);
+  }
+
   position: relative;
   display: flex;
   flex-direction: column;

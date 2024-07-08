@@ -7,7 +7,7 @@ type Props = {
 const Content = ({ item }: Props) => {
     if (!item) return null;
 
-    const { title, href, content, children = [] } = item
+    const { title, href, children = [] } = item
 
     const getId = (href: string | undefined) => (href ?? '').replace('#', '')
 
@@ -15,9 +15,7 @@ const Content = ({ item }: Props) => {
         <div className="documentation-content" id={getId(href)}>
             {title && <h1 className="title"><a href={href}>{title}</a></h1>}
 
-                {typeof content === 'function' ? <div className="content">content()</div> : null}
-
-            {/* Render Children Content */}
+            {/* Render Content in children property */}
             {children.map((item: DocumentationItem) => (
                 <div key={item.href} className="documentation-content-child" id={getId(item?.href)}>
                     {item.title && <h2 className="title title-child"><a href={item.href}>{item.title}</a></h2>}

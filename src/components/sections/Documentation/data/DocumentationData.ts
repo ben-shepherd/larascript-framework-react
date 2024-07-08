@@ -1,9 +1,35 @@
+import AuthApiToken from "../components/docs/Auth/AuthApiToken"
+import AuthConfiguration from "../components/docs/Auth/AuthConfiguration"
+import AuthContainer from "../components/docs/Auth/AuthContainer"
+import AuthService from "../components/docs/Auth/AuthService"
+import AuthSummary from "../components/docs/Auth/AuthSummary"
+import AuthUser from "../components/docs/Auth/AuthUser"
+import EventConfiguration from "../components/docs/Events/EventConfiguration"
+import EventDrivers from "../components/docs/Events/EventDrivers"
+import EventSubscribersAndListeners from "../components/docs/Events/EventSubscribersAndListeners"
+import EventSummary from "../components/docs/Events/EventSummary"
+import EventWorker from "../components/docs/Events/EventWorker"
+import ExpressWebServer from "../components/docs/Express/ExpressWebServer"
+import ProtectedRoutes from "../components/docs/Express/ProtectedRoutes"
+import RoutingFiles from "../components/docs/Express/RoutingFiles"
+import ModelCRUD from "../components/docs/Models/ModelCRUD"
+import ModelMethods from "../components/docs/Models/ModelMethods"
+import ModelProperties from "../components/docs/Models/ModelProperties"
+import ModelRelationships from "../components/docs/Models/ModelRelationships"
+import ModelSummary from "../components/docs/Models/ModelSummary"
+import MongoConfiguration from "../components/docs/MongoDB/MongoConfiguration"
+import MongoContainer from "../components/docs/MongoDB/MongoContainer"
+import MongoModelConnections from "../components/docs/MongoDB/MongoModelConnections"
+import MongoMultipleConnections from "../components/docs/MongoDB/MongoMultipleConnections"
 import ContainerExplained from "../components/docs/ProvidersAndContainers/ContainerExplained"
 import NewContainer from "../components/docs/ProvidersAndContainers/NewContainer"
 import ProviderSummary from "../components/docs/ProvidersAndContainers/ProviderSummary"
 import Registering from "../components/docs/ProvidersAndContainers/Registering"
 import RetrieveFromContainer from "../components/docs/ProvidersAndContainers/RetrieveFromContainer"
 import TypeHintingConfig from "../components/docs/ProvidersAndContainers/TypeHintingConfig"
+import RepositorySummary from "../components/docs/Repositories/RepositorySummary"
+import Services from "../components/docs/Services/Services"
+import Singletons from "../components/docs/Services/Singletons"
 import { DocumentationItem } from "../types/DocumentationTypes.t"
 
 const data: DocumentationItem[] = [
@@ -15,28 +41,33 @@ const data: DocumentationItem[] = [
                 content: ProviderSummary,
             },
             {
+                href: "#providers-containers-1-2",
+                title: "Container explained",
+                titleSmall: "Container",
+                content: ContainerExplained
+            },
+            {
                 href: "#providers-containers-1-1",
                 title: "Registering a provider",
+                titleSmall: 'Registering',
                 content: Registering,
             },
             {
-                href: "#providers-containers-1-2",
-                title: "Type hinting config structure",
-                content: TypeHintingConfig
-            },
-            {
                 href: "#providers-containers-1-3",
-                title: "Container Explained",
-                content: ContainerExplained
+                title: "Type hinting config structure",
+                titleSmall: 'Type hinting',
+                content: TypeHintingConfig
             },
             {
                 href: "#providers-containers-1-4",
                 title: "Setting up a new container",
+                titleSmall: "Setup new",
                 content: NewContainer
             },
             {
                 href: "#providers-containers-1-5",
                 title: "Retrieving from the container",
+                titleSmall: "Retrieving",
                 content: RetrieveFromContainer
             },
         ],
@@ -46,8 +77,12 @@ const data: DocumentationItem[] = [
         title: "Services",
         children: [
             {
+                content: Services
+            },
+            {
                 href: "#services-2-1",
                 title: "Singletons",
+                content: Singletons
             },
         ],
     },
@@ -58,14 +93,17 @@ const data: DocumentationItem[] = [
             {
                 href: "#express-web-server-3-1",
                 title: "Defining routes",
+                content: ExpressWebServer
             },
             {
                 href: "#express-web-server-3-2",
-                title: "Adding another routing file",
+                title: "Routing Files",
+                content: RoutingFiles
             },
             {
                 href: "#express-web-server-3-3",
                 title: "Protected routes",
+                content: ProtectedRoutes
             },
         ],
     },
@@ -74,24 +112,35 @@ const data: DocumentationItem[] = [
         title: "Authentication",
         children: [
             {
+                content: AuthSummary,
+            },
+            {
                 href: "#authentication-4-1",
                 title: "Configuration",
+                content: AuthConfiguration,
             },
             {
                 href: "#authentication-4-2",
                 title: "Container",
+                content: AuthContainer
             },
             {
                 href: "#authentication-4-3",
                 title: "Auth Service",
+                titleSmall: "Service",
+                content: AuthService
             },
             {
                 href: "#authentication-4-4",
                 title: "ApiToken Model",
+                titleSmall: "ApiToken",
+                content: AuthApiToken
             },
             {
                 href: "#authentication-4-5",
                 title: "User Model",
+                titleSmall: "User",
+                content: AuthUser
             },
         ],
     },
@@ -102,18 +151,26 @@ const data: DocumentationItem[] = [
             {
                 href: "#mongodb-5-1",
                 title: "Database configuration",
+                titleSmall: "Configuration",
+                content: MongoConfiguration
             },
             {
                 href: "#mongodb-5-2",
                 title: "MongoDB Container",
+                titleSmall: "Container",
+                content: MongoContainer
             },
             {
                 href: "#mongodb-5-3",
                 title: "Handling Multiple Connections",
+                titleSmall: "Multiple Connections",
+                content: MongoMultipleConnections
             },
             {
                 href: "#mongodb-5-4",
                 title: "Change connection on a Model",
+                titleSmall: "Change Connection",
+                content: MongoModelConnections
             },
         ],
     },
@@ -122,46 +179,67 @@ const data: DocumentationItem[] = [
         title: "Models",
         children: [
             {
+                content: ModelSummary
+            },
+            {
                 href: "#models-6-1",
                 title: "Properties",
+                content: ModelProperties
             },
             {
                 href: "#models-6-2",
-                title: "Models",
+                title: "Methods",
+                content: ModelMethods,
             },
             {
                 href: "#models-6-3",
                 title: "CRUD Operations",
+                titleSmall: "CRUD",
+                content: ModelCRUD
             },
             {
                 href: "#models-6-4",
                 title: "Relationships",
+                content: ModelRelationships
             },
         ],
     },
     {
         href: "#repositories",
         title: "Repositories",
+        children: [
+            {
+                content: RepositorySummary
+            }
+        ]
     },
     {
         href: "#events",
         title: "Events",
         children: [
             {
+                content: EventSummary
+            },
+            {
                 href: "#events-8-1",
                 title: "Configuration",
+                content: EventConfiguration
             },
             {
                 href: "#events-8-2",
                 title: "Subscribers and listeners",
+                titleSmall: "Subscribers/listeners",
+                content: EventSubscribersAndListeners
             },
             {
                 href: "#events-8-3",
                 title: "Event Drivers",
+                content: EventDrivers
             },
             {
                 href: "#events-8-4",
                 title: "Worker",
+                content: EventWorker
             },
         ],
     },
@@ -172,14 +250,17 @@ const data: DocumentationItem[] = [
             {
                 href: "#observers-9-1",
                 title: "Creating an observer",
+                titleSmall: "Creating",
             },
             {
                 href: "#observers-9-2",
                 title: "Model Observers",
+                titleSmall: "Model"
             },
             {
                 href: "#observers-9-3",
                 title: "Custom Observers",
+                titleSmall: "Custom"
             },
         ],
     },

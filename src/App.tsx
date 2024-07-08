@@ -12,9 +12,9 @@ function App() {
 
       <PoweredBy />
 
-      <Documentation />
-
       <About />
+
+      <Documentation />
     </>
   )
 }

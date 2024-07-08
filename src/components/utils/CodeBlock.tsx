@@ -2,19 +2,17 @@
 import { CopyBlock as CodeBlockPlugin } from 'react-code-blocks';
 
 type Props = {
-    code?: string
-    children?: string
-    language: string
+    children: string | string[]
+    language?: string
     showLineNumbers?: boolean
 }
 
-const CodeBlock = ({ code, children, language, showLineNumbers }: Props) => {
-    const text = code ?? children
-
+const CodeBlock = ({ children, language = 'typescript', showLineNumbers = true }: Props) => {
+    console.log('children', {children})
     return (
         <div className="codeBlock">
             <CodeBlockPlugin
-                text={text ?? ''}
+                text={children as string}
                 language={language}
                 showLineNumbers={showLineNumbers}
             />

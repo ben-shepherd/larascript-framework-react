@@ -2,11 +2,7 @@ import documentationData from '../data/DocumentationData';
 import { DocumentationItem } from "../types/DocumentationTypes.t";
 import ContentItem from './ContentItem';
 
-type Props = {
-    selected: DocumentationItem | null
-}
-
-const Content = ({ selected }: Props) => {
+const Content = () => {
 
     return (
         <div className='content-container'>

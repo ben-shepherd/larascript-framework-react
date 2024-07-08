@@ -1,33 +1,30 @@
-import { useEffect, useState } from "react"
+import { useRef, useState } from "react"
 import Divider from "../../utils/Divider"
 import Content from "./components/Content"
 import List from "./components/List"
 import DocumentationData from './data/DocumentationData'
+import useScrollOnSidebarClick from "./hooks/useScrollOnSidebarClick"
+import useSidebarFixed from "./hooks/useSidebarFixed"
 import { DocumentationItem } from "./types/DocumentationTypes.t"
 
 const Documentation = () => {
     const [documentationItemSelected, setDocumentationItemSelected] = useState<DocumentationItem | null>(null)
+    const titleRef = useRef<HTMLHeadingElement | null>(null)
+    const sectionRef = useRef<HTMLElement | null>(null)
 
     /**
-     * Scroll to URL on document selected changing
+     * Scroll to position on page when a documentation item is clicked in sidemenu
      */
-    useEffect(() => {
-        if(!documentationItemSelected?.href) {
-            return;
-        }
-
-        window.history.pushState({}, '', documentationItemSelected?.href)
-    }, [documentationItemSelected])
+    useScrollOnSidebarClick({ documentationItemSelected})
 
     /**
-     * TODO:
-     * When the user scrolls past main "Documentation" title,
-     * make the list position fixed so it scrolls with user
+     * Position fixed the sidebar when user scrolls past main "Documentation" title
      */
+    useSidebarFixed({ sectionRef })
 
     return (
-        <section id="section-documentation">
-            <h1 className='text-center pt-10'>Documentation</h1>
+        <section id="section-documentation" ref={sectionRef}>
+            <h1 className='text-center pt-10' ref={titleRef}>Documentation</h1>
 
             <div className="docs-container container mb-10">
                 <Divider />
@@ -37,7 +34,7 @@ const Documentation = () => {
                         onSelect={setDocumentationItemSelected}
                         data={DocumentationData} />
 
-                    <Content selected={documentationItemSelected} />
+                    <Content />
                 </div>
             </div>
         </section>

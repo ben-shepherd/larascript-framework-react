@@ -8,7 +8,7 @@ const Registering = () => {
                 <p>You can also run <code>npm run dev:console -- make:provider --name=WeatherProvider</code> to automatically create the file.</p>
 
                 <CodeBlock language="typescript">
-                    {`import BaseProvider from "@src/core/base/Provider";
+{`import BaseProvider from "@src/core/base/Provider";
 import Weather from '@src/app/services/Weather'; // @ref [Section 2] - Services
 
 // Type hint our config shape
