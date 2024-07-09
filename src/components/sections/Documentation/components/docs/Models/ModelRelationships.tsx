@@ -81,7 +81,7 @@ const ModelRelationships = () => {
         </CodeBlock>
     </pre>
 
-    <h3>Example (with additional filters)</h3>
+    <h3>Example</h3>
     <pre>
         <CodeBlock>
             {`async author(): Promise<BaseApiTokenModel[]> {

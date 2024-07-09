@@ -19,7 +19,7 @@ const Header = () => {
               </a>
             </div>
             <div className="header-button">
-              <a href="#docs" target='_blank'>
+              <a href="#section-documentation" target='_self'>
               <Button className="rounded bg-stone-200 text-gray-500 py-2 px-4 text-sm data-[hover]:bg-red-300 data-[hover]:text-gray-50">
                 Documentation
               </Button>

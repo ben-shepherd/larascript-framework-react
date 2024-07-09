@@ -223,6 +223,9 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
 
+  .divider {
+    width:100%;
+  }
   p {
     padding: 5px 0;
   }
@@ -261,7 +264,7 @@ header {
   }
 
   .docs-container .divider {
-    width: 80%;
+    width: 100%;
     margin: 35px auto;
   }
 
@@ -356,6 +359,7 @@ header {
     color: var(--seasalt);
   }
 
+  background-color: var(--jet);
   position: relative;
   display: flex;
   flex-direction: column;

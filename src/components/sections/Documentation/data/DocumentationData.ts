@@ -4,6 +4,10 @@ import AuthContainer from "../components/docs/Auth/AuthContainer"
 import AuthService from "../components/docs/Auth/AuthService"
 import AuthSummary from "../components/docs/Auth/AuthSummary"
 import AuthUser from "../components/docs/Auth/AuthUser"
+import ConsoleAvailableCommands from "../components/docs/Console/ConsoleAvailableCommands"
+import ConsoleCustomCommands from "../components/docs/Console/ConsoleCustomCommands"
+import ConsoleMakerCommands from "../components/docs/Console/ConsoleMakerCommands"
+import ConsoleSummary from "../components/docs/Console/ConsoleSummary"
 import EventConfiguration from "../components/docs/Events/EventConfiguration"
 import EventDrivers from "../components/docs/Events/EventDrivers"
 import EventSubscribersAndListeners from "../components/docs/Events/EventSubscribersAndListeners"
@@ -21,6 +25,9 @@ import MongoConfiguration from "../components/docs/MongoDB/MongoConfiguration"
 import MongoContainer from "../components/docs/MongoDB/MongoContainer"
 import MongoModelConnections from "../components/docs/MongoDB/MongoModelConnections"
 import MongoMultipleConnections from "../components/docs/MongoDB/MongoMultipleConnections"
+import ObserverMethods from "../components/docs/Observers/ObserverMethods"
+import ObserverModel from "../components/docs/Observers/ObserverModel"
+import ObserverSummary from "../components/docs/Observers/ObserverSummary"
 import ContainerExplained from "../components/docs/ProvidersAndContainers/ContainerExplained"
 import NewContainer from "../components/docs/ProvidersAndContainers/NewContainer"
 import ProviderSummary from "../components/docs/ProvidersAndContainers/ProviderSummary"
@@ -248,25 +255,46 @@ const data: DocumentationItem[] = [
         title: "Observers",
         children: [
             {
+                content: ObserverSummary
+            },
+            {
                 href: "#observers-9-1",
-                title: "Creating an observer",
-                titleSmall: "Creating",
+                title: "Methods",
+                content: ObserverMethods
             },
             {
                 href: "#observers-9-2",
-                title: "Model Observers",
-                titleSmall: "Model"
-            },
-            {
-                href: "#observers-9-3",
-                title: "Custom Observers",
-                titleSmall: "Custom"
-            },
+                title: "Models",
+                content: ObserverModel
+            }
         ],
     },
     {
         href: "#console-commands",
         title: "Console commands",
+        children: [
+            {
+                content: ConsoleSummary
+            },
+            {
+                href: "#console-commands-10-1",
+                title: "Worker Command",
+                titleSmall: "Worker",
+                content: ConsoleAvailableCommands
+            },
+            {
+                href: "#console-commands-10-2",
+                title: "Maker commands",
+                titleSmall: "Maker",
+                content: ConsoleMakerCommands
+            },
+            {
+                href: "#console-commands-10-3",
+                title: "Maker commands",
+                titleSmall: "Maker",
+                content: ConsoleCustomCommands
+            },
+        ]
     }
 ]
 

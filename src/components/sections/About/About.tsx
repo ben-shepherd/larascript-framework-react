@@ -1,7 +1,7 @@
 const About = () => {
     return (
-        <div id="section-about" className='section p-0 my-10'>
-            <h1 className='text-center mb-10'>Author Bio</h1>
+        <div id="section-about" className='section py-24'>
+            <h1 className='text-center mb-10'>Meet The Author</h1>
             <div className="container">
                 <div className='grid grid-cols-2 pb-10'>
                     <div className='left'>
@@ -12,7 +12,7 @@ const About = () => {
                         <p className='role text-xs tex'>Software Developer</p>
 
                         <p className='mt-3 bio'>
-                            Hello, I'm Benjamin, an experienced software developer with expertise in Node.js, Typescript, MongoDB, Express, PHP, Laravel, Symfony, SQL/Postgres, and React. My passion for technology drives me to constantly innovate and improve my skills. I believe in the power of code to transform ideas into reality and am committed to developing top-notch web applications. Feel free to connect with me to discuss projects, technology, or just to share ideas!
+                            Hello, I'm Benjamin, an experienced software developer with expertise in Node.js, Typescript, MongoDB, Express, PHP, Laravel, Symfony, SQL/Postgres, and React. My passion for technology drives me to constantly innovate and improve my skills. I believe in the power of code to transform ideas into reality and am committed to developing top-notch web applications. Feel free to connect with me to discuss projects, technology, or just to share ideas.
                         </p>
 
 
