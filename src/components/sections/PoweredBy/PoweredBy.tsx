@@ -2,11 +2,11 @@ const PoweredBy = () => {
     return (
         <section id='section-powered-by' className='section'>
             <h1 className='text-center pt-10'>Powered By</h1>
-            <div className="container logo-items h-56">
-                <div className='logo-item nodejs' style={{ backgroundImage: 'url(/images/nodejs.png)' }}></div>
-                <div className='logo-item typescript' style={{ backgroundImage: 'url(/images/typescript.png)' }}></div>
-                <div className='logo-item express' style={{ backgroundImage: 'url(/images/express.png)' }}></div>
-                <div className='logo-item mongodb' style={{ backgroundImage: 'url(/images/mongodb.png)' }}></div>
+            <div className="container logo-items flex flex-wrap lg:flex-nowrap">
+                <div className='logo-item w-full lg:w-1/4 md:w-1/2 nodejs' style={{ backgroundImage: 'url(/images/nodejs.png)' }}></div>
+                <div className='logo-item w-full lg:w-1/4 md:w-1/2 typescript' style={{ backgroundImage: 'url(/images/typescript.png)' }}></div>
+                <div className='logo-item w-full lg:w-1/4 md:w-1/2 express' style={{ backgroundImage: 'url(/images/express.png)' }}></div>
+                <div className='logo-item w-full lg:w-1/4 md:w-1/2 mongodb' style={{ backgroundImage: 'url(/images/mongodb.png)' }}></div>
             </div>
 
             <h1 className='text-center pt-10 pb-3'>Core Features</h1>
@@ -14,8 +14,8 @@ const PoweredBy = () => {
 
             <div className='core-features-container mb-10'>
                 <div className='container'>
-                    <div className='grid grid-cols-6 px-26 text-slate-700'>
-                        <div className='col-span-2 col-start-2'>
+                    <div className='flex flex-wrap lg:flex-nowrap text-slate-700'>
+                        <div className='w-full lg:w-1/2'>
                             <ul className='list-disc px-10'>
                                 <li>Providers<br />
                                     <p>Easily provide configuration to your application services.</p>
@@ -40,7 +40,7 @@ const PoweredBy = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className='col-span-2'>
+                        <div className='w-full lg:w-1/2'>
                             <ul className='list-disc px-10'>
                                 <li>Models<br />
                                     <p>Create, configure, and use models in your application.</p>

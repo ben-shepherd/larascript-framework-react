@@ -3,11 +3,11 @@ const About = () => {
         <div id="section-about" className='section py-24'>
             <h1 className='text-center mb-10'>Meet The Author</h1>
             <div className="container">
-                <div className='grid grid-cols-2 pb-10'>
-                    <div className='left'>
+                <div className='flex flex-wrap lg:flex-nowrap'>
+                    <div className='author-container w-full lg:w-1/2'>
                         <div className='author-image mr-24 mt-5' style={{ backgroundImage: 'url(/images/author.jpg)' }}></div>
                     </div>
-                    <div>
+                    <div className="info-container w-full lg:w-1/2">
                         <h3 className='author-text text-2xl'>Benjamin Shepherd</h3>
                         <p className='role text-xs tex'>Software Developer</p>
 

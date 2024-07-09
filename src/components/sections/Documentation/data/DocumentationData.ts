@@ -290,8 +290,8 @@ const data: DocumentationItem[] = [
             },
             {
                 href: "#console-commands-10-3",
-                title: "Maker commands",
-                titleSmall: "Maker",
+                title: "Custom commands",
+                titleSmall: "Custom",
                 content: ConsoleCustomCommands
             },
         ]

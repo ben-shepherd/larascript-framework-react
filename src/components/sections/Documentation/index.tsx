@@ -29,7 +29,7 @@ const Documentation = () => {
             <div className="docs-container container mb-10">
                 <Divider />
 
-                <div className="docs-flex">
+                <div className="docs-flex flex flex-wrap lg:flex-nowrap">
                     <List
                         onSelect={setDocumentationItemSelected}
                         data={DocumentationData} />

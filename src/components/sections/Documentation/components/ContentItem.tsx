@@ -12,7 +12,7 @@ const Content = ({ item }: Props) => {
     const getId = (href: string | undefined) => (href ?? '').replace('#', '')
 
     return (
-        <div className="documentation-content" id={getId(href)}>
+        <div className="content-item" id={getId(href)}>
             {title && <h1 className="title"><a href={href}>{title}</a></h1>}
 
             {/* Render Content in children property */}
