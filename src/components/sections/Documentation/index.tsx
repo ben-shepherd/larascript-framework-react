@@ -9,7 +9,6 @@ import { DocumentationItem } from "./types/DocumentationTypes.t"
 
 const Documentation = () => {
     const [documentationItemSelected, setDocumentationItemSelected] = useState<DocumentationItem | null>(null)
-    const titleRef = useRef<HTMLHeadingElement | null>(null)
     const sectionRef = useRef<HTMLElement | null>(null)
 
     /**
@@ -24,7 +23,7 @@ const Documentation = () => {
 
     return (
         <section id="section-documentation" ref={sectionRef}>
-            <h1 className='text-center pt-10' ref={titleRef}>Documentation</h1>
+            <h1 className='text-center pt-10'>Documentation</h1>
 
             <div className="docs-container container mb-10">
                 <Divider />
