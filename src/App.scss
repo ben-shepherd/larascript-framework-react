@@ -239,6 +239,9 @@ header {
     width: 100%;
   }
 
+  p, li {
+    white-space: pre-line;
+  }
   p {
     padding: 5px 0;
   }
@@ -377,7 +380,12 @@ header {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 15px;
+    overflow: hidden;
 
+    * {
+      white-space: pre-line;
+      max-width: 100%;
+    }
     span {
       background-color: unset !important;
     }
