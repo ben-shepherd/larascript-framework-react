@@ -8,7 +8,7 @@ export type ListProps = {
 }
 const List = ({ data, onSelect }: ListProps) => {
     return (
-        <div className="docs-list-container w-full lg:w-3/10">
+        <div className="docs-list-container w-auto xs:w-full shrink">
                 <ul className="parent-list">
                     {data.map((item: DocumentationItem) => (
                         <ListItem key={item.href} item={item} onSelect={onSelect} />

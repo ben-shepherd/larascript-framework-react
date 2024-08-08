@@ -5,7 +5,7 @@ import ContentItem from './ContentItem';
 const Content = () => {
 
     return (
-        <div className='content-container w-full lg:w-7/10'>
+        <div className='content-container w-full'>
             {documentationData.map((item: DocumentationItem, index: number) => (
                 <>
                     <ContentItem key={item?.href} item={item} />

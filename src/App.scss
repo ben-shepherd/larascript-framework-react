@@ -182,7 +182,7 @@ header {
     background-position: center;
     transition: all 0.2s ease-in-out;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
-    filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(2px 2px 2px #222);
 
     &:hover {
       transform: scale(1.1);
@@ -229,7 +229,6 @@ header {
 
       .parent-list {
         position: sticky;
-        position: -webkit-sticky;
         top: 1rem;
       }
     }
@@ -306,7 +305,7 @@ header {
       position: relative;
       top: 5px;
       margin-right: 3px;
-      transform: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
 
       svg {
         color: #8d8d8d;
@@ -314,7 +313,7 @@ header {
 
       &:hover {
         cursor: pointer;
-        transform: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
         transform: scale(1.2);
       }
     }
@@ -333,15 +332,11 @@ header {
   .docs-flex {
     display: flex;
     box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
   }
 
   .docs-list-container,
   .content-container {
     box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
-    flex: 1;
-    /* Make sure both containers can grow and shrink as needed */
   }
 
 
@@ -353,14 +348,13 @@ header {
 
   .content {
     color: #222;
-    padding-left: 15px;
     white-space: nowrap;
 
     h1,
     h2,
     h3 {
       font-weight: bold;
-      margin-top: 10px 0;
+      margin-top: 10px;
       padding: 10px 0;
     }
   }
@@ -368,22 +362,23 @@ header {
   code {
     padding: 5px;
     margin: 7px 0;
-    background-color: #f3f3f3;
     outline: 1px solid #e7e7e7;
     border-radius: 3px;
     display: inline-block;
   }
 
   .codeBlock {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight:400;
     margin: 10px 0;
-    background-color: #f8f8f8;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 15px;
     overflow: hidden;
 
+    & div:first-child {
+      padding:20px;
+    }
     * {
-      white-space: pre-line;
       max-width: 100%;
     }
     span {
@@ -391,7 +386,6 @@ header {
     }
 
     code {
-      background-color: #f8f8f8;
       padding: 0;
       outline: unset;
       margin: 0;

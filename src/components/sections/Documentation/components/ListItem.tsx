@@ -1,6 +1,5 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { DocumentationItem, LinkHrefAndTitle } from "../types/DocumentationTypes.t";
-import DefaultIcon from "./DefaultIcon";
 import ExpandIcon from "./ExpandIcon";
 
 export type ListItemProps = {
@@ -13,8 +12,9 @@ const ListItem = ({ item, onSelect, showExpandIcon = false }: ListItemProps) => 
     const { href, title, titleSmall, children = [] } = item;
     const [expanded, setExpanded] = useState<boolean>(showExpandIcon)
 
-    const hasChildrenWithTitles = children.filter((child: LinkHrefAndTitle) => child?.title).length > 0
-    const expandIconIsVisible = hasChildrenWithTitles;
+    const childrenWithTitleAndHref = children.filter((item: LinkHrefAndTitle) => item.title && item.href)
+
+    console.log(title, children)
 
     const handleSelect = (item: DocumentationItem) => {
         onSelect(item)
@@ -23,13 +23,12 @@ const ListItem = ({ item, onSelect, showExpandIcon = false }: ListItemProps) => 
 
     return (
         <li className={`list-item ${expanded ? 'expanded' : ''}`}>
-            <DefaultIcon visible={!expandIconIsVisible} />
-            <ExpandIcon visible={expandIconIsVisible} expanded={expanded} onClick={() => setExpanded(!expanded)} />
+            <ExpandIcon expanded={expanded} onClick={() => setExpanded(!expanded)} />
 
             <a href={href} onClick={() => handleSelect(item)}>{titleSmall ?? title}</a>
-            {children.length > 0 && (
+            {childrenWithTitleAndHref.length > 0 && (
                 <ul className="sub-list" >
-                    {children.map((item: LinkHrefAndTitle) => 
+                    {childrenWithTitleAndHref.map((item: LinkHrefAndTitle) =>
                         <ListItem key={item.href} item={{ href: item.href, title: item?.titleSmall ?? item.title }} onSelect={onSelect} showExpandIcon={false} />
                     )}
                 </ul>

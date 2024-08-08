@@ -1,14 +1,9 @@
 type Props = {
-    visible?: boolean;
     onClick: () => void;
     expanded: boolean;
 }
 
-const ExpandIcon = ({ visible = true, expanded, onClick }: Props) => {
-    if(!visible) {
-        return null;
-    }
-    
+const ExpandIcon = ({expanded, onClick }: Props) => {
     return (
         <button className="list-item-icon ExpandIcon" onClick={onClick} tabIndex={0}>
             {expanded ? (
