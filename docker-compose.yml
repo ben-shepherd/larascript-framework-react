@@ -5,17 +5,19 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+      args:
+        DOMAIN: ${DOMAIN}
+        EMAIL: ${EMAIL}
     container_name: larascript-node-frontend
     ports:
       - "80:80"
-      - "443:443"  # Don't forget to expose port 443 for HTTPS
+      - "443:443"  # Expose port 443 for HTTPS
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
       - letsencrypt:/etc/letsencrypt
     environment:
       - DOMAIN=larascriptnode.com
       - EMAIL=ben.shepherd@gmx.com
-    command: tail -f /dev/null  # Keep the container running
 
 volumes:
   letsencrypt:

@@ -15,6 +15,10 @@ FROM nginx:latest
 # Install Certbot
 RUN apt-get update && apt-get install -y certbot python3-certbot-nginx
 
+# Set up build arguments
+ARG DOMAIN
+ARG EMAIL
+
 # Copy the Nginx configuration
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
