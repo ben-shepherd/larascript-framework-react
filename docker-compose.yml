@@ -15,6 +15,7 @@ services:
     environment:
       - DOMAIN=larascriptnode.com
       - EMAIL=ben.shepherd@gmx.com
+    command: tail -f /dev/null  # Keep the container running
 
 volumes:
   letsencrypt:
