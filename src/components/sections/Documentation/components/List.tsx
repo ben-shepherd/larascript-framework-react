@@ -11,7 +11,7 @@ const List = ({ data, onSelect }: ListProps) => {
         <div className="docs-list-container w-auto xs:w-full shrink">
                 <ul className="parent-list">
                     {data.map((item: DocumentationItem) => (
-                        <ListItem key={item.href} item={item} onSelect={onSelect} />
+                        <ListItem key={item.href} item={item} onSelect={onSelect} iconType={'expand'} />
                     ))}
                 </ul>
         </div>

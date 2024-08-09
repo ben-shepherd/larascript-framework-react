@@ -311,6 +311,10 @@ header {
         color: #8d8d8d;
       }
 
+      &.DefaultIcon svg {
+        color:#c8e0ff;
+      }
+
       &:hover {
         cursor: pointer;
         transition: all 0.4s ease-in-out;
