@@ -25,7 +25,7 @@ COPY --from=build /app/dist /usr/share/nginx/html
 RUN echo "0 0,12 * * * root certbot renew --quiet --nginx" > /etc/cron.d/certbot-renewal
 
 # Create a script to obtain SSL certificate and start Nginx
-RUN certbot --nginx -d $DOMAIN -d www.$DOMAIN --non-interactive --agree-tos -m $EMAIL'
+RUN certbot --nginx -d $DOMAIN -d www.$DOMAIN --non-interactive --agree-tos -m $EMAIL
 
 # Create a start script
 RUN echo 'nginx -g "daemon off;"' > /start.sh && chmod +x /start.sh
