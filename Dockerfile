@@ -29,7 +29,7 @@ COPY --from=build /app/dist /usr/share/nginx/html
 RUN echo "0 0,12 * * * root certbot renew --quiet --nginx" > /etc/cron.d/certbot-renewal
 
 # Create a script to obtain SSL certificate and start Nginx
-RUN 'certbot --nginx -d ${DOMAIN} -d www.${DOMAIN} --non-interactive --agree-tos -m ${EMAIL}' > /obtain-ssl.sh && chmod +x /obtain-ssl.sh
+RUN "certbot --nginx -d ${DOMAIN} -d www.${DOMAIN} --non-interactive --agree-tos -m ${EMAIL}" > /obtain-ssl.sh && chmod +x /obtain-ssl.sh
 
 # Create a start script
 RUN echo 'nginx -g "daemon off;"' > /start.sh && chmod +x /start.sh
@@ -38,4 +38,4 @@ RUN echo 'nginx -g "daemon off;"' > /start.sh && chmod +x /start.sh
 EXPOSE 80 443
 
 # Start Nginx
-CMD ["/start.sh", "/obtain-ssl.sh"]
+CMD ["/bin/bash", "-c", "/obtain-ssl.sh && /start.sh"]
