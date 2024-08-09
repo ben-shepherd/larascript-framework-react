@@ -40,4 +40,4 @@ RUN echo 'nginx -g "daemon off;"' > /start.sh && chmod +x /start.sh
 EXPOSE 80 443
 
 # Start Nginx
-CMD ["/bin/bash", "-c", "/obtain-ssl.sh && /start.sh"]
+CMD ["/bin/bash", "-c", "/start.sh"]
