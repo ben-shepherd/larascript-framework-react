@@ -15,7 +15,7 @@ FROM nginx:latest
 # Install Certbot
 RUN apt-get update && apt-get install -y certbot python3-certbot-nginx
 
-# Set up build arguments
+# Declare build arguments
 ARG DOMAIN
 ARG EMAIL
 
@@ -29,7 +29,7 @@ COPY --from=build /app/dist /usr/share/nginx/html
 RUN echo "0 0,12 * * * root certbot renew --quiet --nginx" > /etc/cron.d/certbot-renewal
 
 # Create a script to obtain SSL certificate and start Nginx
-RUN certbot --nginx -d $DOMAIN -d www.$DOMAIN --non-interactive --agree-tos -m $EMAIL
+RUN certbot --nginx -d ${DOMAIN} -d www.${DOMAIN} --non-interactive --agree-tos -m ${EMAIL}
 
 # Create a start script
 RUN echo 'nginx -g "daemon off;"' > /start.sh && chmod +x /start.sh
@@ -37,5 +37,5 @@ RUN echo 'nginx -g "daemon off;"' > /start.sh && chmod +x /start.sh
 # Expose the ports
 EXPOSE 80 443
 
-# Start Nginx and obtain SSL certificate
+# Start Nginx
 CMD ["/start.sh"]
