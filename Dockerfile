@@ -24,8 +24,13 @@ COPY --from=build /app/dist /usr/share/nginx/html
 # Renew SSL certificates automatically
 RUN echo "0 0,12 * * * root certbot renew --quiet --nginx" > /etc/cron.d/certbot-renewal
 
+# Create a script to obtain SSL certificate and start Nginx
+RUN echo '#!/bin/bash\n\
+certbot --nginx -d $DOMAIN -d www.$DOMAIN --non-interactive --agree-tos -m $EMAIL\n\
+nginx -g "daemon off;"' > /start.sh && chmod +x /start.sh
+
 # Expose the ports
 EXPOSE 80 443
 
-# Start Nginx and Cron
-CMD ["nginx", "-g", "daemon off;"]
+# Start Nginx and obtain SSL certificate
+CMD ["/start.sh"]

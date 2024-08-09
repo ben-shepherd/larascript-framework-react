@@ -8,5 +8,13 @@ services:
     container_name: larascript-node-frontend
     ports:
       - "80:80"
+      - "443:443"  # Don't forget to expose port 443 for HTTPS
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - letsencrypt:/etc/letsencrypt
+    environment:
+      - DOMAIN=larascriptnode.com
+      - EMAIL=ben.shepherd@gmx.com
+
+volumes:
+  letsencrypt:
