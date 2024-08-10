@@ -1,0 +1,47 @@
+#section-about {
+
+  h1,
+  h2,
+  h3,
+  p {
+    color: var(--seasalt);
+  }
+
+  background-color: var(--jet);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .left {
+    display: flex;
+    justify-content: right;
+  }
+
+  .author-container {
+    display: flex;
+    position: relative;
+  }
+
+  .author-image {
+    position: absolute;
+    right: 0;
+    top: auto;
+    bottom: auto;
+    height: 250px;
+    width: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      transform: scale(1.1);
+    }
+
+  }
+
+}
