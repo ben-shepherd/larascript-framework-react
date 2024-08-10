@@ -1,6 +1,7 @@
 import AuthApiToken from "../components/docs/Auth/AuthApiToken"
 import AuthConfiguration from "../components/docs/Auth/AuthConfiguration"
 import AuthContainer from "../components/docs/Auth/AuthContainer"
+import AuthGenerateJwt from "../components/docs/Auth/AuthGenerateJwt"
 import AuthService from "../components/docs/Auth/AuthService"
 import AuthSummary from "../components/docs/Auth/AuthSummary"
 import AuthUser from "../components/docs/Auth/AuthUser"
@@ -123,28 +124,34 @@ const data: DocumentationItem[] = [
             },
             {
                 href: "#authentication-4-1",
+                title: "Generate JWT Secret",
+                titleSmall: "JWT Secret",
+                content: AuthGenerateJwt,
+            },
+            {
+                href: "#authentication-4-2",
                 title: "Configuration",
                 content: AuthConfiguration,
             },
             {
-                href: "#authentication-4-2",
+                href: "#authentication-4-3",
                 title: "Container",
                 content: AuthContainer
             },
             {
-                href: "#authentication-4-3",
+                href: "#authentication-4-4",
                 title: "Auth Service",
                 titleSmall: "Service",
                 content: AuthService
             },
             {
-                href: "#authentication-4-4",
+                href: "#authentication-4-5",
                 title: "ApiToken Model",
                 titleSmall: "ApiToken",
                 content: AuthApiToken
             },
             {
-                href: "#authentication-4-5",
+                href: "#authentication-4-6",
                 title: "User Model",
                 titleSmall: "User",
                 content: AuthUser
