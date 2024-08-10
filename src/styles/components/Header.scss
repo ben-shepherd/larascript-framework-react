@@ -3,6 +3,7 @@ header {
   height: 90vh;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -55,6 +56,17 @@ header {
     height: 100%;
     width: 100%;
   }
+}
+
+#header-alpha-warning {
+  background-color:#fff;
+  padding:25px 40px;
+  border-radius:25px;
+  h2 {
+    font-size:2em;
+    color:#414141;
+  }
+  color:#adadad;
 }
 
 @media (max-width: 1024px) {
