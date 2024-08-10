@@ -1,10 +1,11 @@
 import { DocumentationItem } from "../types/DocumentationTypes.t";
 
 type Props = {
-    item: DocumentationItem | null
+    item: DocumentationItem | null;
+    scrollToTop: () => void;
 }
 
-const Content = ({ item }: Props) => {
+const Content = ({ item, scrollToTop }: Props) => {
     if (!item) return null;
 
     const { title, href, children = [] } = item
@@ -17,10 +18,14 @@ const Content = ({ item }: Props) => {
 
             {/* Render Content in children property */}
             {children.map((item: DocumentationItem) => (
-                <div key={item.href} className="documentation-content-child" id={getId(item?.href)}>
+                <div key={`${item?.href}-${item?.title}`} className="documentation-content-child" id={getId(item?.href)}>
                     {item.title && <h2 className="title title-child"><a href={item.href}>{item.title}</a></h2>}
+                    <button className={'responsive-scroll-to-top'} onClick={scrollToTop} role="button" aria-label="Scroll to top">
+                        Scroll to top
+                    </button>
 
-                    {typeof item.content === 'function' ? <div className="content">{item.content()}</div> : 'No yet available'}
+                    {typeof item.content === 'function' ?
+                        <div className="content">{item.content()}</div> : 'No yet available'}
                 </div>
             ))}
         </div>

@@ -21,19 +21,25 @@ const Documentation = () => {
      */
     useSidebarFixed({ sectionRef })
 
+    /**
+     * Scroll to top (for mobile devices)
+     */
+    const scrollToTop = () => {
+        window.scrollTo({ top: sectionRef.current?.offsetTop ?? 0, behavior: 'smooth' })
+    }
     return (
         <section id="section-documentation" ref={sectionRef}>
             <h1 className='text-center pt-10'>Documentation</h1>
 
             <div className="docs-container container mb-10">
-                <Divider />
+                <Divider/>
 
                 <div className="docs-flex flex flex-wrap lg:flex-nowrap">
                     <List
                         onSelect={setDocumentationItemSelected}
-                        data={DocumentationData} />
+                        data={DocumentationData}/>
 
-                    <Content />
+                    <Content scrollToTop={scrollToTop} />
                 </div>
             </div>
         </section>

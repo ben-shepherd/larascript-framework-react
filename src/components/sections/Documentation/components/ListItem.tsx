@@ -34,6 +34,7 @@ const ListItem = ({ item, onSelect, iconType = null, isChild = false }: ListItem
             <ListItemIcon {...iconProps} />
 
             <a href={href} onClick={() => handleSelect(item)}>{titleSmall ?? title}</a>
+
             {childrenWithTitleAndHref.length > 0 && (
                 <ul className="sub-list" >
                     {childrenWithTitleAndHref.map((item: LinkHrefAndTitle) =>

@@ -15,7 +15,6 @@ const CodeBlock = ({ children, language = 'typescript', showLineNumbers = true }
                 language={language}
                 showLineNumbers={showLineNumbers}
                 theme={dracula}
-                codeBlock
             />
         </div>
     );

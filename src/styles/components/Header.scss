@@ -56,3 +56,24 @@ header {
     width: 100%;
   }
 }
+
+@media (max-width: 1024px) {
+  header {
+    #logo-text, #logo-subtext {
+      font-size:0.6em;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  header {
+    #logo-text, #logo-subtext {
+      font-size:0.4em;
+    }
+    #logo-container {
+      padding:0 25px;
+      min-width:260px;
+    }
+  }
+}
+

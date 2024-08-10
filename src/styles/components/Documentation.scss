@@ -178,9 +178,39 @@
       outline: unset;
       margin: 0;
     }
-
     button {
-      background-color: #fff;
+      background-color: #7192e1;
+    }
+  }
+
+  .responsive-scroll-to-top {
+    display:none;
+  }
+}
+
+@media (max-width: 1024px) {
+  #section-documentation {
+    .docs-list-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+      width:100%;
+      padding:25px 0;
+    }
+
+    .responsive-scroll-to-top {
+      display:block;
+      position:relative;
+      top:-15px;
+      border:0;
+      color:#5986cc;
+      padding:0;
+      margin:0;
+      svg {
+        color:black;
+      }
     }
   }
 }
