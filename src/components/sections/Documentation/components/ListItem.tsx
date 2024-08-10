@@ -1,15 +1,15 @@
-import {Dispatch, SetStateAction, useMemo, useState} from "react";
+import {Dispatch, SetStateAction, useState} from "react";
 import { DocumentationItem, LinkHrefAndTitle } from "../types/DocumentationTypes.t";
-import ExpandIcon from "./ExpandIcon";
-import DefaultIcon from "./DefaultIcon.tsx";
+import ListItemIcon, {ListItemIconType} from "./ListItemIcon.tsx";
 
 export type ListItemProps = {
     onSelect: Dispatch<SetStateAction<DocumentationItem | null>>
     item: DocumentationItem;
-    iconType?: 'expand' | 'dot' | null;
+    iconType?: ListItemIconType;
+    isChild?: boolean;
 }
 
-const ListItem = ({ item, onSelect, iconType = null }: ListItemProps) => {
+const ListItem = ({ item, onSelect, iconType = null, isChild = false }: ListItemProps) => {
     const { href, title, titleSmall, children = [] } = item;
     const [expanded, setExpanded] = useState<boolean>(false)
 
@@ -20,28 +20,24 @@ const ListItem = ({ item, onSelect, iconType = null }: ListItemProps) => {
         setExpanded(true)
     }
 
-    const icon = useMemo(() => {
-        if(!iconType) {
-            return null;
-        }
-
-        const iconMap = {
-            expand: <ExpandIcon expanded={expanded} onClick={() => setExpanded(!expanded)} />,
-            dot: <DefaultIcon />
-        };
-
-        return iconMap[iconType] ? iconMap[iconType] : null
-    }, [iconType, expanded]);
+    const iconProps = {
+        expanded: expanded,
+        setExpanded: setExpanded,
+        onSelect: () => handleSelect(item),
+        isChild,
+        childrenWithTitleAndHref: childrenWithTitleAndHref,
+        iconType,
+    }
 
     return (
         <li className={`list-item ${expanded ? 'expanded' : ''}`}>
-            {icon}
+            <ListItemIcon {...iconProps} />
 
             <a href={href} onClick={() => handleSelect(item)}>{titleSmall ?? title}</a>
             {childrenWithTitleAndHref.length > 0 && (
                 <ul className="sub-list" >
                     {childrenWithTitleAndHref.map((item: LinkHrefAndTitle) =>
-                        <ListItem key={item.href} item={{ href: item.href, title: item?.titleSmall ?? item.title }} onSelect={onSelect} iconType={'dot'} />
+                        <ListItem key={item.href} item={{ href: item.href, title: item?.titleSmall ?? item.title }} onSelect={onSelect} iconType={'dot'} isChild={true} />
                     )}
                 </ul>
             )}
