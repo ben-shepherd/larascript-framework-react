@@ -16,14 +16,16 @@ const About = () => {
                         </p>
 
 
-                        <p className='mt-3 email'>
-                            <strong>Email Address</strong>: <a href='mailto:ben.shepherd@gmx.com'>ben.shepherd@gmx.com</a>
+                        <p className='mt-10 email'>
+                            <strong>Email Address</strong>:<br /> <a href='mailto:ben.shepherd@gmx.com'>ben.shepherd@gmx.com</a>
                         </p>
                         <p className='mt-3 github'>
-                            <strong>GitHub</strong>: <a href='https://github.com/ben-shepherd' target='_blank'>https://github.com/ben-shepherd</a>
+                            <strong>GitHub</strong>:<br/> <a href='https://github.com/ben-shepherd'
+                                                             target='_blank'>https://github.com/ben-shepherd</a>
                         </p>
                         <p className='mt-3 email'>
-                            <strong>LinkedIn</strong>: <a href='https://www.linkedin.com/in/benjamin-programmer/' target='_blank'>https://www.linkedin.com/in/benjamin-programmer/</a>
+                            <strong>LinkedIn</strong>:<br/> <a href='https://www.linkedin.com/in/benjamin-programmer/'
+                                                               target='_blank'>https://www.linkedin.com/in/benjamin-programmer/</a>
                         </p>
                     </div>
                 </div>

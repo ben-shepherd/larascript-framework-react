@@ -43,5 +43,22 @@
     }
 
   }
+}
 
+/* Large screens (lg) */
+@media (max-width: 1024px) {
+  /* Styles for screens 1024px and larger */
+  #section-about {
+    h1 {
+      font-size:2em;
+    }
+
+    .author-image {
+      position: relative;
+    }
+
+    .info-container {
+      padding:0 25px;
+    }
+  }
 }
