@@ -13,6 +13,7 @@ class MovieModel extends Model<MovieModelData> {
 
     fields = [
         'authorId',
+        'yearReleased'
     ]
 
     public async author(): Promise<AuthorModel | null> {

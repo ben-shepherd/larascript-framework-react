@@ -3,40 +3,42 @@ import CodeBlock from "../../../../../../utils/CodeBlock"
 const HasMany = () => {
     return (
         <>
-            <h3>HasMany Full Example (with additional filters)</h3>
+            <h3>HasMany Full Example</h3>
             <pre>
                 <CodeBlock>
-                    {`async tokens({ activeOnly }: TokensOptions = TokenOptionsDefault): Promise<BaseApiTokenModel[]> {
-    const filters: { revokedAt?: null } = {}
+                    {`import MovieModel from '@src/app/models/Movie';
 
-    if (activeOnly) {
-        filters.revokedAt = null
+export class AuthorModel extends Model<AuthorModelData> {
+    /* rest of your model code */
+
+    public async movies(): Promise<MovieModel[]> {
+        return this.hasMany({
+            localKey: '_id',
+            localModel: this,
+            foreignKey: 'authorId',
+            foreignModelCtor: MovieModel
+        })
     }
 
-    return this.hasMany<BaseUserData, BaseUserModel, BaseApiTokenData, BaseApiTokenModel>(
-        this,
-        this.primaryKey,
-        BaseApiTokenModel,
-        'userId',
-        filters
-    )
+    public async moviesFromYear(year: number): Promise<MovieModel[]> {
+        return this.hasMany({
+            localKey: '_id',
+            localModel: this,
+            foreignKey: 'authorId',
+            foreignModelCtor: MovieModel,
+            filters: {
+                yearReleased: year.toString()
+            }
+        })
+    }
 }`}
                 </CodeBlock>
             </pre>
 
-            <h2>HasMany Signature</h2>
+            <h2>HasMany Method Signature</h2>
             <pre>
                 <CodeBlock>
-                    {`async hasMany<
-    LocalData extends BaseModelData, LocalModel extends Model<LocalData>,
-    ForeignData extends BaseModelData, ForeignModel extends Model<ForeignData>
-> (
-    model: LocalModel,
-    localKey: keyof LocalData,
-    foreignModelCtor: ModelConstructor<ForeignModel>,
-    foreignKey: keyof ForeignData,
-    filters: object = {}
-): Promise<ForeignModel[]>`}
+                    {`public async hasMany<ForeignModel extends Model<any> = Model<any>>(options: HasManyOptions): Promise<ForeignModel[]>`}
                 </CodeBlock>
             </pre>
         </>
