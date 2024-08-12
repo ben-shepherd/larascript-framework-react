@@ -104,6 +104,11 @@
         transition: all 0.4s ease-in-out;
         transform: scale(1.2);
       }
+      &.NoPointerEvents {
+        &:hover {
+          cursor: default;
+        }
+      }
     }
 
     .list-item {

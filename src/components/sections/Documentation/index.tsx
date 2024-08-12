@@ -10,6 +10,7 @@ import { DocumentationItem } from "./types/DocumentationTypes.t"
 const Documentation = () => {
     const [documentationItemSelected, setDocumentationItemSelected] = useState<DocumentationItem | null>(null)
     const sectionRef = useRef<HTMLElement | null>(null)
+    const [expanded, setExpanded] = useState<string | null>(null)
 
     /**
      * Scroll to position on page when a documentation item is clicked in sidemenu
@@ -27,6 +28,7 @@ const Documentation = () => {
     const scrollToTop = () => {
         window.scrollTo({ top: sectionRef.current?.offsetTop ?? 0, behavior: 'smooth' })
     }
+    
     return (
         <section id="section-documentation" ref={sectionRef}>
             <h1 className='text-center pt-10'>Documentation</h1>
@@ -37,7 +39,9 @@ const Documentation = () => {
                 <div className="docs-flex flex flex-wrap lg:flex-nowrap">
                     <List
                         onSelect={setDocumentationItemSelected}
-                        data={DocumentationData}/>
+                        data={DocumentationData}
+                        expanded={expanded}
+                        setExpanded={setExpanded} />
 
                     <Content scrollToTop={scrollToTop} />
                 </div>
