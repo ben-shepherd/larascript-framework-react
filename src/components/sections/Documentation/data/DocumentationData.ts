@@ -5,6 +5,7 @@ import AuthGenerateJwt from "../components/docs/Auth/AuthGenerateJwt"
 import AuthService from "../components/docs/Auth/AuthService"
 import AuthSummary from "../components/docs/Auth/AuthSummary"
 import AuthUser from "../components/docs/Auth/AuthUser"
+import CodingStandards from "../components/docs/CodingStandards"
 import ConsoleAvailableCommands from "../components/docs/Console/ConsoleAvailableCommands"
 import ConsoleCustomCommands from "../components/docs/Console/ConsoleCustomCommands"
 import ConsoleMakerCommands from "../components/docs/Console/ConsoleMakerCommands"
@@ -301,6 +302,17 @@ const data: DocumentationItem[] = [
                 titleSmall: "Custom",
                 content: ConsoleCustomCommands
             },
+        ]
+    },
+    {
+        href: '#standards',
+        title: "Coding Standards",
+        children: [
+            {
+                title: 'Guideline',
+                href: '#standards-guideline',
+                content: CodingStandards
+            }
         ]
     }
 ]
