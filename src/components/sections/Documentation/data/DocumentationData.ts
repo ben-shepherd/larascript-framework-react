@@ -18,6 +18,9 @@ import EventWorker from "../components/docs/Events/EventWorker"
 import ExpressWebServer from "../components/docs/Express/ExpressWebServer"
 import ProtectedRoutes from "../components/docs/Express/ProtectedRoutes"
 import RoutingFiles from "../components/docs/Express/RoutingFiles"
+import { default as InstallCloning } from "../components/docs/Installation/InstallCloning"
+import InstallDocker from "../components/docs/Installation/InstallDocker"
+import InstallPackages from "../components/docs/Installation/InstallPackages"
 import ModelCRUD from "../components/docs/Models/ModelCRUD"
 import ModelMethods from "../components/docs/Models/ModelMethods"
 import ModelProperties from "../components/docs/Models/ModelProperties"
@@ -42,6 +45,30 @@ import Singletons from "../components/docs/Services/Singletons"
 import { DocumentationItem } from "../types/DocumentationTypes.t"
 
 const data: DocumentationItem[] = [
+    {
+        href: "#installation",
+        title: "Installation",
+        titleSmall: "Install",
+        children: [
+            {
+                href: "#installation-1",
+                title: "Cloning",
+                content: InstallCloning,
+            },
+            {
+                href: "#installation-2",
+                title: "Installing Packages",
+                titleSmall: "Packages",
+                content: InstallPackages
+            },
+            {
+                href: "#installation-3",
+                title: "Running Docker",
+                titleSmall: "Docker",
+                content: InstallDocker
+            }
+        ]
+    },
     {
         href: "#providers-containers",
         title: "Providers & Containers",

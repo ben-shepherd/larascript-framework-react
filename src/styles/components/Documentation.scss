@@ -197,6 +197,12 @@
   }
 }
 
+.documentation__content__img {
+  border-radius:15px;
+  box-shadow:3px 4px 13px #7f7f7f;
+  margin:10px 0;
+}
+
 @media (max-width: 1024px) {
   #section-documentation {
     .docs-list-container {
