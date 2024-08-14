@@ -7,7 +7,7 @@ const ConsoleAvailableCommands = () => {
             <p>Create your command by running the following:</p>
             <pre>
                 <code>
-                    npm run start -- make:command --name=MovieCommand
+                    yarn run start -- make:command --name=MovieCommand
                 </code>
             </pre>
 
