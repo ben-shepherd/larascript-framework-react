@@ -3,6 +3,12 @@ import CodeBlock from "../../../../../utils/CodeBlock";
 const InstallDocker = () => {
     return (
         <article>
+          <div className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 my-10" role="alert">
+                <p className="font-bold">Incomplete Docker Configuration</p>
+                <p>Running the app in docker is currently incomplete and is not gauranteed to work correctly.</p>
+                <p>It's recommended to install Yarn on your local system and run with <code>yarn run dev</code></p>
+            </div>
+
             <p>This project comes with Docker configurations.</p>
             <p>The following steps will help you get started.</p>
 
@@ -59,15 +65,10 @@ volumes:
 
             <h2>Environment Setup</h2>
             <p>Navigate to your root project and run the following command:</p>
+            <p>This will allow you to quickly configure your Environment file.</p>
             <p><code>yarn run dev -- app:setup --no-db</code></p>
 
-            <p>This will walk you through basic .env setup.</p>
-
-            <div className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 my-10" role="alert">
-                <p className="font-bold">Incomplete Docker Configuration</p>
-                <p>Running the app in docker is currently incomplete and is not gauranteed to work correctly.</p>
-            </div>
-            <p>You will need to install npm and yarn (or npm) on your local system in order to run the project in development mode.</p>
+            <p>To run the app in development mode, you will need to install npm and yarn (or npm) on your local system in order to run the project in development mode.</p>
             
             <p><code>yarn run dev</code></p>
         </article>
