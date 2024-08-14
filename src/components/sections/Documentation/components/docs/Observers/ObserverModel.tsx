@@ -5,6 +5,16 @@ const ObserverModel = () => {
         <article>
 
             <p>By default, all models have observer functionality implemented and can be enabled when required.</p>
+
+            <h3>Enabling in Models</h3>
+            <p>Use the <code>observeWith(Observer)</code> method to enable observer functionality.</p>
+            <CodeBlock>
+                {`    constructor(data: MovieData | null) {
+    super(data)
+    this.observeWith(MovieObserver)
+}`}
+            </CodeBlock>
+
             <p>First, we'll create our MovieObserver at <code>@src/app/observers/MovieObserver.ts</code></p>
             <p>You can run the following command to make an Observer file automatically:</p>
             <pre>
@@ -13,8 +23,9 @@ const ObserverModel = () => {
                 </code>
             </pre>
 
-            <p><strong>Note:</strong></p>
+            <p className="my-3"><strong>Note:</strong></p>
             <ul>
+                <li>The following changes have been made in the Observer:</li>
                 <li>We've added predefined methods <code>updating</code> and <code>creating</code>, and also one custom method <code>onAuthorChanged</code>.</li>
                 <li>We've also passed a type parameter to the extended <code>Observer&lt;MovieData&gt;</code> class. This helps with type hinting when interacting with your Observer.</li>
             </ul>
@@ -51,7 +62,7 @@ export default class MovieObserver extends Observer<MovieData> {
             <pre>
                 <CodeBlock>
                     {`observeProperties = {
-                        author: 'onAuthorChanged'
+    author: 'onAuthorChanged'
 }`}
                 </CodeBlock>
             </pre>
