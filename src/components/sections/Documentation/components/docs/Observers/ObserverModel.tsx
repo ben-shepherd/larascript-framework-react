@@ -9,7 +9,7 @@ const ObserverModel = () => {
             <p>You can run the following command to make an Observer file automatically:</p>
             <pre>
                 <code>
-                    npm run dev:console -- make:model --name=MovieObserver
+                    yarn run dev -- make:model --name=MovieObserver
                 </code>
             </pre>
 

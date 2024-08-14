@@ -9,7 +9,7 @@ const ModelSummary = () => {
             <p>You can run the following command to make a model file automatically:</p>
             <pre>
                 <code>
-                    npm run dev:console -- make:model --name=Movie
+                    yarn run dev -- make:model --name=Movie
                 </code>
             </pre>
 

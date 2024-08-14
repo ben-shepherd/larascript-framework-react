@@ -12,7 +12,7 @@ const RepositorySummary = () => {
             <p>You can run the following command to automatically create the Repository for you:</p>
             <pre>
                 <code>
-                    npm run dev:console -- make:repository --name=MovieRepository
+                    yarn run dev -- make:repository --name=MovieRepository
                 </code>
             </pre>
             <p>We will create our file here: <code>@src/app/repositories/MovieRepository.ts</code></p>

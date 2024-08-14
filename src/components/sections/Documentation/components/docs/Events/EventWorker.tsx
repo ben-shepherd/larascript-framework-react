@@ -9,7 +9,7 @@ const EventWorker = () => {
 
             <h4>Running the worker</h4>
             <pre>
-                <code>npm run worker</code>
+                <code>yarn run worker</code>
             </pre>
         </article>
     );

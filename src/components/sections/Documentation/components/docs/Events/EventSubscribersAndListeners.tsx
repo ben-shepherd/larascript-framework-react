@@ -8,7 +8,7 @@ const EventSubscribersAndListeners = () => {
             <h2>Subscriber Example</h2>
             <p>You can also run the following to automatically create a Subscriber file for you:</p>
             <pre>
-                <code>npm run dev:console -- make:subscriber --name=ExampleSubscriber</code>
+                <code>yarn run dev -- make:subscriber --name=ExampleSubscriber</code>
             </pre>
             <p>We will create our file here: <code>@src/app/events/subscribers/ExampleSubscriber.ts</code></p>
             <pre>
@@ -34,7 +34,7 @@ export default class ExampleSubscriber extends EventSubscriber<Payload> {
             <h2>Listener Example</h2>
             <p>You can also run the following to automatically create a Listener file for you:</p>
             <pre>
-                <code>npm run dev:console -- make:listener --name=ExampleListener</code>
+                <code>yarn run dev -- make:listener --name=ExampleListener</code>
             </pre>
             <p>We will create our file here: <code>@src/app/events/listeners/ExampleListener.ts</code></p>
             <pre>
