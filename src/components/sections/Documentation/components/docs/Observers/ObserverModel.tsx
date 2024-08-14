@@ -9,7 +9,7 @@ const ObserverModel = () => {
             <h3>Enabling in Models</h3>
             <p>Use the <code>observeWith(Observer)</code> method to enable observer functionality.</p>
             <CodeBlock>
-                {`    constructor(data: MovieData | null) {
+                {`constructor(data: MovieData | null) {
     super(data)
     this.observeWith(MovieObserver)
 }`}
