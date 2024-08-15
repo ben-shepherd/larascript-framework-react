@@ -1,10 +1,10 @@
-import AuthApiToken from "../components/docs/Auth/AuthApiToken"
-import AuthConfiguration from "../components/docs/Auth/AuthConfiguration"
-import AuthContainer from "../components/docs/Auth/AuthContainer"
-import AuthGenerateJwt from "../components/docs/Auth/AuthGenerateJwt"
-import AuthService from "../components/docs/Auth/AuthService"
-import AuthSummary from "../components/docs/Auth/AuthSummary"
-import AuthUser from "../components/docs/Auth/AuthUser"
+import AuthConfiguration from "../components/docs/Authentication/AuthConfiguration"
+import AuthContainer from "../components/docs/Authentication/AuthContainer"
+import AuthEndpoints from "../components/docs/Authentication/AuthEndpoints"
+import AuthGenerateJwt from "../components/docs/Authentication/AuthGenerateJwt"
+import AuthModels from "../components/docs/Authentication/AuthModels"
+import AuthService from "../components/docs/Authentication/AuthService"
+import AuthSummary from "../components/docs/Authentication/AuthSummary"
 import CodingStandards from "../components/docs/CodingStandards"
 import ConsoleAvailableCommands from "../components/docs/Console/ConsoleAvailableCommands"
 import ConsoleCustomCommands from "../components/docs/Console/ConsoleCustomCommands"
@@ -152,37 +152,37 @@ const data: DocumentationItem[] = [
             },
             {
                 href: "#authentication-4-1",
+                title: "Endpoints",
+                content: AuthEndpoints,
+            },
+            {
+                href: "#authentication-4-2",
                 title: "Generate JWT Secret",
                 titleSmall: "JWT Secret",
                 content: AuthGenerateJwt,
             },
             {
-                href: "#authentication-4-2",
+                href: "#authentication-4-3",
                 title: "Configuration",
                 content: AuthConfiguration,
             },
             {
-                href: "#authentication-4-3",
-                title: "Container",
+                href: "#authentication-4-4",
+                title: "Auth Container",
+                titleSmall: "Container",
                 content: AuthContainer
             },
             {
-                href: "#authentication-4-4",
+                href: "#authentication-4-5",
                 title: "Auth Service",
                 titleSmall: "Service",
                 content: AuthService
             },
             {
-                href: "#authentication-4-5",
-                title: "ApiToken Model",
-                titleSmall: "ApiToken",
-                content: AuthApiToken
-            },
-            {
                 href: "#authentication-4-6",
-                title: "User Model",
-                titleSmall: "User",
-                content: AuthUser
+                title: "Auth Models",
+                titleSmall: "Models",
+                content: AuthModels
             },
         ],
     },

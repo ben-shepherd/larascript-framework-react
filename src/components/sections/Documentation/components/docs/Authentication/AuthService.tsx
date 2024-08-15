@@ -3,7 +3,7 @@ import SimpleCodeBlock from "../../../../../utils/SimpleCodeBlock";
 const AuthService = () => {
     return (
         <article>
-            <p>A look into the available methods and properties for <code>App.container('auth')</code></p>
+            <p>Overview of the methods and properties available through <code>App.container('auth')</code>:</p>
 
             <h3>Properties</h3>
             <p>The default user repository:</p>
@@ -24,35 +24,35 @@ const AuthService = () => {
             <p>Attempt to authorize an <em>authentication token</em>:</p>
             <pre>
                 <SimpleCodeBlock>
-                    attemptAuthenticateToken(token: string): Promise{`<ApiTokenModel | null>`}
+                    {`attemptAuthenticateToken(token: string): Promise<ApiTokenModel | null>`}
                 </SimpleCodeBlock>
             </pre>
 
             <p>Create a <em>JSON Web Token</em> from the User:</p>
             <pre>
                 <SimpleCodeBlock>
-                    createJwtFromUser(user: UserModel): Promise{`<string>`}
+                    {`createJwtFromUser(user: UserModel): Promise<string>`}
                 </SimpleCodeBlock>
             </pre>
 
             <p>Create an ApiTokenModel from the User:</p>
             <pre>
                 <SimpleCodeBlock>
-                    createApiTokenFromUser(user: UserModel): Promise{`<ApiTokenModel>`}
+                    {`createApiTokenFromUser(user: UserModel): Promise<ApiTokenModel>`}
                 </SimpleCodeBlock>
             </pre>
 
             <p>Revoke a token:</p>
             <pre>
                 <SimpleCodeBlock>
-                    revokeToken(apiToken: ApiTokenModel): Promise{`<void>`}
+                    {`revokeToken(apiToken: ApiTokenModel): Promise<void>`}
                 </SimpleCodeBlock>
             </pre>
 
             <p>Attempt a login with credentials. Returns an <em>authentication token</em>:</p>
             <pre>
                 <SimpleCodeBlock>
-                    attemptCredentials(email: string, password: string): Promise{`<string>`}
+                    {`attemptCredentials(email: string, password: string): Promise<string>`}
                 </SimpleCodeBlock>
             </pre>
 
@@ -67,7 +67,7 @@ const AuthService = () => {
             <pre>
                 <SimpleCodeBlock>
                     {`{
-    "Authorization": "Bearer eyJhbG..."
+"Authorization": "Bearer eyJhbG..."
 }`}
                 </SimpleCodeBlock>
             </pre>

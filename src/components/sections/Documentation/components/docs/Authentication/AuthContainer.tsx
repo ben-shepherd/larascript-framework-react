@@ -7,14 +7,17 @@ const AuthContainer = () => {
             <h3>Example</h3>
             <pre>
                 <CodeBlock language="typescript">
-                    {`const auth = App.container('auth');
+                    {`// Get the auth service
+const auth = App.container('auth');
 
-const user = await auth.userRepository.findOne({})
+// Get the user from the repository provided
+const user = await auth.userRepository.findOne({ email: 'tony.stark@example.com' });
 
 if (!user) {
     throw new Error('No user found');
 }
 
+// Generate a JWT from the user model
 const jwt = await auth.createJwtFromUser(user);`}
                 </CodeBlock>
             </pre>

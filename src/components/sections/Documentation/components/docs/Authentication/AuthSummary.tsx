@@ -2,7 +2,6 @@
 const AuthSummary = () => {
     return (
         <article>
-            <h2>Terminology</h2>
             <ul>
                 <li>
                     <strong>authentication token</strong>: The value of the property stored on the MongoDB collection <code>apiToken.token</code>.
