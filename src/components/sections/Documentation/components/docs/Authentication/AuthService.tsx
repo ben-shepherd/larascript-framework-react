@@ -67,7 +67,7 @@ const AuthService = () => {
             <pre>
                 <SimpleCodeBlock>
                     {`{
-"Authorization": "Bearer eyJhbG..."
+    "Authorization": "Bearer eyJhbG..."
 }`}
                 </SimpleCodeBlock>
             </pre>
