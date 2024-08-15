@@ -4,27 +4,27 @@ const CodingStandards = () => {
     return (
         <article>
             <h3>Naming Convention Casing</h3>
-            <ul>
+            <ul className="list-disc">
                 <li><strong>Preferred casing for methods, variables:</strong> camelCase</li>
                 <li><strong>Preferred casing for classes, interfaces and types, objects:</strong> PascalCase</li>
             </ul>
 
             <h3>Domains</h3>
-            <ul>
-                <li>Features ideally should be self contained in app/domains or core/domains.</li>
-                <li>More generic utility functions and helpers can sit outside of a domain.</li>
-                <li>Interfaces should be used when interacting with classes and methods outside of its self contained domain.</li>
+            <ul className="list-disc">
+                <li>Features should ideally be encapsulated within their own domains in either app/domains or core/domains.</li>
+                <li>Each domain should have its own provider, which binds the domain's services to a container for external access.</li>
+                <li>More generic utility functions and helpers can be placed outside of specific domains.</li>
             </ul>
 
             <h3>Classes, Types and Interfaces, Objects</h3>
-            <ul>
+            <ul className="list-disc">
                 <li>Classes, Interfaces, Types should be PascalCase. Example: <code>MyService.ts</code></li>
                 <li>Interfaces should start with a capital "i". Example: <code>IMyServiceInterface.ts</code></li>
                 <li>Type files should be suffixed with ".t.ts" Example: <code>Types.t.ts</code></li>
                 <li>Files that export Objects should follow PascalCase. Example: <code>MyObject.ts</code></li>
             </ul>
 
-            <h4>Service/Interface Example:</h4>
+            <h4 className="mt-5">Service/Interface Example:</h4>
             <p>Filename: <code>MyService.ts</code></p>
             <CodeBlock>
                 {`class MyService implements IMyService
@@ -87,7 +87,7 @@ import MongoDB from '@core/database/mongodb/services/MongoDB';`}
             <h2>Example Folder Structure</h2>
             <pre>
                 <code>
-{`├── app/
+                    {`├── app/
 │   ├── commands/
 │   ├── events/
 │   ├── models/
