@@ -43,6 +43,7 @@ import TypeHintingConfig from "../components/docs/ProvidersAndContainers/TypeHin
 import RepositorySummary from "../components/docs/Repositories/RepositorySummary"
 import Services from "../components/docs/Services/Services"
 import Singletons from "../components/docs/Services/Singletons"
+import Testing from "../components/docs/Testing/Testing"
 import { DocumentationItem } from "../types/DocumentationTypes.t"
 
 const data: DocumentationItem[] = [
@@ -67,6 +68,16 @@ const data: DocumentationItem[] = [
                 title: "Running Docker",
                 titleSmall: "Docker",
                 content: InstallDocker
+            }
+        ]
+    },
+    {
+        href: "#testing",
+        title: "Running Tests",
+        titleSmall: "Run Tests",
+        children: [
+            {
+                content: Testing,
             }
         ]
     },
@@ -348,8 +359,6 @@ const data: DocumentationItem[] = [
         title: "Coding Standards",
         children: [
             {
-                title: 'Guideline',
-                href: '#standards-guideline',
                 content: CodingStandards
             }
         ]
