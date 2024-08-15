@@ -58,7 +58,7 @@ const PoweredBy = () => {
                                     <p>Plug and play authorization component using JSON Web Tokens.</p>
                                 </li>
                                 <li>Events<br/>
-                                    <p>Subscrie and listen to events in your application.</p>
+                                    <p>Subscribe and listen to events in your application.</p>
                                 </li>
                                 <li>Observers<br/>
                                     <p>Monitor data changes in your application and modify them.</p>
