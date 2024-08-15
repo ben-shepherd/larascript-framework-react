@@ -7,6 +7,244 @@
 	},
 	"item": [
 		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Auth create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = pm.response.json()\r",
+									"\r",
+									"if(pm.response.code === 200) {\r",
+									"    pm.collectionVariables.set(\"token\", data.token);\r",
+									"    pm.collectionVariables.set('userId', data.user._id)\r",
+									"    pm.collectionVariables.set('userEmail', data.user.email)\r",
+									"\r",
+									"}\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function() {\r",
+									"    pm.response.to.have.status(200)\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Token exists\", function() {\r",
+									"    pm.response.has('token')\r",
+									"})\r",
+									"\r",
+									"pm.test(\"User is created\", function() {\r",
+									"    pm.response.has('user')\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"{{testEmail}}\",\r\n    \"password\": \"{{testPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auth login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = pm.response.json()\r",
+									"\r",
+									"if(pm.response.code === 200) {\r",
+									"    pm.collectionVariables.set(\"token\", data.token);\r",
+									"    pm.collectionVariables.set('userId', data.user._id)\r",
+									"    pm.collectionVariables.set('userEmail', data.user.email)\r",
+									"\r",
+									"}\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function() {\r",
+									"    pm.response.to.have.status(200)\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Token exists\", function() {\r",
+									"    pm.response.has('token')\r",
+									"})\r",
+									"\r",
+									"pm.test(\"User exists\", function() {\r",
+									"    pm.response.has('user')\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Authorization",
+								"value": "odkf-0q9k09rf2309jf09w3fj0w9fgjwoifjwoiefjowi"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"{{userEmail}}\",\r\n    \"password\": \"{{testPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auth user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = pm.response.json()\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function() {\r",
+									"    pm.response.to.have.status(200)\r",
+									"});\r",
+									"\r",
+									"pm.test(\"User is created\", function() {\r",
+									"    pm.response.has('user')\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/user",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auth Revoke",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = pm.response.json()\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function() {\r",
+									"    pm.response.to.have.status(200)\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Token has beenr revoked\", function() {\r",
+									"    pm.response.has('success')\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/revoke",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"revoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Health",
 			"event": [
 				{
@@ -33,189 +271,6 @@
 					"path": [
 						"api",
 						"health"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Auth create",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"var data = pm.response.json()\r",
-							"\r",
-							"if(pm.response.code === 200) {\r",
-							"    pm.collectionVariables.set(\"token\", data.token);\r",
-							"    pm.collectionVariables.set('userId', data.user._id)\r",
-							"    pm.collectionVariables.set('userEmail', data.user.email)\r",
-							"\r",
-							"}\r",
-							"\r",
-							"pm.test(\"Status code is 200\", function() {\r",
-							"    pm.response.to.have.status(200)\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Token exists\", function() {\r",
-							"    pm.response.has('token')\r",
-							"})\r",
-							"\r",
-							"pm.test(\"User is created\", function() {\r",
-							"    pm.response.has('user')\r",
-							"})"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				},
-				{
-					"listen": "prerequest",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"{{testEmail}}\",\r\n    \"password\": \"{{testPassword}}\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{baseUrl}}/api/auth/create",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"api",
-						"auth",
-						"create"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Auth login",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"var data = pm.response.json()\r",
-							"\r",
-							"if(pm.response.code === 200) {\r",
-							"    pm.collectionVariables.set(\"token\", data.token);\r",
-							"    pm.collectionVariables.set('userId', data.user._id)\r",
-							"    pm.collectionVariables.set('userEmail', data.user.email)\r",
-							"\r",
-							"}\r",
-							"\r",
-							"pm.test(\"Status code is 200\", function() {\r",
-							"    pm.response.to.have.status(200)\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Token exists\", function() {\r",
-							"    pm.response.has('token')\r",
-							"})\r",
-							"\r",
-							"pm.test(\"User exists\", function() {\r",
-							"    pm.response.has('user')\r",
-							"})"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Authorization",
-						"value": "odkf-0q9k09rf2309jf09w3fj0w9fgjwoifjwoiefjowi"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"{{userEmail}}\",\r\n    \"password\": \"{{testPassword}}\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{baseUrl}}/api/auth/login",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"api",
-						"auth",
-						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Auth user",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"var data = pm.response.json()\r",
-							"\r",
-							"\r",
-							"pm.test(\"Status code is 200\", function() {\r",
-							"    pm.response.to.have.status(200)\r",
-							"});\r",
-							"\r",
-							"pm.test(\"User is created\", function() {\r",
-							"    pm.response.has('user')\r",
-							"})"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{token}}",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{baseUrl}}/api/auth/user",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"api",
-						"auth",
-						"user"
 					]
 				}
 			},
@@ -247,7 +302,7 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "http://localhost:3000",
+			"value": "http://localhost:5000",
 			"type": "string"
 		},
 		{
@@ -272,7 +327,7 @@
 		},
 		{
 			"key": "testEmail",
-			"value": "bob@example.com",
+			"value": "tony.stark@example.com",
 			"type": "string"
 		}
 	]
