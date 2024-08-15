@@ -71,80 +71,6 @@ const data: DocumentationItem[] = [
         ]
     },
     {
-        href: "#providers-containers",
-        title: "Providers & Containers",
-        children: [
-            {
-                content: ProviderSummary,
-            },
-            {
-                href: "#providers-containers-1-2",
-                title: "Container explained",
-                titleSmall: "Container",
-                content: ContainerExplained
-            },
-            {
-                href: "#providers-containers-1-1",
-                title: "Registering a provider",
-                titleSmall: 'Registering',
-                content: Registering,
-            },
-            {
-                href: "#providers-containers-1-3",
-                title: "Type hinting config structure",
-                titleSmall: 'Type hinting',
-                content: TypeHintingConfig
-            },
-            {
-                href: "#providers-containers-1-4",
-                title: "Setting up a new container",
-                titleSmall: "Setup new",
-                content: NewContainer
-            },
-            {
-                href: "#providers-containers-1-5",
-                title: "Retrieving from the container",
-                titleSmall: "Retrieving",
-                content: RetrieveFromContainer
-            },
-        ],
-    },
-    {
-        href: "#services",
-        title: "Services",
-        children: [
-            {
-                content: Services
-            },
-            {
-                href: "#services-2-1",
-                title: "Singletons",
-                content: Singletons
-            },
-        ],
-    },
-    {
-        href: "#express-web-server",
-        title: "Express Web Server",
-        children: [
-            {
-                href: "#express-web-server-3-1",
-                title: "Defining routes",
-                content: ExpressWebServer
-            },
-            {
-                href: "#express-web-server-3-2",
-                title: "Routing Files",
-                content: RoutingFiles
-            },
-            {
-                href: "#express-web-server-3-3",
-                title: "Protected routes",
-                content: ProtectedRoutes
-            },
-        ],
-    },
-    {
         href: "#authentication",
         title: "Authentication",
         children: [
@@ -186,6 +112,37 @@ const data: DocumentationItem[] = [
                 content: AuthModels
             },
         ],
+    },
+    {
+        href: "#express-web-server",
+        title: "Express Web Server",
+        children: [
+            {
+                href: "#express-web-server-3-1",
+                title: "Defining routes",
+                content: ExpressWebServer
+            },
+            {
+                href: "#express-web-server-3-2",
+                title: "Routing Files",
+                content: RoutingFiles
+            },
+            {
+                href: "#express-web-server-3-3",
+                title: "Protected routes",
+                content: ProtectedRoutes
+            },
+        ],
+    },
+    {
+        href: '#postman',
+        title: "Postman Collection",
+        titleSmall: "Postman",
+        children: [
+            {
+                content: PostmanCollection
+            }
+        ]
     },
     {
         href: "#mongodb",
@@ -255,6 +212,60 @@ const data: DocumentationItem[] = [
                 content: RepositorySummary
             }
         ]
+    },
+    {
+        href: "#containers",
+        title: "App Container",
+        titleSmall: "Container",
+        children: [
+            {
+                content: ProviderSummary,
+            },
+            {
+                href: "#containers-1-2",
+                title: "Container explained",
+                titleSmall: "Container",
+                content: ContainerExplained
+            },
+            {
+                href: "#containers-1-1",
+                title: "Registering a provider",
+                titleSmall: 'Registering',
+                content: Registering,
+            },
+            {
+                href: "#containers-1-3",
+                title: "Type hinting config structure",
+                titleSmall: 'Type hinting',
+                content: TypeHintingConfig
+            },
+            {
+                href: "#containers-1-4",
+                title: "Setting up a new container",
+                titleSmall: "Setup new",
+                content: NewContainer
+            },
+            {
+                href: "#containers-1-5",
+                title: "Retrieving from the container",
+                titleSmall: "Retrieving",
+                content: RetrieveFromContainer
+            },
+        ],
+    },
+    {
+        href: "#services",
+        title: "Services",
+        children: [
+            {
+                content: Services
+            },
+            {
+                href: "#services-2-1",
+                title: "Singletons",
+                content: Singletons
+            },
+        ],
     },
     {
         href: "#events",
@@ -330,16 +341,6 @@ const data: DocumentationItem[] = [
                 titleSmall: "Custom",
                 content: ConsoleCustomCommands
             },
-        ]
-    },
-    {
-        href: '#postman',
-        title: "Postman Collection",
-        titleSmall: "Postman",
-        children: [
-            {
-                content: PostmanCollection
-            }
         ]
     },
     {
