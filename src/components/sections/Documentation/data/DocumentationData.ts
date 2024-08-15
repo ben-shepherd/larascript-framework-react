@@ -33,6 +33,7 @@ import MongoMultipleConnections from "../components/docs/MongoDB/MongoMultipleCo
 import ObserverMethods from "../components/docs/Observers/ObserverMethods"
 import ObserverModel from "../components/docs/Observers/ObserverModel"
 import ObserverSummary from "../components/docs/Observers/ObserverSummary"
+import PostmanCollection from "../components/docs/Postman/PostmanCollection"
 import ContainerExplained from "../components/docs/ProvidersAndContainers/ContainerExplained"
 import NewContainer from "../components/docs/ProvidersAndContainers/NewContainer"
 import ProviderSummary from "../components/docs/ProvidersAndContainers/ProviderSummary"
@@ -329,6 +330,16 @@ const data: DocumentationItem[] = [
                 titleSmall: "Custom",
                 content: ConsoleCustomCommands
             },
+        ]
+    },
+    {
+        href: '#postman',
+        title: "Postman Collection",
+        titleSmall: "Postman",
+        children: [
+            {
+                content: PostmanCollection
+            }
         ]
     },
     {
