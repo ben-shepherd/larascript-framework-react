@@ -1,0 +1,118 @@
+.Modal__backdrop {
+    width:100vw;
+    height:100vh;
+    background-color:rgba(0,0,0,0.7);
+    z-index:1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display:flex;
+    justify-content:center;
+    align-content:center;
+}
+.Modal__container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #f5f5f5;
+    min-height: 300px;
+    height:fit-content;
+    margin: auto;
+    border: 7px solid #60acfb;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+}
+.Modal__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Modal__title {
+    position:relative;   
+    font-size:2em;
+    font-weight: 700;
+    width:100%;
+}
+.Modal__title__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.Modal_title_close_icon {
+    color: #232323;
+    font-size: 2em;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin: 0;
+}
+.Modal__title__close_icon:focus,
+.Modal__title__close_icon:hover {
+    outline:none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+.Modal__title__close_text {
+    display:none;
+}
+.Modal__title__close_icon svg {
+    color:#373737;
+}
+.Modal__content {
+    width:80%;
+    font-size:1.2em;
+}
+.Modal__buttons {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    padding-bottom:25px;
+}
+.Modal__buttons__button_1 {
+    margin-right:35px;
+}
+.Modal__buttons__button {
+    background-color: #4299f3;
+    color: #ffffff;
+    padding: 20px 40px;
+}
+
+
+@media (max-width: 1280px) {
+    .Modal__container {
+        padding:0 25px;
+        height:90%;
+        width:90%;
+        display:flex;
+        align-items: center;
+    }
+    .Modal__inner {
+        height:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    .Modal__title__close {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        height:30px;
+    }
+    .Modal__title__close_icon {
+        flex-shrink: 1;
+    }
+}

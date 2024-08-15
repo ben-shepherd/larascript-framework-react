@@ -1,0 +1,59 @@
+.GithubStarModal__text {
+    padding:25px 0;
+}
+.GithubStarModal__image {
+    padding:25px 0;
+    display:flex;
+    justify-content:center;
+}
+.GithubStarModal__image_img {
+    box-shadow: 0px 0px 17px #8d8d8d;
+    border-radius:15px;
+}
+.GithubStarModal .Modal__buttons__button,
+.GithubStarModal__image_img {
+    transition:all 0.3s ease-in-out;
+}
+.GithubStarModal .Modal__buttons__button:hover,
+.GithubStarModal__image_img:hover {
+   transition:all 0.3s ease-in-out;
+    transform:scale(1.1);
+}
+.GithubStarModal .Modal__buttons__button_1,
+.GithubStarModal .Modal__buttons__button_2 {
+    margin-right:35px;
+}
+.GithubStarModal__text_p1 {
+    margin-bottom:10px;
+}
+
+@media screen and (min-width: 1281px) {
+    .GithubStarModal_button_xs {
+        display: none;
+    }
+    .GithubStarModal_button_lg {
+        display: block;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .GithubStarModal_button_xs {
+        display:block;
+    }
+    .GithubStarModal_button_lg {
+        display: none;
+    }
+    .GithubStarModal .Modal__title__close {
+        display:none;
+    }
+    .Modal__title__text {
+        font-size: 1.5em;
+    }
+    .GithubStarModal__text_p1,
+    .GithubStarModal__text_p2 {
+        line-height:50px;
+        font-size:1.4em;
+    }
+    .GithubStarModal__text_p1 {
+        margin-bottom:25px;
+    }
+}
