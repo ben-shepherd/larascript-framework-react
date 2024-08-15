@@ -45,15 +45,16 @@
     .GithubStarModal .Modal__title__close {
         display:none;
     }
-    .Modal__title__text {
-        font-size: 1.5em;
-    }
-    .GithubStarModal__text_p1,
-    .GithubStarModal__text_p2 {
-        line-height:50px;
-        font-size:1.4em;
+    .GithubStarModal .Modal__content {
+        padding:10px 0;
     }
     .GithubStarModal__text_p1 {
         margin-bottom:25px;
+    }
+    .GithubStarModal .Modal__buttons__button {
+        padding:10px;
+    }
+    .GithubStarModal__image {
+        display:none;
     }
 }
