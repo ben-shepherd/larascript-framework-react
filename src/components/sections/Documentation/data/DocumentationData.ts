@@ -45,6 +45,9 @@ import RepositorySummary from "../components/docs/Repositories/RepositorySummary
 import Services from "../components/docs/Services/Services"
 import Singletons from "../components/docs/Services/Singletons"
 import Testing from "../components/docs/Testing/Testing"
+import ValidatorJoi from "../components/docs/Validator/ValidatorJoi"
+import ValidatorMiddleware from "../components/docs/Validator/ValidatorMiddleware"
+import ValidatorSummary from "../components/docs/Validator/ValidatorSummary"
 import { DocumentationItem } from "../types/DocumentationTypes.t"
 
 const data: DocumentationItem[] = [
@@ -157,6 +160,26 @@ const data: DocumentationItem[] = [
         children: [
             {
                 content: PostmanCollection
+            }
+        ]
+    },
+    {
+        href: '#validation',
+        title: "Validation",
+        children: [
+            {
+                content: ValidatorSummary
+            },
+            {
+                href: "#validation-joi",
+                title: "Joi Documentation",
+                titleSmall: "Joi",
+                content: ValidatorJoi
+            },
+            {
+                href: "#validation-middleware",
+                title: "Middleware",
+                content: ValidatorMiddleware
             }
         ]
     },
