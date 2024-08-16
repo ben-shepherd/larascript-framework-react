@@ -70,9 +70,10 @@
       font-size: 1.2em;
     }
 
+    .parent-list li {
+      padding:10px 0;
+    }
     .parent-list>li:not(:last-child) {
-      padding-bottom: 25px;
-      margin-bottom: 25px;
       border-bottom: 1px solid #405d9642;
     }
 
@@ -122,6 +123,10 @@
       &.expanded .sub-list {
         display: block;
       }
+    }
+
+    .sub-list li {
+      padding:5px 0;
     }
   }
 

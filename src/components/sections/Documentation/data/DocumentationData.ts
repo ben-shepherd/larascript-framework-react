@@ -75,7 +75,7 @@ const data: DocumentationItem[] = [
     {
         href: "#testing",
         title: "Running Tests",
-        titleSmall: "Run Tests",
+        titleSmall: "Testing",
         children: [
             {
                 content: Testing,
