@@ -15,9 +15,10 @@ import EventDrivers from "../components/docs/Events/EventDrivers"
 import EventSubscribersAndListeners from "../components/docs/Events/EventSubscribersAndListeners"
 import EventSummary from "../components/docs/Events/EventSummary"
 import EventWorker from "../components/docs/Events/EventWorker"
-import ExpressWebServer from "../components/docs/Express/ExpressWebServer"
-import ProtectedRoutes from "../components/docs/Express/ProtectedRoutes"
-import RoutingFiles from "../components/docs/Express/RoutingFiles"
+import ExpressAction from "../components/docs/Express/ExpressAction"
+import ExpressMiddleware from "../components/docs/Express/ExpressMiddleware"
+import RoutingFiles from "../components/docs/Express/ExpressRouting"
+import ExpressSummary from "../components/docs/Express/ExpressSummary"
 import { default as InstallCloning } from "../components/docs/Installation/InstallCloning"
 import InstallDocker from "../components/docs/Installation/InstallDocker"
 import InstallPackages from "../components/docs/Installation/InstallPackages"
@@ -127,21 +128,25 @@ const data: DocumentationItem[] = [
     {
         href: "#express-web-server",
         title: "Express Web Server",
+        titleSmall: "Express",
         children: [
             {
-                href: "#express-web-server-3-1",
-                title: "Defining routes",
-                content: ExpressWebServer
+                content: ExpressSummary,
             },
             {
                 href: "#express-web-server-3-2",
-                title: "Routing Files",
+                title: "Routing",
                 content: RoutingFiles
             },
             {
                 href: "#express-web-server-3-3",
-                title: "Protected routes",
-                content: ProtectedRoutes
+                title: "Middleware",
+                content: ExpressMiddleware
+            },
+            {
+                href: "#express-web-server-3-3",
+                title: "Actions",
+                content: ExpressAction
             },
         ],
     },
