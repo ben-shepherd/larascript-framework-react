@@ -42,7 +42,7 @@ export default config;`}
 
             <h2>Environment variables</h2>
             <blockquote>
-                <p>MONGODB_URI=mongodb://username:SuperSecretPwd@localhost:27017/app?authSource=admin</p>
+                <code>MONGODB_URI=mongodb://username:SuperSecretPwd@localhost:27017/app?authSource=admin</code>
             </blockquote>
         </article>
 
