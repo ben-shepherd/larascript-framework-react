@@ -30,7 +30,7 @@ const ExpressSummary = () => {
                 {`import {App} from '@src/core/services/App';
 import {Express} from 'express';
 
-const express: Express = App.container('express').getApp();`}
+const express: Express = App.container('express').getExpress();`}
             </CodeBlock>
             
             <p>Remember that while the wrapper simplifies many common tasks, having access to the raw Express instance gives you the power to handle complex scenarios or specific requirements that may arise during development.</p>
