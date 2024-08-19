@@ -53,12 +53,21 @@
       font-size:2em;
     }
 
+    .author-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 25px;
+    }
+
     .author-image {
       position: relative;
+      margin: 0 auto;
     }
 
     .info-container {
       padding:0 25px;
+      text-align: center;
     }
   }
 }
