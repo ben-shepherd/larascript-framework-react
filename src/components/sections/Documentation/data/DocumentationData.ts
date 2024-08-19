@@ -10,7 +10,6 @@ import ConsoleAvailableCommands from "../components/docs/Console/ConsoleAvailabl
 import ConsoleCustomCommands from "../components/docs/Console/ConsoleCustomCommands"
 import ConsoleMakerCommands from "../components/docs/Console/ConsoleMakerCommands"
 import ConsoleSummary from "../components/docs/Console/ConsoleSummary"
-import EventConfiguration from "../components/docs/Events/EventConfiguration"
 import EventDrivers from "../components/docs/Events/EventDrivers"
 import EventSubscribersAndListeners from "../components/docs/Events/EventSubscribersAndListeners"
 import EventSummary from "../components/docs/Events/EventSummary"
@@ -287,11 +286,6 @@ const data: DocumentationItem[] = [
         children: [
             {
                 content: EventSummary
-            },
-            {
-                href: "#events-8-1",
-                title: "Configuration",
-                content: EventConfiguration
             },
             {
                 href: "#events-8-2",

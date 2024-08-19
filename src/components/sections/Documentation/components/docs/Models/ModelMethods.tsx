@@ -4,14 +4,14 @@ import SimpleCodeBlock from "../../../../../utils/SimpleCodeBlock";
 const ModelMethods = () => {
     return (
         <article>
-            <h2>setAttribute</h2>
+            <h2>Set an attribute</h2>
             <pre>
                 <SimpleCodeBlock>
                     {`movie.setAttribute('genre', 'Horror')`}
                 </SimpleCodeBlock>
             </pre>
 
-            <h2>fill</h2>
+            <h2>Fill attributes</h2>
             <pre>
                 <SimpleCodeBlock>
                     {`movie.fill({
