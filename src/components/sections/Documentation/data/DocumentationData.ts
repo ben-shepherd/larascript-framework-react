@@ -6,10 +6,8 @@ import AuthModels from "../components/docs/Authentication/AuthModels"
 import AuthService from "../components/docs/Authentication/AuthService"
 import AuthSummary from "../components/docs/Authentication/AuthSummary"
 import CodingStandards from "../components/docs/CodingStandards"
-import ConsoleAvailableCommands from "../components/docs/Console/ConsoleAvailableCommands"
 import ConsoleCustomCommands from "../components/docs/Console/ConsoleCustomCommands"
-import ConsoleMakerCommands from "../components/docs/Console/ConsoleMakerCommands"
-import ConsoleSummary from "../components/docs/Console/ConsoleSummary"
+import ConsoleMake from "../components/docs/Console/ConsoleMake"
 import EventDrivers from "../components/docs/Events/EventDrivers"
 import EventSubscribersAndListeners from "../components/docs/Events/EventSubscribersAndListeners"
 import EventSummary from "../components/docs/Events/EventSummary"
@@ -320,26 +318,18 @@ const data: DocumentationItem[] = [
         ],
     },
     {
-        href: "#console-commands",
-        title: "Console commands",
+        href: "#cli",
+        title: "Commands (CLI)",
+        titleSmall: "Commands",
         children: [
             {
-                content: ConsoleSummary
+                href: "#cli-make",
+                title: "Make Commands",
+                titleSmall: "Make",
+                content: ConsoleMake
             },
             {
-                href: "#console-commands-10-1",
-                title: "Worker Command",
-                titleSmall: "Worker",
-                content: ConsoleAvailableCommands
-            },
-            {
-                href: "#console-commands-10-2",
-                title: "Maker commands",
-                titleSmall: "Maker",
-                content: ConsoleMakerCommands
-            },
-            {
-                href: "#console-commands-10-3",
+                href: "#cli-custom",
                 title: "Custom commands",
                 titleSmall: "Custom",
                 content: ConsoleCustomCommands
