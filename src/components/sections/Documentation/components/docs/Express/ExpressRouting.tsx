@@ -77,7 +77,7 @@ export default class AppProvider extends BaseProvider
     {
         App.container('express').bindRoutes(routes);
         App.container('express').bindRoutes(userRoutes);    
-}
+    }
 }`}
             </CodeBlock>
  

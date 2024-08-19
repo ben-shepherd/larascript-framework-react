@@ -30,7 +30,6 @@ import MongoConfiguration from "../components/docs/MongoDB/MongoConfiguration"
 import MongoContainer from "../components/docs/MongoDB/MongoContainer"
 import MongoModelConnections from "../components/docs/MongoDB/MongoModelConnections"
 import MongoMultipleConnections from "../components/docs/MongoDB/MongoMultipleConnections"
-import ObserverMethods from "../components/docs/Observers/ObserverMethods"
 import ObserverModel from "../components/docs/Observers/ObserverModel"
 import ObserverSummary from "../components/docs/Observers/ObserverSummary"
 import PostmanCollection from "../components/docs/Postman/PostmanCollection"
@@ -311,12 +310,6 @@ const data: DocumentationItem[] = [
         children: [
             {
                 content: ObserverSummary
-            },
-            {
-                href: "#observers-9-1",
-                title: "Observer Methods",
-                titleSmall: "Methods",
-                content: ObserverMethods
             },
             {
                 href: "#observers-9-2",

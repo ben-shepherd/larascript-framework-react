@@ -3,37 +3,27 @@ import CodeBlock from "../../../../../utils/CodeBlock";
 const ObserverModel = () => {
     return (
         <article>
+            <p>Observer functionality is built into every model in our system. However, it's turned off by default for performance reasons and to avoid unnecessary complexity when not needed.</p>
 
-            <p>By default, all models have observer functionality implemented and can be enabled when required.</p>
-
-            <h3>Enabling in Models</h3>
-            <p>Use the <code>observeWith(Observer)</code> method to enable observer functionality.</p>
+            <h3>Enabling Observers in Models</h3>
+            <p>To enable observer functionality for a specific model, use the <code>observeWith(Observer)</code> method in the model's constructor:</p>
             <CodeBlock>
-                {`constructor(data: MovieData | null) {
+{`constructor(data: MovieData | null) {
     super(data)
     this.observeWith(MovieObserver)
 }`}
             </CodeBlock>
 
-            <p>First, we'll create our MovieObserver at <code>@src/app/observers/MovieObserver.ts</code></p>
-            <p>You can run the following command to make an Observer file automatically:</p>
-            <pre>
-                <code>
-                    yarn run dev -- make:model --name=MovieObserver
-                </code>
-            </pre>
+            <h3>Creating an Observer</h3>
+            <p>Before enabling the observer, you need to create an Observer class for your model. You can do this manually or use our CLI tool:</p>
+            <CodeBlock language="bash">
+                yarn run dev -- make:model --name=MovieObserver
+            </CodeBlock>
+            <p>This will create a new Observer file at <code>@src/app/observers/MovieObserver.ts</code></p>
 
-            <p className="my-3"><strong>Note:</strong></p>
-            <ul>
-                <li>The following changes have been made in the Observer:</li>
-                <li>We've added predefined methods <code>updating</code> and <code>creating</code>, and also one custom method <code>onAuthorChanged</code>.</li>
-                <li>We've also passed a type parameter to the extended <code>Observer&lt;MovieData&gt;</code> class. This helps with type hinting when interacting with your Observer.</li>
-            </ul>
-
-            <h3>Example</h3>
-            <pre>
-                <CodeBlock>
-                    {`import Observer from "@src/core/observer/Observer";
+            <h3>Observer Implementation Example</h3>
+            <CodeBlock>
+{`import Observer from "@src/core/observer/Observer";
 import { UserData } from "../models/auth/User";
 import { MovieData } from "../models/MovieModel";
 
@@ -53,24 +43,25 @@ export default class MovieObserver extends Observer<MovieData> {
         return data;
     }
 }`}
-                </CodeBlock>
-            </pre>
+            </CodeBlock>
 
-            <p>To enable the Observer on your model, simply execute <code>observeWith</code> in your <code>constructor</code> with your observer class as the first parameter.</p>
-            <p>We've also defined the <code>observeProperties</code> to link the attribute <code>author</code> to our custom method.</p>
+            <h3>Key Points</h3>
+            <ul className='list-disc my-3'>
+                <li>We've added predefined methods <code>updating</code> and <code>creating</code>, and a custom method <code>onAuthorChanged</code>.</li>
+                <li>The Observer extends <code>Observer&lt;MovieData&gt;</code>, providing type hinting for better development experience.</li>
+            </ul>
 
-            <pre>
-                <CodeBlock>
-                    {`observeProperties = {
+            <h3>Linking Custom Methods to Model Properties</h3>
+            <p>To link specific model properties to custom observer methods, define the <code>observeProperties</code> object in your model:</p>
+            <CodeBlock>
+{`observeProperties = {
     author: 'onAuthorChanged'
 }`}
-                </CodeBlock>
-            </pre>
+            </CodeBlock>
 
-            <p>See the full example below:</p>
-            <pre>
-                <CodeBlock>
-                    {`import Model from '@src/core/base/Model';
+            <h3>Complete Model Example with Observer</h3>
+            <CodeBlock>
+{`import Model from '@src/core/base/Model';
 import { ObjectId } from 'mongodb';
 import MovieObserver from '../observers/MovieObserver';
 
@@ -82,7 +73,6 @@ export interface MovieData {
 }
 
 export default class Movie extends Model<MovieData> {
-
     fields: string[] = [
         ...this.fields,
         'subscriptionId',
@@ -103,11 +93,16 @@ export default class Movie extends Model<MovieData> {
         return this.data?.author ?? null;
     }
 }`}
-                </CodeBlock>
-            </pre>
+            </CodeBlock>
+
+            <h3>Best Practices</h3>
+            <ul className='list-disc my-3'>
+                <li>Only enable observers on models where you need reactive behavior.</li>
+                <li>Keep observer logic focused and lightweight to avoid performance issues.</li>
+                <li>Use custom methods for complex property-specific logic.</li>
+                <li>Always consider the performance implications when adding observers to frequently used models.</li>
+            </ul>
         </article>
-
-
     );
 }
 
