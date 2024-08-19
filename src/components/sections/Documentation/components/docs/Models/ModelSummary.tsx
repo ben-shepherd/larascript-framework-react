@@ -16,17 +16,19 @@ const ModelSummary = () => {
             <p>We will create our model file here: <code>@src/app/models/MovieModel.ts</code></p>
             <pre>
                 <CodeBlock>
-                    {`import Model from '@src/core/base/Model';
-import { ObjectId } from 'mongodb';
+                    {`import { ObjectId } from 'mongodb';
 
-interface MovieData {
+import Model from '@src/core/base/Model';
+import IModelData from "@src/core/interfaces/IModelData";
+
+export interface IMovieData extends IModelData {
     _id: ObjectId;
     subscriptionId: string;
     author: string;
     genre: string;
 }
 
-export default class Movie extends Model<MovieData> {
+export default class Movie extends Model<IMovieData> {
 
     fields: string[] = [
         ...this.fields,

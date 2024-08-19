@@ -189,8 +189,6 @@ const data: DocumentationItem[] = [
         children: [
             {
                 href: "#mongodb-5-1",
-                title: "Database configuration",
-                titleSmall: "Configuration",
                 content: MongoConfiguration
             },
             {

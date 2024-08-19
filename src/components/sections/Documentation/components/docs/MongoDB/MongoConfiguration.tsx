@@ -3,6 +3,8 @@ import CodeBlock from "../../../../../utils/CodeBlock";
 const MongoConfiguration = () => {
     return (
         <article>
+            <h2>Provider</h2>
+            <p><code>@src/core/domains/database/mongodb/providers/MongoDBProvider.ts</code></p>
             <h2>Configuration</h2>
             <p><code>@src/config/database/mongodb.ts</code></p>
             <pre>
