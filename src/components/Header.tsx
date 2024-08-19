@@ -32,13 +32,17 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div id="header-alpha-warning">
-        <h2>This is an alpha version.</h2>
-        <ul>
+      <div className="header_alpha_warning">
+        <h2 className="header_alpha_warning__h2">This is an alpha version.</h2>
+        <ul className="header_alpha_warning__list">
           <li>Some features may be removed or changed without notice.</li>
           <li>Certain functionalities might not work as expected.</li>
           <li>We appreciate your patience as we continue to update and test.</li>
         </ul>
+        <div className="header_alpha_warning__under_construction">
+          <div className="header_alpha_warning__under_construction__img" title="under construction"></div>
+          <a className="header_alpha_warning__under_construction_attribution" href="https://www.flaticon.com/free-icons/under-construction" title="under construction icons">Icon by winnievinzence</a>
+        </div>
       </div>
       <div id="header-down">
         <svg className="size-6 h-6 alice-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
