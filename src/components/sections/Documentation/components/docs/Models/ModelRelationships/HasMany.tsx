@@ -35,12 +35,6 @@ export class AuthorModel extends Model<AuthorModelData> {
                 </CodeBlock>
             </pre>
 
-            <h2>HasMany Method Signature</h2>
-            <pre>
-                <CodeBlock>
-                    {`public async hasMany<ForeignModel extends Model<any> = Model<any>>(options: HasManyOptions): Promise<ForeignModel[]>`}
-                </CodeBlock>
-            </pre>
         </>
     )
 }

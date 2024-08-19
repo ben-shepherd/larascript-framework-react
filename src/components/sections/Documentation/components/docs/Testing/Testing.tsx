@@ -26,7 +26,7 @@ const Testing = () => {
             
             <h4 className="mt-5">1. Running All Tests</h4>
             <p>To run all tests in the project, use the following command:</p>
-            <pre><code>yarn run test:all</code></pre>
+            <pre><code>yarn run test</code></pre>
             
             <h4 className="mt-5">2. Running Individual Test Files</h4>
             <p>To run tests from a specific file, use the following command structure:</p>

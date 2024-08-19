@@ -74,8 +74,6 @@ const resultArray = myServiceMethod()`}
             <p>Prefixes available:</p>
             <ul>
                 <li><code>@src</code> -&gt; <code>/src</code></li>
-                <li><code>@core</code> -&gt; <code>/src/core</code></li>
-                <li><code>@app</code> -&gt; <code>/src/app</code></li>
             </ul>
 
             <p>Example</p>

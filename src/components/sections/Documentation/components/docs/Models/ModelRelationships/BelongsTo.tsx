@@ -40,13 +40,6 @@ class MovieModel extends Model<MovieModelData> {
 }`}
                 </CodeBlock>
             </pre>
-            
-            <h2>BelongsTo Method Signature</h2>
-            <pre>
-                <CodeBlock>
-                    {`async belongsTo<ForeignModel extends Model<any> = Model<any>>(options: BelongsToOptions): Promise<ForeignModel | null>`}
-                </CodeBlock>
-            </pre>
         </>
     )
 }

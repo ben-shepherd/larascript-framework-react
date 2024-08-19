@@ -11,15 +11,24 @@ const ModelMethods = () => {
                 </SimpleCodeBlock>
             </pre>
 
-            <h2>Get an value from an attribute</h2>
+            <h2>fill</h2>
             <pre>
                 <SimpleCodeBlock>
-                    {`const genre = movie.getAttribute('genre')
-console.log(genre) // 'Horror' | null`}
+                    {`movie.fill({
+    author: 'Christopher Nolan',
+    genre: 'Horror
+})`}
                 </SimpleCodeBlock>
             </pre>
 
-            <h2>Get the entire data state object from your model</h2>
+            <h2>Get an value from an attribute</h2>
+            <pre>
+                <SimpleCodeBlock>
+                    {`const genre = movie.getAttribute('genre') // 'Horror' | null`}
+                </SimpleCodeBlock>
+            </pre>
+
+            <h2>Get data state, excluding guarded properties</h2>
             <pre>
                 <SimpleCodeBlock>
                     {`type GetDataOptions = {
