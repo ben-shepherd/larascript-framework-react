@@ -6,7 +6,7 @@ const PostmanCollection = () => {
             <p>To facilitate easier testing and interaction with the API, we provide a pre-configured Postman collection. This collection includes basic endpoints that are already set up for immediate use.</p>
 
             <div className="my-5">
-                <strong>Download here:<br /> <a href="/data/LarascriptNode.postman_collection.json" download target="_blank" rel="noopener noreferrer">LarascriptNode.postman_collection.json</a></strong>
+                
             </div>
 
             <p>This preconfigured collection saves you time in setting up requests and allows you to quickly test and interact with the authentication system.</p>

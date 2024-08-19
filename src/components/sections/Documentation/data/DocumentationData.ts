@@ -35,12 +35,9 @@ import ObserverMethods from "../components/docs/Observers/ObserverMethods"
 import ObserverModel from "../components/docs/Observers/ObserverModel"
 import ObserverSummary from "../components/docs/Observers/ObserverSummary"
 import PostmanCollection from "../components/docs/Postman/PostmanCollection"
-import ContainerExplained from "../components/docs/ProvidersAndContainers/ContainerExplained"
-import NewContainer from "../components/docs/ProvidersAndContainers/NewContainer"
-import ProviderSummary from "../components/docs/ProvidersAndContainers/ProviderSummary"
-import Registering from "../components/docs/ProvidersAndContainers/Registering"
-import RetrieveFromContainer from "../components/docs/ProvidersAndContainers/RetrieveFromContainer"
-import TypeHintingConfig from "../components/docs/ProvidersAndContainers/TypeHintingConfig"
+import PostmanDownload from "../components/docs/Postman/PostmanDownload"
+import ProviderContainers from "../components/docs/Providers/ProviderContainers"
+import ProviderSummary from "../components/docs/Providers/ProviderSummary"
 import RepositorySummary from "../components/docs/Repositories/RepositorySummary"
 import Services from "../components/docs/Services/Services"
 import Singletons from "../components/docs/Services/Singletons"
@@ -86,6 +83,61 @@ const data: DocumentationItem[] = [
         ]
     },
     {
+        href: '#postman',
+        title: "Postman Collection",
+        titleSmall: "Postman",
+        children: [
+            {
+                content: PostmanCollection
+            },
+            {
+                href: "#postman-download-collection",
+                title: "Download Postman Collection",
+                titleSmall: "Download",
+                content: PostmanDownload
+            }
+        ]
+    },
+    {
+        href: "#express-web-server",
+        title: "Express Web Server",
+        titleSmall: "Express",
+        children: [
+            {
+                content: ExpressSummary,
+            },
+            {
+                href: "#express-web-server-3-2",
+                title: "Routing",
+                content: RoutingFiles
+            },
+            {
+                href: "#express-web-server-3-3",
+                title: "Middleware",
+                content: ExpressMiddleware
+            },
+            {
+                href: "#express-web-server-3-3",
+                title: "Actions",
+                content: ExpressAction
+            },
+        ],
+    },
+    {
+        href: "#providers",
+        title: "Providers",
+        children: [
+            {
+                content: ProviderSummary
+            },
+            {
+                href: "#providers-containers",
+                title: "App Container",
+                content: ProviderContainers
+            }
+        ]
+    },
+    {
         href: "#authentication",
         title: "Authentication",
         children: [
@@ -127,41 +179,6 @@ const data: DocumentationItem[] = [
                 content: AuthModels
             },
         ],
-    },
-    {
-        href: "#express-web-server",
-        title: "Express Web Server",
-        titleSmall: "Express",
-        children: [
-            {
-                content: ExpressSummary,
-            },
-            {
-                href: "#express-web-server-3-2",
-                title: "Routing",
-                content: RoutingFiles
-            },
-            {
-                href: "#express-web-server-3-3",
-                title: "Middleware",
-                content: ExpressMiddleware
-            },
-            {
-                href: "#express-web-server-3-3",
-                title: "Actions",
-                content: ExpressAction
-            },
-        ],
-    },
-    {
-        href: '#postman',
-        title: "Postman Collection",
-        titleSmall: "Postman",
-        children: [
-            {
-                content: PostmanCollection
-            }
-        ]
     },
     {
         href: '#validation',
@@ -251,46 +268,6 @@ const data: DocumentationItem[] = [
         ]
     },
     {
-        href: "#containers",
-        title: "App Container",
-        titleSmall: "Container",
-        children: [
-            {
-                content: ProviderSummary,
-            },
-            {
-                href: "#containers-1-2",
-                title: "Container explained",
-                titleSmall: "Container",
-                content: ContainerExplained
-            },
-            {
-                href: "#containers-1-1",
-                title: "Registering a provider",
-                titleSmall: 'Registering',
-                content: Registering,
-            },
-            {
-                href: "#containers-1-3",
-                title: "Type hinting config structure",
-                titleSmall: 'Type hinting',
-                content: TypeHintingConfig
-            },
-            {
-                href: "#containers-1-4",
-                title: "Setting up a new container",
-                titleSmall: "Setup new",
-                content: NewContainer
-            },
-            {
-                href: "#containers-1-5",
-                title: "Retrieving from the container",
-                titleSmall: "Retrieving",
-                content: RetrieveFromContainer
-            },
-        ],
-    },
-    {
         href: "#services",
         title: "Services",
         children: [
@@ -343,12 +320,14 @@ const data: DocumentationItem[] = [
             },
             {
                 href: "#observers-9-1",
-                title: "Methods",
+                title: "Observer Methods",
+                titleSmall: "Methods",
                 content: ObserverMethods
             },
             {
                 href: "#observers-9-2",
-                title: "Models",
+                title: "Observer Models",
+                titleSmall: "Models",
                 content: ObserverModel
             }
         ],
