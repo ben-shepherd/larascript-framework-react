@@ -59,13 +59,13 @@
 							"mode": "raw",
 							"raw": "{\r\n    \"email\": \"{{testEmail}}\",\r\n    \"password\": \"{{testPassword}}\",\r\n    \"firstName\": \"Bob\"\r\n}",
 							"options": {
-								"raw": {
+								"raw": {	
 									"language": "json"
 								}
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/api/auth/create",
+							"raw": "{{baseUrl}}/auth/create",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -129,7 +129,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/api/auth/login",
+							"raw": "{{baseUrl}}/auth/login",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -179,7 +179,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/api/auth/user",
+							"raw": "{{baseUrl}}/auth/user",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -238,7 +238,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/api/auth/user",
+							"raw": "{{baseUrl}}/auth/user",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -288,7 +288,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/api/auth/revoke",
+							"raw": "{{baseUrl}}/auth/revoke",
 							"host": [
 								"{{baseUrl}}"
 							],

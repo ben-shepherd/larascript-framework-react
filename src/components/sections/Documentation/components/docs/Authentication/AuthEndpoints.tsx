@@ -14,7 +14,7 @@ const AuthEndpoints = () => {
 
             <h2>Create a User</h2>
             <p>Allows for the creation of a new user account.</p>
-            <p><strong>POST</strong> <code>{`{baseUrl}`}/api/auth/create</code></p>
+            <p><strong>POST</strong> <code>{`{baseUrl}`}/auth/create</code></p>
             <p><strong>Body</strong></p>
             <CodeBlock>
                 {`{
@@ -40,7 +40,7 @@ const AuthEndpoints = () => {
 
             <h2>User Login</h2>
             <p>Authenticates a user and returns a token for subsequent API calls.</p>
-            <p><strong>POST</strong> <code>{`{baseUrl}`}/api/auth/login</code></p>
+            <p><strong>POST</strong> <code>{`{baseUrl}`}/auth/login</code></p>
             <p><strong>Body</strong></p>
             <CodeBlock>
                 {`{
@@ -66,7 +66,7 @@ const AuthEndpoints = () => {
 
             <h2>Get User Information</h2>
             <p>Retrieves information about the currently authenticated user.</p>
-            <p><strong>GET</strong> <code>{`{baseUrl}`}/api/auth/user</code></p>
+            <p><strong>GET</strong> <code>{`{baseUrl}`}/auth/user</code></p>
             <p><strong>Header</strong></p>
             <CodeBlock>
                 {`{
@@ -90,7 +90,7 @@ const AuthEndpoints = () => {
 
             <h2>Logout</h2>
             <p>Revokes the users token.</p>
-            <p><strong>POST</strong> <code>{`{baseUrl}`}/api/auth/revoke</code></p>
+            <p><strong>POST</strong> <code>{`{baseUrl}`}/auth/revoke</code></p>
             <p><strong>Header</strong></p>
             <CodeBlock>
                 {`{

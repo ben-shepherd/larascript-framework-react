@@ -38,6 +38,7 @@ import RepositorySummary from "../components/docs/Repositories/RepositorySummary
 import Services from "../components/docs/Services/Services"
 import Singletons from "../components/docs/Services/Singletons"
 import Testing from "../components/docs/Testing/Testing"
+import ValidatorCreating from '../components/docs/Validator/ValidatorCreating'
 import ValidatorJoi from "../components/docs/Validator/ValidatorJoi"
 import ValidatorMiddleware from "../components/docs/Validator/ValidatorMiddleware"
 import ValidatorSummary from "../components/docs/Validator/ValidatorSummary"
@@ -188,6 +189,12 @@ const data: DocumentationItem[] = [
                 title: "Joi Documentation",
                 titleSmall: "Joi",
                 content: ValidatorJoi
+            },
+            {
+                href: "#validation-creating",
+                title: "Creating Validator",
+                titleSmall: "Creating",
+                content: ValidatorCreating
             },
             {
                 href: "#validation-middleware",
