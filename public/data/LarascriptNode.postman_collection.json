@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "b5472d06-d28e-40d7-a20a-877c2cf62538",
-		"name": "API",
+		"name": "Larascript Node",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "6100245"
 	},
@@ -59,19 +59,19 @@
 							"mode": "raw",
 							"raw": "{\r\n    \"email\": \"{{testEmail}}\",\r\n    \"password\": \"{{testPassword}}\",\r\n    \"firstName\": \"Bob\"\r\n}",
 							"options": {
-								"raw": {	
+								"raw": {
 									"language": "json"
 								}
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/auth/create",
+							"raw": "{{baseUrl}}/auth/users/create",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"api",
 								"auth",
+								"users",
 								"create"
 							]
 						}
@@ -129,7 +129,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/auth/login",
+							"raw": "{{baseUrl}}/api/auth/login",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -179,7 +179,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/auth/user",
+							"raw": "{{baseUrl}}/api/auth/user",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -243,7 +243,6 @@
 								"{{baseUrl}}"
 							],
 							"path": [
-								"api",
 								"auth",
 								"user"
 							]
@@ -293,7 +292,6 @@
 								"{{baseUrl}}"
 							],
 							"path": [
-								"api",
 								"auth",
 								"revoke"
 							]
