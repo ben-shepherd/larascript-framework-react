@@ -60,9 +60,15 @@ const ConsoleMake = () => {
             </CodeBlock>
 
             <h3>8. Create an Observer</h3>
-            <p>Generates a new Observer file in <code>@src/app/events/observers/{'{fileName}'}</code></p>
+            <p>Generates a new Observer file in <code>@src/app/observers/{'{fileName}'}</code></p>
             <CodeBlock language="bash">
                 yarn run dev -- make:observer --name=MovieObserver
+            </CodeBlock>
+
+            <h3>8. Create a a Validator</h3>
+            <p>Generates a new Validator file in <code>@src/app/validators{'{fileName}'}</code></p>
+            <CodeBlock language="bash">
+                yarn run dev -- make:validator --name=CreateMovieValidator
             </CodeBlock>
 
             <h3>Best Practices</h3>

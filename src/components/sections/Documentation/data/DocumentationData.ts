@@ -14,6 +14,7 @@ import EventSummary from "../components/docs/Events/EventSummary"
 import EventWorker from "../components/docs/Events/EventWorker"
 import ExpressAction from "../components/docs/Express/ExpressAction"
 import ExpressMiddleware from "../components/docs/Express/ExpressMiddleware"
+import ExpressResourceRoutes from "../components/docs/Express/ExpressResourceRoutes"
 import RoutingFiles from "../components/docs/Express/ExpressRouting"
 import ExpressSummary from "../components/docs/Express/ExpressSummary"
 import { default as InstallCloning } from "../components/docs/Installation/InstallCloning"
@@ -96,28 +97,33 @@ const data: DocumentationItem[] = [
         ]
     },
     {
-        href: "#express-web-server",
-        title: "Express Web Server",
-        titleSmall: "Express",
+        href: "#http-express",
+        title: "Express (Http)",
         children: [
             {
                 content: ExpressSummary,
             },
             {
-                href: "#express-web-server-3-2",
+                href: "#http-express-routing",
                 title: "Routing",
                 content: RoutingFiles
             },
             {
-                href: "#express-web-server-3-3",
+                href: "#http-express-middleware",
                 title: "Middleware",
                 content: ExpressMiddleware
             },
             {
-                href: "#express-web-server-3-3",
+                href: "#http-express-actions",
                 title: "Actions",
                 content: ExpressAction
             },
+            {
+                href: "#http-express-resources",
+                title: "Routing Resources",
+                titleSmall: "Resources",
+                content: ExpressResourceRoutes
+            }
         ],
     },
     {
