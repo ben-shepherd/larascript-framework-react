@@ -3,44 +3,35 @@ import CodeBlock from "../../../../../utils/CodeBlock";
 const ExpressActions = () => {
     return (
         <article>
-            <p>Actions in this framework are essentially equivalent to controllers in traditional MVC architectures. They serve as the primary location for your endpoint logic, handling the request processing and response generation for specific routes.</p>
+            <p>Actions, equivalent to controllers in MVC, handle endpoint logic. They're located in <code>@src/app/actions</code>.</p>
             
-            <h3>Location and Creation of Actions</h3>
-            <p>All Action files should be placed in the <code>@src/app/actions</code> directory.</p>
-            
-            <p>To streamline the process of creating new Actions, you can use the provided command-line tool:</p>
+            <p>Generate a new action:</p>
             
             <CodeBlock language="bash">
                 yarn run dev -- make:action --name=UpdateUser
             </CodeBlock>
             
-            <p>This command will generate a new Action file named <code>@src/app/actions/updateUserAction.ts</code> in the correct directory, complete with basic boilerplate code to get you started quickly.</p>
+            <p>This creates <code>@src/app/actions/updateUserAction.ts</code> with boilerplate code.</p>
             
             <h3>BaseRequest Type</h3>
-            <p>To streamline the development of Actions, we provide a <code>BaseRequest</code> type. This type extends the standard Express request object with additional properties:</p>
-            <ul>
-                <li><code>validator</code>: Handling of request data validation</li>
-                <li><code>user</code>: Accesing the user model</li>
+            <p>The <code>BaseRequest</code> type extends the Express request with:</p>
+            <ul className="list-disc py-3">
+                <li><code>validator</code>: For request data validation</li>
+                <li><code>user</code>: Access to the user model</li>
                 <li><code>apiToken</code>: Access to the current API token</li>
             </ul>
             
             <h3>Example Action</h3>
-            <p>Here's an example of an Action that demonstrates the use of <code>BaseRequest</code>:</p>
             
             <CodeBlock language="typescript">
                 {`import { Response } from 'express';
 import responseError from '@src/core/domains/express/requests/responseError';
-import { BaseRequest } from '../../express/types/BaseRequest.t';
+import { BaseRequest } from '@src/core/domains/express/types/BaseRequest.t';
 
 export default (req: BaseRequest, res: Response) => {
     try {
-        // Check validation result
         const successfullyValidated = req.validator?.validate(req.body).success
-        
-        // Get the authorized user
         const user = req.user?.getData({ excludeGuarded: true })
-
-        // Get ApiToken
         const apiToken = req.apiToken?.getData({ excludeGuarded: true })
 
         res.send({ success: successfullyValidated, user, apiToken })
@@ -53,7 +44,7 @@ export default (req: BaseRequest, res: Response) => {
 }`}
             </CodeBlock>
             
-            <p><strong>Note:</strong> When creating Actions, ensure they remain focused on orchestrating the request handling process. Complex business logic should be delegated to appropriate services or repositories to maintain separation of concerns.</p>
+            <p>Keep actions focused on request handling. Delegate complex logic to services or repositories.</p>
         </article>
     );
 }

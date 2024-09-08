@@ -9,7 +9,7 @@ const AuthGenerateJwt = () => {
             <h3>Generating the Secret</h3>
             <p>Run the following command in your terminal to generate a JWT secret and update your .env file:</p>
             <CodeBlock language="bash">
-                yarn run dev -- app:generate-jwt-secret --no-db
+                yarn run dev -- app:generate-jwt-secret --no-db --no-auth
             </CodeBlock>
 
             <p>This command will:</p>
@@ -20,6 +20,7 @@ const AuthGenerateJwt = () => {
             </ul>
 
             <p>The <code>--no-db</code> flag is used to prevent loading the database, which is useful if your database setup is not yet complete.</p>
+            <p>The <code>--no-auth</code> flag is used to prevent loading authentication system, which may error on start up due to missing JWT secret.</p>
 
             <h3>Result</h3>
             <p>After running the command, your .env file will contain a new or updated JWT_SECRET entry. For example:</p>

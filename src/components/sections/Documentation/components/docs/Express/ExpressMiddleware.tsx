@@ -15,50 +15,34 @@ const ExpressMiddleware = () => {
             
             <p>This command will generate a new middleware file named <code>@src/app/middleware/userMiddleware.ts</code> with basic boilerplate code, saving you time and ensuring consistency across your middleware files.</p>
             
-            <h3>Middleware Authentication Example</h3>
-            
-            <p>Here's an example of an authorization middleware that checks for a valid API token:</p>
+            <h3>Middleware Example</h3>
             
             <CodeBlock language="typescript">
-                {`import { NextFunction, Response } from 'express';
+                {`import { BaseRequest } from '@src/core/domains/express/types/BaseRequest.t';
+import { NextFunction, Response } from 'express';
 
-import UnauthorizedError from '@src/core/domains/auth/exceptions/UnauthorizedError';
-import IAuthorizedRequest from '@src/core/domains/auth/interfaces/IAuthorizedRequest';
-import responseError from '@src/core/domains/express/requests/responseError';
-import { App } from '@src/core/services/App';
-
-export const authorize = () => async (req: IAuthorizedRequest, res: Response, next: NextFunction): Promise<void> => {
-    try {
-        const authorization = (req.headers.authorization ?? '').replace('Bearer ', '');
-
-        const apiToken = await App.container('auth').attemptAuthenticateToken(authorization)
-
-        const user = await apiToken?.user()
-
-        if(!user || !apiToken) {
-            throw new UnauthorizedError();
-        }
-
-        req.user = user;
-        req.apiToken = apiToken
-
-        next();
-    }
-    catch (error) {
-        if(error instanceof UnauthorizedError) {
-            responseError(req, res, error, 401)
-            return;
-        }
-
-        if(error instanceof Error) {
-            responseError(req, res, error)
-        }
-    }
+export const logger = () => async (req: BaseRequest, res: Response, next: NextFunction): Promise<void> => {
+    console.log('Request', 'Method: ' + req.method, 'URL: ' + req.url);
+    next();
 };`}
             </CodeBlock>
 
             
             <p><strong>Note:</strong> After creating a middleware file, you will need to add it to your route configuration.</p>
+
+            <CodeBlock>
+{`const routes: IRoute[] = [
+    {
+        name: 'health',
+        method: 'get',
+        path: '/health',
+        action: health,
+        middlewares: [logger()], // Add one or more middleware
+    }
+]
+
+export default routes;`}
+            </CodeBlock>
         </article>
     );
 }

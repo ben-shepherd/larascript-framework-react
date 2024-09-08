@@ -17,9 +17,10 @@ import ExpressMiddleware from "../components/docs/Express/ExpressMiddleware"
 import ExpressResourceRoutes from "../components/docs/Express/ExpressResourceRoutes"
 import RoutingFiles from "../components/docs/Express/ExpressRouting"
 import ExpressSummary from "../components/docs/Express/ExpressSummary"
-import { default as InstallCloning } from "../components/docs/Installation/InstallCloning"
-import InstallDocker from "../components/docs/Installation/InstallDocker"
-import InstallPackages from "../components/docs/Installation/InstallPackages"
+import InstallRunningDocker from "../components/docs/Installation/InstallRunningDocker"
+import InstallSetupCommand from "../components/docs/Installation/InstallSetupCommand"
+import { default as Installing } from "../components/docs/Installation/InstallSummary"
+import Requirements from "../components/docs/Installation/Requirements"
 import ModelCRUD from "../components/docs/Models/ModelCRUD"
 import ModelMethods from "../components/docs/Models/ModelMethods"
 import ModelProperties from "../components/docs/Models/ModelProperties"
@@ -32,7 +33,6 @@ import MongoMultipleConnections from "../components/docs/MongoDB/MongoMultipleCo
 import ObserverModel from "../components/docs/Observers/ObserverModel"
 import ObserverSummary from "../components/docs/Observers/ObserverSummary"
 import PostmanCollection from "../components/docs/Postman/PostmanCollection"
-import PostmanDownload from "../components/docs/Postman/PostmanDownload"
 import ProviderContainers from "../components/docs/Providers/ProviderContainers"
 import ProviderSummary from "../components/docs/Providers/ProviderSummary"
 import RepositorySummary from "../components/docs/Repositories/RepositorySummary"
@@ -47,58 +47,42 @@ import { DocumentationItem } from "../types/DocumentationTypes.t"
 
 const data: DocumentationItem[] = [
     {
-        href: "#installation",
-        title: "Installation",
-        titleSmall: "Install",
+        href: "#setup",
+        title: "Setup",
+        titleSmall: "Setup",
         children: [
             {
-                href: "#installation-1",
-                title: "Cloning",
-                content: InstallCloning,
+                href: "#setup-requirements",
+                title: "Requirements",
+                content: Requirements,
             },
             {
-                href: "#installation-2",
-                title: "Installing Packages",
-                titleSmall: "Packages",
-                content: InstallPackages
+                href: "#setup-install",
+                title: "Install",
+                content: Installing,
             },
             {
-                href: "#installation-3",
+                href: "#setup-command",
+                title: "Setup Command",
+                content: InstallSetupCommand,
+            },
+            {
+                href: "#setup-docker",
                 title: "Running Docker",
                 titleSmall: "Docker",
-                content: InstallDocker
-            }
-        ]
-    },
-    {
-        href: "#testing",
-        title: "Running Tests",
-        titleSmall: "Testing",
-        children: [
-            {
-                content: Testing,
-            }
-        ]
-    },
-    {
-        href: '#postman',
-        title: "Postman Collection",
-        titleSmall: "Postman",
-        children: [
-            {
-                content: PostmanCollection
+                content: InstallRunningDocker,
             },
             {
-                href: "#postman-download-collection",
-                title: "Download Postman Collection",
-                titleSmall: "Download",
-                content: PostmanDownload
-            }
+                href: "#setup-postman",
+                title: "Postman",
+                content: PostmanCollection
+            },
         ]
     },
     {
         href: "#http-express",
-        title: "Express (Http)",
+        title: "Express Web Server",
+        titleSmall: "Express",
         children: [
             {
                 content: ExpressSummary,
@@ -347,6 +331,15 @@ const data: DocumentationItem[] = [
                 titleSmall: "Custom",
                 content: ConsoleCustomCommands
             },
+        ]
+    },
+    {
+        href: "#testing",
+        title: "Jest & Testing",
+        children: [
+            {
+                content: Testing,
+            }
         ]
     },
     {

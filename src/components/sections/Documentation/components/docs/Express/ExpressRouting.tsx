@@ -3,85 +3,53 @@ import CodeBlock from "../../../../../utils/CodeBlock";
 const Routing = () => {
     return (
         <article>
-            <p>The application's routing structure is centralized in the <code>@src/app/routes</code> directory. This directory serves as the main entry point for defining and organizing all routes in your application.</p>
-            
-            <h3>Generating Route Files</h3>
-            
-            <p>To streamline the process of creating new route files, you can use the provided command-line tool:</p>
+            <p>Routes are centralized in <code>@src/app/routes</code>.</p>
+
+            <p>Generate new route files using:</p>
             
             <CodeBlock language="bash">
-                yarn run dev -- make:routes --name=User
+                yarn run dev -- make:routes --name=Blog
             </CodeBlock>
 
-            <p>This command will:</p>
-            <ul className="list-disc">
-                <li>Generate a new route file with boilerplate code.</li>
-                <li>Name the file based on the provided <code>--name</code> parameter (e.g., <code>userRoutes.ts</code>).</li>
-                <li>Place the file in the <code>@src/app/routes/userRoutes.ts</code>.</li>
-            </ul>
+            <p>This creates <code>@src/app/routes/userRoutes.ts</code> with boilerplate code.</p>
             
-            <p>For example, to add a new User route:</p>
+            <h3>Example Routing File</h3>
             
             <CodeBlock language="typescript">
-                {`import Route from "@src/core/domains/express/routing/Route";
-import RouteGroup from "@src/core/domains/express/routing/RouteGroup";
-import UpdateUserValidator from '@src/app/validators/user/UpdateUserValidator';
-import updateUser from '@src/app/actions/updateUser';
-import { authorize } from '@src/core/domains/express/middleware/authorize';
-
-const UserRoutes = RouteGroup([
+{`const UserRoutes = RouteGroup([
     Route({
         name: 'index',
         method: 'get',
-        path: '/api/user/update',
-        action: updateUser,
+        path: '/blog/update',
+        action: updateBlog,
         middlewares: [authorize()],
-        validator: UpdateUserValidator,
+        validator: UpdateBlogValidator,
     }),
 ])
 
-export default UserRoutes;;`}
+export default UserRoutes;`}
             </CodeBlock>
         
+            <h3>Binding Routes</h3>
 
-            <p><strong>Important:</strong> Make sure to bind your routes to Express in your App provider.</p>
+            <p>Bind routes to Express in your App provider:</p>
 
             <CodeBlock language="typescript">
-                {`import routes from "@src/app/routes/api";
-import userRoutes from "@src/app/routes/userRoutes";
-import BaseProvider from "@src/core/base/Provider";
-import { App } from "@src/core/services/App";
+{`export default class AppProvider extends BaseProvider {
 
-export default class AppProvider extends BaseProvider
-{
-    /** rest of the logic */
+    // ...
 
-    public async boot(): Promise<void> 
-    {
-        this.log('Booting AppProvider');
-
+    public async boot(): Promise<void> {
         /**
-         * Bind routes to Express
+         * Register your routes 
          */
-        this.routes();
-
-        /**
-         * Boot your services here
-         */
-    }
-
-    /**
-     *  Setup routing files
-     */
-    private routes(): void
-    {
         App.container('express').bindRoutes(routes);
         App.container('express').bindRoutes(userRoutes);    
     }
 }`}
             </CodeBlock>
  
-            <p><strong>Note:</strong> Remember to follow the established naming conventions and file structure when adding new routes to maintain consistency across your application.</p>
+            <p>Maintain consistency by following established naming conventions and file structure when adding new routes.</p>
         </article>
     );
 }
