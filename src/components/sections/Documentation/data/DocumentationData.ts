@@ -1,13 +1,15 @@
 import AuthConfiguration from "../components/docs/Authentication/AuthConfiguration"
-import AuthContainer from "../components/docs/Authentication/AuthContainer"
 import AuthEndpoints from "../components/docs/Authentication/AuthEndpoints"
 import AuthGenerateJwt from "../components/docs/Authentication/AuthGenerateJwt"
-import AuthModels from "../components/docs/Authentication/AuthModels"
-import AuthService from "../components/docs/Authentication/AuthService"
 import AuthSummary from "../components/docs/Authentication/AuthSummary"
 import CodingStandards from "../components/docs/CodingStandards"
 import ConsoleCustomCommands from "../components/docs/Console/ConsoleCustomCommands"
 import ConsoleMake from "../components/docs/Console/ConsoleMake"
+import DatabaseClient from "../components/docs/Database/DatabaseClient"
+import DatabaseConfig from "../components/docs/Database/DatabaseConfig"
+import DatabaseDocumentManager from "../components/docs/Database/DatabaseDocumentManager"
+import DatabaseSchema from "../components/docs/Database/DatabaseSchema"
+import DatabaseService from "../components/docs/Database/DatabaseService"
 import EventDrivers from "../components/docs/Events/EventDrivers"
 import EventSubscribersAndListeners from "../components/docs/Events/EventSubscribersAndListeners"
 import EventSummary from "../components/docs/Events/EventSummary"
@@ -17,27 +19,21 @@ import ExpressMiddleware from "../components/docs/Express/ExpressMiddleware"
 import ExpressResourceRoutes from "../components/docs/Express/ExpressResourceRoutes"
 import RoutingFiles from "../components/docs/Express/ExpressRouting"
 import ExpressSummary from "../components/docs/Express/ExpressSummary"
+import Extendables from "../components/docs/Extendables/ExtendableSummary"
 import InstallRunningDocker from "../components/docs/Installation/InstallRunningDocker"
 import InstallSetupCommand from "../components/docs/Installation/InstallSetupCommand"
 import { default as Installing } from "../components/docs/Installation/InstallSummary"
 import Requirements from "../components/docs/Installation/Requirements"
-import ModelCRUD from "../components/docs/Models/ModelCRUD"
-import ModelMethods from "../components/docs/Models/ModelMethods"
-import ModelProperties from "../components/docs/Models/ModelProperties"
-import ModelRelationships from "../components/docs/Models/ModelRelationships"
+import MigrationSummary from "../components/docs/Migrations/MigrationSummary"
+import ModelExamples from "../components/docs/Models/ModelMethods"
+import BelongsTo from "../components/docs/Models/ModelRelationships/BelongsTo"
+import HasMany from "../components/docs/Models/ModelRelationships/HasMany"
 import ModelSummary from "../components/docs/Models/ModelSummary"
-import MongoConfiguration from "../components/docs/MongoDB/MongoConfiguration"
-import MongoContainer from "../components/docs/MongoDB/MongoContainer"
-import MongoModelConnections from "../components/docs/MongoDB/MongoModelConnections"
-import MongoMultipleConnections from "../components/docs/MongoDB/MongoMultipleConnections"
 import ObserverModel from "../components/docs/Observers/ObserverModel"
 import ObserverSummary from "../components/docs/Observers/ObserverSummary"
 import PostmanCollection from "../components/docs/Postman/PostmanCollection"
-import ProviderContainers from "../components/docs/Providers/ProviderContainers"
 import ProviderSummary from "../components/docs/Providers/ProviderSummary"
 import RepositorySummary from "../components/docs/Repositories/RepositorySummary"
-import Services from "../components/docs/Services/Services"
-import Singletons from "../components/docs/Services/Singletons"
 import Testing from "../components/docs/Testing/Testing"
 import ValidatorCreating from '../components/docs/Validator/ValidatorCreating'
 import ValidatorJoi from "../components/docs/Validator/ValidatorJoi"
@@ -62,15 +58,15 @@ const data: DocumentationItem[] = [
                 content: Installing,
             },
             {
-                href: "#setup-command",
-                title: "Setup Command",
-                content: InstallSetupCommand,
-            },
-            {
                 href: "#setup-docker",
                 title: "Running Docker",
                 titleSmall: "Docker",
                 content: InstallRunningDocker,
+            },
+            {
+                href: "#setup-command",
+                title: "Setup Command",
+                content: InstallSetupCommand,
             },
             {
                 href: "#setup-postman",
@@ -116,11 +112,6 @@ const data: DocumentationItem[] = [
         children: [
             {
                 content: ProviderSummary
-            },
-            {
-                href: "#providers-containers",
-                title: "App Container",
-                content: ProviderContainers
             }
         ]
     },
@@ -147,24 +138,24 @@ const data: DocumentationItem[] = [
                 title: "Configuration",
                 content: AuthConfiguration,
             },
-            {
-                href: "#authentication-4-4",
-                title: "Auth Container",
-                titleSmall: "Container",
-                content: AuthContainer
-            },
-            {
-                href: "#authentication-4-5",
-                title: "Auth Service",
-                titleSmall: "Service",
-                content: AuthService
-            },
-            {
-                href: "#authentication-4-6",
-                title: "Auth Models",
-                titleSmall: "Models",
-                content: AuthModels
-            },
+            // {
+            //     href: "#authentication-4-4",
+            //     title: "Auth Container",
+            //     titleSmall: "Container",
+            //     content: AuthContainer
+            // },
+            // {
+            //     href: "#authentication-4-5",
+            //     title: "Auth Service",
+            //     titleSmall: "Service",
+            //     content: AuthService
+            // },
+            // {
+            //     href: "#authentication-4-6",
+            //     title: "Auth Models",
+            //     titleSmall: "Models",
+            //     content: AuthModels
+            // },
         ],
     },
     {
@@ -194,30 +185,48 @@ const data: DocumentationItem[] = [
         ]
     },
     {
-        href: "#mongodb",
-        title: "MongoDB",
+        href: "#database",
+        title: "Database",
         children: [
             {
-                href: "#mongodb-5-1",
-                content: MongoConfiguration
+                title: "Configuration",
+                titleSmall: "Config",
+                href: "#database-config",
+                content: DatabaseConfig
             },
             {
-                href: "#mongodb-5-2",
-                title: "MongoDB Container",
-                titleSmall: "Container",
-                content: MongoContainer
+                title: 'Database Container',
+                titleSmall: 'Container',
+                href: '#database-container',
+                content: DatabaseService
             },
             {
-                href: "#mongodb-5-3",
-                title: "Handling Multiple Connections",
-                titleSmall: "Multiple Connections",
-                content: MongoMultipleConnections
+                title: 'Database Client',
+                titleSmall: 'Client',
+                href: '#database-client',
+                content: DatabaseClient
             },
             {
-                href: "#mongodb-5-4",
-                title: "Change connection on a Model",
-                titleSmall: "Change Connection",
-                content: MongoModelConnections
+                title: 'Document Manager',
+                titleSmall: 'Documents',
+                href: '#database-document-manager',
+                content: DatabaseDocumentManager
+            },
+            {
+                title: 'Document Schema',
+                titleSmall: 'Schema',
+                href: '#database-schema',
+                content: DatabaseSchema
+            }
+        ],
+    },
+    {
+        href: "#migrations",
+        title: "Migrations",
+        children: [
+            {
+                href: "#migrations-summary",
+                content: MigrationSummary
             },
         ],
     },
@@ -229,25 +238,21 @@ const data: DocumentationItem[] = [
                 content: ModelSummary
             },
             {
-                href: "#models-6-1",
-                title: "Properties",
-                content: ModelProperties
+                href: "#models-examples",
+                title: "Examples",
+                content: ModelExamples,
             },
             {
-                href: "#models-6-2",
-                title: "Methods",
-                content: ModelMethods,
+                href: "#models-relationships-belongs-to",
+                title: "BelongsTo Relationship",
+                titleSmall: "BelongsTo",
+                content: BelongsTo
             },
             {
-                href: "#models-6-3",
-                title: "CRUD Operations",
-                titleSmall: "CRUD",
-                content: ModelCRUD
-            },
-            {
-                href: "#models-6-4",
-                title: "Relationships",
-                content: ModelRelationships
+                href: "#models-relationships-has-many",
+                title: "HasMany Relationship",
+                titleSmall: "HasMany",
+                content: HasMany
             },
         ],
     },
@@ -259,20 +264,6 @@ const data: DocumentationItem[] = [
                 content: RepositorySummary
             }
         ]
-    },
-    {
-        href: "#services",
-        title: "Services",
-        children: [
-            {
-                content: Services
-            },
-            {
-                href: "#services-2-1",
-                title: "Singletons",
-                content: Singletons
-            },
-        ],
     },
     {
         href: "#events",
@@ -332,6 +323,15 @@ const data: DocumentationItem[] = [
                 content: ConsoleCustomCommands
             },
         ]
+    },
+    {
+        href: "#extendables",
+        title: "Extendables",
+        children: [
+            {
+                content: Extendables
+            }
+        ],
     },
     {
         href: "#testing",

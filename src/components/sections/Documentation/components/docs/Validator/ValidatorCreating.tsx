@@ -6,7 +6,7 @@ const ValidatorCreating = () => {
       <p>To create a new validator, you can use the provided command-line tool:</p>
 
       <CodeBlock language="bash">
-        yarn run dev -- make:validator --name=UpdateUser
+        yarn dev -- make:validator --name=UpdateUser
       </CodeBlock>
 
       <p>This command generates a new validator file named `UpdateUserValidator.ts` with the following structure:</p>

@@ -36,7 +36,7 @@ const CodingStandards = () => {
 }`}
             </CodeBlock>
 
-            <h4>Type Example:</h4>
+            <h3>Type Example:</h3>
             <p>Filename: <code>MyServiceTypes.t.ts</code></p>
             <CodeBlock>
                 {`export type MyServiceMethodArgs = {

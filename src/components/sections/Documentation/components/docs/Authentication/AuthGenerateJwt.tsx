@@ -9,7 +9,7 @@ const AuthGenerateJwt = () => {
             <h3>Generating the Secret</h3>
             <p>Run the following command in your terminal to generate a JWT secret and update your .env file:</p>
             <CodeBlock language="bash">
-                yarn run dev -- app:generate-jwt-secret --no-db --no-auth
+                yarn dev -- app:generate-jwt-secret --no-db --no-auth
             </CodeBlock>
 
             <p>This command will:</p>

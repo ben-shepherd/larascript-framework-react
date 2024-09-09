@@ -62,12 +62,12 @@ const EventWorker = () => {
             <h3>Running the Worker</h3>
             <p>To start a worker process:</p>
 
-            <h4>Development Environment</h4>
+            <h3>Development Environment</h3>
             <CodeBlock language="bash">
-                yarn run dev -- worker
+                yarn dev -- worker
             </CodeBlock>
 
-            <h4>Production Environment</h4>
+            <h3>Production Environment</h3>
             <CodeBlock language="bash">
                 yarn run start -- worker
             </CodeBlock>

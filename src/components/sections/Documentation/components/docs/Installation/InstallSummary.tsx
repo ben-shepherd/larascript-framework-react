@@ -16,7 +16,7 @@ const Installing = () => {
       <h2>Clone and Set Up Your Repository</h2>
       <p>After creating your repository, follow these steps to set it up locally:</p>
       <ul className="list-disc py-3">
-        <li>Open a terminal or command prompt on your system</li>
+        <li className="py-2">Open a terminal or command prompt on your system</li>
         <li>Navigate to the folder where you want to store your project:
           <code>cd path/to/your/desired/folder</code>
         </li>
