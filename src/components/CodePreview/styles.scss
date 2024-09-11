@@ -1,0 +1,20 @@
+#code_preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616;
+    background-image: url("images/axiom-pattern.png");
+}
+
+.code_preview__item_title,
+.code_preview__item_title_small {
+    text-align: center;
+    color:#fff;
+}
+.code_preview__item_title_small {
+    font-weight:700;
+}
+.code_preview__item_code .codeBlock > div {
+    padding:30px;
+}
