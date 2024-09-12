@@ -9,7 +9,6 @@ const ValidationExample =
             lastName: Joi.string(),
         })
     }
-
 }`
 
 export default ValidationExample
