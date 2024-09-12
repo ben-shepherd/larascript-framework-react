@@ -12,7 +12,7 @@ const AppSetup = () => {
       <ul className="list-disc py-3">
         <li>Environment Setup: The command will copy <code>.env.example</code> to <code>.env</code>, creating a base configuration file.</li>
         
-        <li>Security Configuration: You'll be prompted to generate a new JWT secret.</li>
+        <li className="py-3">Security Configuration: You'll be prompted to generate a new JWT secret.</li>
         
         <li>Database Selection: 
           <ul className="list-disc py-3">

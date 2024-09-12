@@ -1,20 +1,24 @@
 
-import { CopyBlock as CodeBlockPlugin, dracula } from 'react-code-blocks';
+import { atomOneDark, CopyBlock as CodeBlockPlugin } from 'react-code-blocks';
+
 
 type Props = {
     children: string | string[]
     language?: string
-    showLineNumbers?: boolean
+    showLineNumbers?: boolean;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    theme?: any
 }
 
-const CodeBlock = ({ children, language = 'typescript', showLineNumbers = true }: Props) => {
+
+const CodeBlock = ({ children, language = 'typescript', showLineNumbers = true, theme = atomOneDark }: Props) => {
     return (
         <div className="codeBlock">
             <CodeBlockPlugin
                 text={children as string}
                 language={language}
                 showLineNumbers={showLineNumbers}
-                theme={dracula}
+                theme={theme}
             />
         </div>
     );

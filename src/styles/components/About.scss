@@ -7,13 +7,6 @@
     color: var(--seasalt);
   }
 
-  background-color: var(--jet);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   .left {
     display: flex;
     justify-content: right;
@@ -42,6 +35,15 @@
       transform: scale(1.1);
     }
 
+  }
+  
+  & {
+    background-color: var(--jet);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
