@@ -1,3 +1,4 @@
+import DatabaseConfigExample from "./examples/DatabaseConfigExample";
 import MigrationExample from "./examples/MigrationExample";
 import ModelsExample from "./examples/ModelsExample";
 import ObserverExample from "./examples/ObserverExample";
@@ -47,6 +48,11 @@ const Slides: Slide[] = [
         title: "Routing",
         description: "Example of a single route, and a RouteResource for the Blog Model.",
         content: RoutesExample
+    },
+    {
+        title: "Database Config",
+        description: "Example config showing how to define your database connections.",
+        content: DatabaseConfigExample
     }
 ]
 
