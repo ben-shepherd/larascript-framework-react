@@ -1,11 +1,5 @@
-import CodeItem from "./CodeItem"
 
-const ServiceProviders = () => {
-    return (
-        <CodeItem
-            title="Service Providers"
-            titleSmall="Here is an example of our ConsoleProvider which boots up the commands system."
-            code={
+const ServiceProvider = 
 `export default class ConsoleProvider extends BaseProvider {
 
     /**
@@ -42,9 +36,6 @@ const ServiceProviders = () => {
     */
     async boot(): Promise<void> {}
     
-}`}
-        />
-    )
-}
+}`
 
-export default ServiceProviders
+export default ServiceProvider

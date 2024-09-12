@@ -5,16 +5,60 @@
     align-items: center;
     background-color: #161616;
     background-image: url("images/axiom-pattern.png");
+    height: 100vh;
 }
 
 .code_preview__item_title,
 .code_preview__item_title_small {
     text-align: center;
-    color:#fff;
+    color: #fff;
 }
+
 .code_preview__item_title_small {
-    font-weight:700;
+    font-weight: 700;
 }
-.code_preview__item_code .codeBlock > div {
-    padding:30px;
+
+.code_preview__item_code {
+    text-wrap: pretty;
+}
+
+.code_preview__item_code .codeBlock>div {
+    padding: 30px;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+ */
+}
+
+#code_preview .react-slideshow-container+ul.indicators li {
+    width: 25px;
+    height: 15px;
+}
+
+#code_preview .react-slideshow-container+ul.indicators .each-slideshow-indicator button {
+    padding: 10px;
+}
+
+#code_preview .react-slideshow-container+ul.indicators .each-slideshow-indicator:before {
+    background-color: rgb(255, 255, 255);
+    width: 15px;
+    height: 15px;
+}
+
+#code_preview .react-slideshow-container+ul.indicators .each-slideshow-indicator.active {
+    opacity: 1;
+}
+
+#code_preview .react-slideshow-container+ul.indicators .each-slideshow-indicator.active:before {
+    background-color: rgb(238, 77, 77);
+}
+
+@media(max-width: 768px) {
+    .code_preview__item_code .codeBlock>div {
+        padding: 10px 0;
+    }
 }
