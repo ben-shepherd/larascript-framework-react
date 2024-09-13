@@ -6,30 +6,19 @@ const ModelsExample =
     revokedAt: Date | null;
 }
 
-class ApiToken extends Model<IApiTokenData> implements IApiTokenModel {
+class ApiToken extends Model<IApiTokenData> {
 
-    /**
-     * Required ApiToken fields
-     *
-     * @field userId The user this token belongs to
-     * @field token The token itself
-     * @field revokedAt The date and time the token was revoked (null if not revoked)
-     */
+    // Required ApiToken fields
     public fields: string[] = [
         'userId',
         'token',
         'revokedAt'
     ]
 
-    /**
-     * Disable createdAt and updatedAt timestamps
-     */
+    // Disable createdAt and updatedAt timestamps
     public timestamps: boolean = false;
 
-    /**
-     * Finds the related user for this ApiToken
-     * @returns The user model if found, or null if not
-     */
+    // Finds the related user for this ApiToken
     public async user(): Promise<IUserModel | null> {
         return this.belongsTo(User, {
             localKey: 'userId',

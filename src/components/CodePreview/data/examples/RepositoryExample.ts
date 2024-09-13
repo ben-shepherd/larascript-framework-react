@@ -1,16 +1,12 @@
 
 const RepositoryExample = 
-`export default class UserRepository extends Repository<User> implements IUserRepository {
+`class UserRepository extends Repository<User> {
 
     constructor() {
         super(User)
     }
 
-    /**
-     * Finds a User by their email address
-     * @param email 
-     * @returns 
-     */
+    // Finds a User by their email address
     public async findOneByEmail(email: string): Promise<User | null> {
         return await this.findOne({ email })
     }

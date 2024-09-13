@@ -1,7 +1,6 @@
 
 const RoutesExample = 
 `const apiRoutes = RouteGroup([
-
     // Single route
     Route({
         name: 'index',
@@ -11,7 +10,6 @@ const RoutesExample =
             res.send('OK!')
         }
     }),
-
     // Auto generated routes
     ...RouteResource({
         name: 'blog',

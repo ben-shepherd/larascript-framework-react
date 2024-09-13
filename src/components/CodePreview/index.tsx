@@ -7,7 +7,7 @@ import './styles.scss';
 const CodePreview = () => {
 
     const randomizedSlides = [...Slides].sort(() => 0.5 - Math.random());
-
+    
     const slideProps: Partial<SlideProps> = {
         canSwipe: true,
         indicators: true,

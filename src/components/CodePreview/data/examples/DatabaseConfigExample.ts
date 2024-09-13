@@ -8,10 +8,7 @@ const DatabaseConfigExample =
     // Comma-separated list of connection names to keep alive
     keepAliveConnections: (process.env.DATABASE_CONNECTIONS_KEEP_ALIVE as string) ?? '',
 
-    /**
-     * Database connections configuration.
-     * Define multiple connections here if needed.
-     */
+    // Database connections configuration.
     connections: {
 
         [DEFAULT_CONNECTION]: {
