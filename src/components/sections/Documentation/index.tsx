@@ -1,8 +1,8 @@
 import { useRef, useState } from "react"
+import documentationConfig from "../../../config/documentation"
 import Divider from "../../utils/Divider"
 import Content from "./components/Content"
 import List from "./components/List"
-import DocumentationData from './data/DocumentationData'
 import useScrollOnSidebarClick from "./hooks/useScrollOnSidebarClick"
 import useSidebarFixed from "./hooks/useSidebarFixed"
 import { DocumentationItem } from "./types/DocumentationTypes.t"
@@ -39,7 +39,7 @@ const Documentation = () => {
                 <div className="docs-flex flex flex-wrap lg:flex-nowrap">
                     <List
                         onSelect={setDocumentationItemSelected}
-                        data={DocumentationData}
+                        data={documentationConfig}
                         expanded={expanded}
                         setExpanded={setExpanded} />
 
