@@ -11,7 +11,7 @@ const Installing = () => {
         <li>Look for the "Use this template" button near the top of the page</li>
         <li>Click the button to create a new repository based on our template</li>
       </ul>
-      <img alt="Use this template button on GitHub" src="images/install/useThisTemplate.png" />
+      <img alt="Use this template button on GitHub" src="/images/install/useThisTemplate.png" />
 
       <h2>Clone and Set Up Your Repository</h2>
       <p>After creating your repository, follow these steps to set it up locally:</p>

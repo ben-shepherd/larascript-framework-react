@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import './styles.scss';
 
 const PostmanCollection = () => {
 
@@ -40,7 +41,7 @@ const PostmanCollection = () => {
             <article>
                 <a href="/data/LarascriptNode.postman_collection.json" download="LarascriptNode.postman_collection.json" className="postman__download__link" ref={linkRef}>Download Postman Collection (Hidden Link)</a>
 
-                <button className="postman__download__button" onClick={handleClick}>Download Postman Collection</button>
+                <button className="mt-5 transition-colors duration-300 rounded bg-slate-500 text-stone-100 py-2 px-4 text-sm hover:bg-stone-200 hover:text-stone-800 postman__download__button" onClick={handleClick}>Download Postman Collection</button>
             </article>
         </>
     );
