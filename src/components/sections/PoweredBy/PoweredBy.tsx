@@ -1,21 +1,23 @@
 const PoweredBy = () => {
     return (
         <section className='section__powered_by section'>
-            <h1 className='section__powered_by__h1 text-center pt-10'>Powered By</h1>
+            <h1 className='section__powered_by__h1 text-center pt-10'>Technologies</h1>
             <div className="section__powered_by__logo_items container flex flex-wrap lg:flex-nowrap">
-                <div className='section__powered_by__logo_items__item section__powered_by__logo_items__logo_nodejs w-full lg:w-1/4 md:w-1/2'
+                <div className='section__powered_by__logo_items__item section__powered_by__logo_items__logo_nodejs w-full lg:w-2/5 md:w-1/2'
                     style={{ backgroundImage: 'url(/images/nodejs.png)' }}></div>
-                <div className='section__powered_by__logo_items__item section__powered_by__logo_items__logo_typescript w-full lg:w-1/4 md:w-1/2'
+                <div className='section__powered_by__logo_items__item section__powered_by__logo_items__logo_typescript w-full lg:w-2/5 md:w-1/2'
                     style={{ backgroundImage: 'url(/images/typescript.png)' }}></div>
-                <div className='section__powered_by__logo_items__item section__powered_by__logo_items__logo_express w-full lg:w-1/4 md:w-1/2'
+                <div className='section__powered_by__logo_items__item section__powered_by__logo_items__logo_express w-full lg:w-2/5 md:w-1/2'
                     style={{ backgroundImage: 'url(/images/express.png)' }}></div>
-                <div className='section__powered_by__logo_items__item section__powered_by__logo_items__logo_mongodb w-full lg:w-1/4 md:w-1/2'
+                <div className='section__powered_by__logo_items__item section__powered_by__logo_items__logo_mongodb w-full lg:w-2/5 md:w-1/2'
                     style={{ backgroundImage: 'url(/images/mongodb.png)' }}></div>
+                <div className='section__powered_by__logo_items__item section__powered_by__logo_items__logo_postgres w-full lg:w-2/5 md:w-1/2'
+                    style={{ backgroundImage: 'url(/images/postgres.png)' }}></div>
             </div>
 
-            <h1 className='section__powered_by__h1 text-center pt-10 pb-3'>Core Features</h1>
-            <h3 className='text-slate-600 text-center pb-10'>Explore the essential components that power the
-                framework.</h3>
+            <h1 className='section__powered_by__h1 text-center pt-10 pb-3'>Essentials</h1>
+            <h3 className='text-slate-600 text-center pb-10'>Learn about the core features that make up the
+                foundation of Larascript.</h3>
 
             <div className='core_features__container mb-10'>
                 <div className='container'>
