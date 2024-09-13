@@ -19,13 +19,13 @@ const Header = () => {
         </div>
         <div id="header-buttons" className='p-5'>
           <div className="header-button">
-              <Button className="rounded bg-stone-200 text-gray-500 py-2 px-4 text-sm data-[hover]:bg-red-300 data-[hover]:text-gray-50" onClick={() => setShowModal(true)} tabIndex={0}>
+              <Button className="rounded bg-stone-200 text-gray-500 py-2 px-4 text-sm data-[hover]:bg-zinc-600 data-[hover]:text-gray-50" onClick={() => setShowModal(true)} tabIndex={0}>
                 View on GitHub
               </Button>
           </div>
           <div className="header-button">
             <a href="#section-documentation" target='_self'>
-              <Button className="rounded bg-stone-200 text-gray-500 py-2 px-4 text-sm data-[hover]:bg-red-300 data-[hover]:text-gray-50">
+              <Button className="rounded bg-stone-200 text-gray-500 py-2 px-4 text-sm data-[hover]:bg-zinc-600 data-[hover]:text-gray-50">
                 Documentation
               </Button>
             </a>
@@ -33,16 +33,16 @@ const Header = () => {
         </div>
       </div>
       <div className="header_alpha_warning">
-        <h2 className="header_alpha_warning__h2">This is an alpha version.</h2>
+        <h2 className="header_alpha_warning__h2">This project is in Beta.</h2>
         <ul className="header_alpha_warning__list">
           <li>Some features may be removed or changed without notice.</li>
           <li>Certain functionalities might not work as expected.</li>
           <li>We appreciate your patience as we continue to update and test.</li>
         </ul>
-        <div className="header_alpha_warning__under_construction">
+        {/* <div className="header_alpha_warning__under_construction">
           <div className="header_alpha_warning__under_construction__img" title="under construction"></div>
           <a className="header_alpha_warning__under_construction_attribution" href="https://www.flaticon.com/free-icons/under-construction" title="under construction icons">Icon by winnievinzence</a>
-        </div>
+        </div> */}
       </div>
       <div id="header-down">
         <svg className="size-6 h-6 alice-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">

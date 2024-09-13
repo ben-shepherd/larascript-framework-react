@@ -1,17 +1,20 @@
 header {
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background-color: var(--burnt-red);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #0c0c0c;
 
   h1,
   p {
-    color: var(--seasalt);
+    color: rgb(255, 255, 255);
+  }
+  p {
+    font-family: "Red Hat Display", sans-serif;
   }
 
   #header-buttons {
@@ -60,8 +63,8 @@ header {
 .abstract-lines {
   position: absolute;
   top: 0;
-  height: 100%;
   width: 100%;
+  height: 100%;
   pointer-events: none;
 
   & svg {
