@@ -32,6 +32,11 @@ body {
   padding: 0;
 }
 
+*:focus,
+*:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
 
 #root {
   height: 100%;
