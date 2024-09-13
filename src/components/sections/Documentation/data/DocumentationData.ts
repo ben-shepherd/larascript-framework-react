@@ -20,6 +20,7 @@ import ExpressResourceRoutes from "../components/docs/Express/ExpressResourceRou
 import RoutingFiles from "../components/docs/Express/ExpressRouting"
 import ExpressSummary from "../components/docs/Express/ExpressSummary"
 import Extendables from "../components/docs/Extendables/ExtendableSummary"
+import InstallRunningApp from "../components/docs/Installation/InstallRunningApp"
 import InstallRunningDocker from "../components/docs/Installation/InstallRunningDocker"
 import InstallSetupCommand from "../components/docs/Installation/InstallSetupCommand"
 import { default as Installing } from "../components/docs/Installation/InstallSummary"
@@ -62,6 +63,11 @@ const data: DocumentationItem[] = [
                 title: "Running Docker",
                 titleSmall: "Docker",
                 content: InstallRunningDocker,
+            },
+            {
+                href: "#setup-app",
+                title: "Running App",
+                content: InstallRunningApp,
             },
             {
                 href: "#setup-command",
