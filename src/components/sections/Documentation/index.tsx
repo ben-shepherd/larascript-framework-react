@@ -30,7 +30,7 @@ const Documentation = () => {
     }
     
     return (
-        <section id="section-documentation" ref={sectionRef}>
+        <section id="documentation" ref={sectionRef}>
             <h1 className='text-center pt-10'>Documentation</h1>
 
             <div className="docs-container container mb-10">
