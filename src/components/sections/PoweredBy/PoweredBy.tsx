@@ -36,8 +36,8 @@ const PoweredBy = () => {
                                 <li className="core_features__container__ul__li">Singletons<br />
                                     <p>Implement shared service instances for consistent functionality throughout your application.</p>
                                 </li>
-                                <li className="core_features__container__ul__li">MongoDB<br />
-                                    <p>Intuitive MongoDB integration module for efficient data management.</p>
+                                <li className="core_features__container__ul__li">Multi Database<br />
+                                    <p>Support for multiple database connections to MongoDB and PostgreSQL.</p>
                                 </li>
                                 <li className="core_features__container__ul__li">Express<br />
                                     <p>Robust web server framework for building scalable APIs.</p>
