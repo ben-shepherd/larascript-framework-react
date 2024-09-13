@@ -12,12 +12,31 @@
     justify-content: right;
   }
 
-  .author-container {
+  .section_about__author_image_container {
     display: flex;
     position: relative;
+    height: 250px;
+    width: 250px;
   }
 
-  .author-image {
+  .section_about__author_image_container:hover {
+    .section_about__author_image {
+      opacity: 0;
+    }
+    .section_about__author_image_goofy {
+      opacity: 1;
+    }
+  }
+  .section_about__author_image {
+    background-image: url('/images/author2.jpg');
+  }
+  .section_about__author_image_goofy {
+    background-image: url('/images/author_goofy.png');
+    opacity: 0;
+    filter: grayscale(50%)
+  }
+  .section_about__author_image,
+  .section_about__author_image_goofy {
     position: absolute;
     right: 0;
     top: auto;
@@ -34,7 +53,6 @@
       transition: all 0.2s ease-in-out;
       transform: scale(1.1);
     }
-
   }
   
   & {

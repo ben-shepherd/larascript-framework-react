@@ -4,8 +4,9 @@ const About = () => {
             <h1 className='text-center mb-10'>Meet The Author</h1>
             <div className="container">
                 <div className='flex flex-wrap lg:flex-nowrap'>
-                    <div className='author-container w-full lg:w-1/2'>
-                        <div className='author-image mr-24 mt-5' style={{ backgroundImage: 'url(/images/author.jpg)' }}></div>
+                    <div className='section_about__author_image_container w-full lg:w-1/2' title="Handsome picture">
+                            <div className='section_about__author_image mr-24'></div>
+                            <div className='section_about__author_image_goofy mr-24'></div>
                     </div>
                     <div className="info-container w-full lg:w-1/2">
                         <h3 className='author-text text-2xl'>Benjamin Shepherd</h3>
