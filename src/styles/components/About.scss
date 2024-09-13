@@ -17,6 +17,7 @@
     position: relative;
     height: 250px;
     width: 250px;
+    margin-right:6rem;
   }
 
   .section_about__author_image_container:hover {
@@ -54,9 +55,10 @@
       transform: scale(1.1);
     }
   }
-  
+
   & {
-    background-color: var(--jet);
+    background-color: #161616;
+    background-image: url("/images/axiom-pattern.png");
     position: relative;
     display: flex;
     flex-direction: column;
@@ -73,15 +75,18 @@
       font-size:2em;
     }
 
-    .author-container {
+    .section_about__author_image_container {
       display: flex;
       justify-content: center;
       align-items: center;
       padding-bottom: 25px;
+      margin-right:0;
+      margin-bottom:25px;
     }
 
-    .author-image {
-      position: relative;
+    .section_about__author_image,
+    .section_about__author_image_goofy {
+      // position: relative;
       margin: 0 auto;
     }
 
