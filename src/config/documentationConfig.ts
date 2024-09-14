@@ -40,9 +40,9 @@ import ValidatorCreating from "../components/sections/Documentation/components/d
 import ValidatorJoi from "../components/sections/Documentation/components/docs/Validator/ValidatorJoi"
 import ValidatorMiddleware from "../components/sections/Documentation/components/docs/Validator/ValidatorMiddleware"
 import ValidatorSummary from "../components/sections/Documentation/components/docs/Validator/ValidatorSummary"
-import { DocumentationItem } from "../components/sections/Documentation/types/DocumentationTypes.t"
+import { IDocumentationItem } from "../interfaces/IDocumentationItem"
 
-const documentationConfig: DocumentationItem[] = [
+const documentationConfig: IDocumentationItem[] = [
     {
         href: "#setup",
         title: "Setup",

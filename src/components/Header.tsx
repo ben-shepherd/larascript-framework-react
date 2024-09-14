@@ -1,5 +1,6 @@
 import { Button } from "@headlessui/react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { IHeader, IHeaderButton } from "../interfaces/IHeader";
 import GithubStarModal from "./modals/GithubStarModal";
 
@@ -43,11 +44,11 @@ const Header = ({ options }: { options: IHeader }) => {
             {buttons.map((button: IHeaderButton) => {
               return (
                 <div className="header_container__buttons_btn" key={button.text}>
-                  <a href={button.to} target={button.target ?? '_self'}>
+                  <Link to={button.to} target={button.target ?? '_self'}>
                     <Button className="rounded bg-stone-200 text-gray-500 py-2 px-4 text-sm data-[hover]:bg-zinc-600 data-[hover]:text-gray-50">
                       {button.text}
                     </Button>
-                  </a>
+                  </Link>
                 </div>
               )
             })}

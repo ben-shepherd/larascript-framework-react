@@ -3,4 +3,4 @@ export type LinkHrefAndTitle = { href?: string; title?: string; titleSmall?: str
 export type LinkWithTextChildren = { children?: LinkHrefAndTitle[] };
 export type Content = { content?: () => JSX.Element }
 
-export type DocumentationItem = LinkHrefAndTitle & LinkWithTextChildren & Content
+export type IDocumentationItem = LinkHrefAndTitle & LinkWithTextChildren & Content

@@ -1,14 +1,14 @@
 import { useRef, useState } from "react"
-import documentationConfig from "../../../config/documentation"
+import documentationConfig from "../../../config/documentationConfig"
+import { IDocumentationItem } from "../../../interfaces/IDocumentationItem"
 import Divider from "../../utils/Divider"
 import Content from "./components/Content"
 import List from "./components/List"
 import useScrollOnSidebarClick from "./hooks/useScrollOnSidebarClick"
 import useSidebarFixed from "./hooks/useSidebarFixed"
-import { DocumentationItem } from "./types/DocumentationTypes.t"
 
 const Documentation = () => {
-    const [documentationItemSelected, setDocumentationItemSelected] = useState<DocumentationItem | null>(null)
+    const [documentationItemSelected, setDocumentationItemSelected] = useState<IDocumentationItem | null>(null)
     const sectionRef = useRef<HTMLElement | null>(null)
     const [expanded, setExpanded] = useState<string | null>(null)
 

@@ -1,7 +1,7 @@
-import { DocumentationItem } from "../types/DocumentationTypes.t";
+import { IDocumentationItem } from "../../../../interfaces/IDocumentationItem";
 
 type Props = {
-    item: DocumentationItem | null;
+    item: IDocumentationItem | null;
     scrollToTop: () => void;
 }
 
@@ -17,7 +17,7 @@ const Content = ({ item, scrollToTop }: Props) => {
             {title && <h1 className="title"><a href={href}>{title}</a></h1>}
 
             {/* Render Content in children property */}
-            {children.map((item: DocumentationItem) => (
+            {children.map((item: IDocumentationItem) => (
                 <div key={`${item?.href}-${item?.title}`} className="documentation-content-child" id={getId(item?.href)}>
                     {item.title && <h2 className="title title-child"><a href={item.href}>{item.title}</a></h2>}
                     <button className={'responsive-scroll-to-top'} onClick={scrollToTop} role="button" aria-label="Scroll to top">

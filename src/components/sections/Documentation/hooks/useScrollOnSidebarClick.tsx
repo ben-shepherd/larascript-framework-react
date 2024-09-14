@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { DocumentationItem } from "../types/DocumentationTypes.t";
+import { IDocumentationItem } from "../../../../interfaces/IDocumentationItem";
 
 type Props = {
-    documentationItemSelected: DocumentationItem | null
+    documentationItemSelected: IDocumentationItem | null
 }
 
 const useScrollOnSidebarClick = ({ documentationItemSelected }: Props) => {
