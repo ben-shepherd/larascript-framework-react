@@ -7,24 +7,37 @@
     color: var(--seasalt);
   }
 
-  background-color: var(--jet);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   .left {
     display: flex;
     justify-content: right;
   }
 
-  .author-container {
+  .section_about__author_image_container {
     display: flex;
     position: relative;
+    height: 250px;
+    width: 250px;
+    margin-right:6rem;
   }
 
-  .author-image {
+  .section_about__author_image_container:hover {
+    .section_about__author_image {
+      opacity: 0;
+    }
+    .section_about__author_image_goofy {
+      opacity: 1;
+    }
+  }
+  .section_about__author_image {
+    background-image: url('/images/author2.jpg');
+  }
+  .section_about__author_image_goofy {
+    background-image: url('/images/author_goofy.png');
+    opacity: 0;
+    filter: grayscale(50%)
+  }
+  .section_about__author_image,
+  .section_about__author_image_goofy {
     position: absolute;
     right: 0;
     top: auto;
@@ -41,7 +54,16 @@
       transition: all 0.2s ease-in-out;
       transform: scale(1.1);
     }
+  }
 
+  & {
+    background-color: #161616;
+    background-image: url("/images/axiom-pattern.png");
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -53,12 +75,24 @@
       font-size:2em;
     }
 
-    .author-image {
-      position: relative;
+    .section_about__author_image_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 25px;
+      margin-right:0;
+      margin-bottom:25px;
+    }
+
+    .section_about__author_image,
+    .section_about__author_image_goofy {
+      // position: relative;
+      margin: 0 auto;
     }
 
     .info-container {
       padding:0 25px;
+      text-align: center;
     }
   }
 }

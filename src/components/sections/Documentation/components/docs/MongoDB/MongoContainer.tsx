@@ -1,36 +1,37 @@
 import CodeBlock from "../../../../../utils/CodeBlock";
+import SimpleCodeBlock from "../../../../../utils/SimpleCodeBlock";
 
 const MongoContainer = () => {
     return (
         <article>
-            <h2>Retrieve the <code>MongoDB</code> service from the container</h2>
+            <p>Retrieve the <code>MongoDB</code> service from the container</p>
             <pre>
-                <code>
+                <SimpleCodeBlock>
                     App.container('mongodb')
-                </code>
+                </SimpleCodeBlock>
             </pre>
 
             <h3>Available Methods</h3>
 
             <p>Get the <a href="https://mongodb.github.io/node-mongodb-native/6.7/classes/MongoClient.html" target="_blank" rel="noopener noreferrer">MongoClient</a></p>
             <pre>
-                <code>
+                <SimpleCodeBlock>
                     {`App.container('mongodb').getClient(): MongoClient`}
-                </code>
+                </SimpleCodeBlock>
             </pre>
 
             <p>Get the <a href="https://mongodb.github.io/node-mongodb-native/6.7/classes/Db.html" target="_blank" rel="noopener noreferrer">Db</a></p>
             <pre>
-                <code>
+                <SimpleCodeBlock>
                     {`App.container('mongodb').getDb(): Db`}
-                </code>
+                </SimpleCodeBlock>
             </pre>
 
             <p>Attempt connecting by connection name</p>
             <pre>
-                <code>
+                <SimpleCodeBlock>
                     {`App.container('mongodb').connect(connectionName: string): void`}
-                </code>
+                </SimpleCodeBlock>
             </pre>
 
             <p>Query a collection</p>

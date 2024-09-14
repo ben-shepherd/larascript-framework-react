@@ -1,0 +1,84 @@
+#code_preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616;
+    background-image: url("/images/axiom-pattern.png");
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.code_preview__item_title,
+.code_preview__item_title_small {
+    text-align: center;
+    color: #fff;
+    user-select: none; /* Standard syntax */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
+.code_preview__item_title_small {
+    font-weight: 700;
+}
+
+.code_preview__item_code {
+    text-wrap: pretty;
+}
+
+.code_preview__item_code .codeBlock>div {
+    padding: 30px;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+ */
+}
+
+#code_preview .react-slideshow-container+ul.indicators li {
+    width: 25px;
+    height: 15px;
+}
+#code_preview .react-slideshow-container+ul.indicators .each-slideshow-indicator button {
+    padding: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+#code_preview .react-slideshow-container + ul.indicators .each-slideshow-indicator button,
+#code_preview .react-slideshow-container + ul.indicators .each-slideshow-indicator button:hover,
+#code_preview .react-slideshow-container + ul.indicators .each-slideshow-indicator button:focus,
+#code_preview .react-slideshow-container + ul.indicators .each-slideshow-indicator button:focus-visible,
+#code_preview .react-slideshow-container + ul.indicators .each-slideshow-indicator button:active {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+#code_preview .react-slideshow-container + ul.indicators .each-slideshow-indicator button::-moz-focus-inner {
+    border: 0 !important;
+}
+#code_preview .react-slideshow-container+ul.indicators .each-slideshow-indicator:before {
+    background-color: rgb(255, 255, 255);
+    width: 15px;
+    height: 15px;
+}
+
+#code_preview .react-slideshow-container+ul.indicators .each-slideshow-indicator.active {
+    opacity: 1;
+}
+
+#code_preview .react-slideshow-container+ul.indicators .each-slideshow-indicator.active:before {
+    background-color: rgb(238, 77, 77);
+}
+
+@media(max-width: 768px) {
+    .code_preview__item_code .codeBlock>div {
+        padding: 10px 0;
+    }
+}

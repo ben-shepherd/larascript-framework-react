@@ -1,26 +1,36 @@
-import ExpandIcon from "../../../icons/ExpandIcon.tsx";
+import { Dispatch, SetStateAction } from "react";
+import { IDocumentationItem, LinkHrefAndTitle } from "../../../../interfaces/IDocumentationItem.ts";
 import DefaultIcon from "../../../icons/DefaultIcon.tsx";
-import {Dispatch, SetStateAction} from "react";
-import {LinkHrefAndTitle} from "../types/DocumentationTypes.t.ts";
+import ExpandIcon from "../../../icons/ExpandIcon.tsx";
 
 export type ListItemIconType = 'expand' | 'staticExpand' | 'dot' | null;
 type ListItemIcon = {
+    item: IDocumentationItem;
     expanded: boolean;
-    setExpanded: Dispatch<SetStateAction<boolean>>;
+    setExpanded: Dispatch<SetStateAction<string | null>>;
     onSelect: () => void;
     isChild: boolean;
     childrenWithTitleAndHref: LinkHrefAndTitle[];
     iconType?: ListItemIconType;
 }
 
-const ListItemIcon = ({ expanded, setExpanded, onSelect, isChild, childrenWithTitleAndHref, iconType }: ListItemIcon) => {
+const ListItemIcon = ({ item, expanded, setExpanded, onSelect, isChild, childrenWithTitleAndHref, iconType }: ListItemIcon) => {
     if(!iconType) {
         return null;
     }
 
+    const handleClickExpand = () => {
+        if(expanded) {
+            setExpanded(null);
+        }
+        else if(typeof item?.href === 'string') {
+            setExpanded(item.href);
+        }
+    }
+
     const iconMap = {
-        expand: <ExpandIcon expanded={expanded} onClick={() => setExpanded(!expanded)} />,
-        staticExpand: <ExpandIcon expanded={false} onClick={onSelect} />,
+        expand: <ExpandIcon expanded={expanded} onClick={handleClickExpand} />,
+        staticExpand: <ExpandIcon expanded={false} onClick={onSelect} noPointerEvents={true} />,
         dot: <DefaultIcon />
     };
 

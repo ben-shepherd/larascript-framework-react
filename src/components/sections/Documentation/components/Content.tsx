@@ -1,5 +1,5 @@
-import documentationData from '../data/DocumentationData';
-import { DocumentationItem } from "../types/DocumentationTypes.t";
+import documentationConfig from '../../../../config/documentationConfig';
+import { IDocumentationItem } from "../../../../interfaces/IDocumentationItem";
 import ContentItem from './ContentItem';
 
 type Props = {
@@ -10,11 +10,11 @@ const Content = ({ scrollToTop }: Props) => {
 
     return (
         <div className='content-container w-full'>
-            {documentationData.map((item: DocumentationItem, index: number) => (
+            {documentationConfig.map((item: IDocumentationItem, index: number) => (
                 <div key={item?.href}>
                     <ContentItem key={item?.href} item={item} scrollToTop={scrollToTop} />
                 
-                    {index < documentationData.length - 1 && <div className='divider'></div>}
+                    {index < documentationConfig.length - 1 && <div className='divider'></div>}
                 </div>
             ))}
         </div>

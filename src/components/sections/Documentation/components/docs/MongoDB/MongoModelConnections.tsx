@@ -29,10 +29,6 @@ export default class Movie extends Model<MovieData> {
 }`}
                 </CodeBlock>
             </pre>
-
-            <h2>Modules</h2>
-            <p>Reference: <code>@src/core/domains/database/services/mongodb.ts</code></p>
-            <p>Provided by <code>@src/core/providers/MongoDBProvider.ts</code></p>
         </article>
 
     );

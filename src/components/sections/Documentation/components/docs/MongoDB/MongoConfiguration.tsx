@@ -3,6 +3,8 @@ import CodeBlock from "../../../../../utils/CodeBlock";
 const MongoConfiguration = () => {
     return (
         <article>
+            <h2>Provider</h2>
+            <p><code>@src/core/domains/database/mongodb/providers/MongoDBProvider.ts</code></p>
             <h2>Configuration</h2>
             <p><code>@src/config/database/mongodb.ts</code></p>
             <pre>
@@ -40,7 +42,7 @@ export default config;`}
 
             <h2>Environment variables</h2>
             <blockquote>
-                <p>MONGODB_URI=mongodb://username:SuperSecretPwd@localhost:27017/app?authSource=admin</p>
+                <code>MONGODB_URI=mongodb://username:SuperSecretPwd@localhost:27017/app?authSource=admin</code>
             </blockquote>
         </article>
 
