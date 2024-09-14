@@ -1,3 +1,4 @@
+import config from "../../../../../../config/config";
 
 const Installing = () => {
   return (
@@ -7,7 +8,7 @@ const Installing = () => {
       <h2>Create Your Own Repository</h2>
       <p>Start by creating a personalized repository using our base template:</p>
       <ul className="list-disc py-3">
-        <li><a href="https://github.com/ben-shepherd/larascript-node" target="_blank" rel="noopener noreferrer">Visit the GitHub page for this project</a></li>
+        <li><a href={config.githubRepository} target="_blank" rel="noopener noreferrer">Visit the GitHub page for this project</a></li>
         <li>Look for the "Use this template" button near the top of the page</li>
         <li>Click the button to create a new repository based on our template</li>
       </ul>

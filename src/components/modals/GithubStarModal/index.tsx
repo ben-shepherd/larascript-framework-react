@@ -1,3 +1,4 @@
+import config from "../../../config/config";
 import Modal from "../BaseModal";
 import './styles.scss';
 
@@ -9,7 +10,7 @@ type Props = {
 const GithubStarModal = ({ open, onClose }: Props) => {
 
     const handleClick = () => {
-        window.open('https://github.com/ben-shepherd/larascript-node', '_blank', 'noopener,noreferrer');
+        window.open(config.githubRepository, '_blank', 'noopener,noreferrer');
         onClose();
     }
 

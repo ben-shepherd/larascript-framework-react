@@ -1,10 +1,10 @@
 import { Dispatch, SetStateAction } from "react";
-import { DocumentationItem, LinkHrefAndTitle } from "../types/DocumentationTypes.t";
+import { IDocumentationItem, LinkHrefAndTitle } from "../../../../interfaces/IDocumentationItem.ts";
 import ListItemIcon, { ListItemIconType } from "./ListItemIcon.tsx";
 
 export type ListItemProps = {
-    onSelect: Dispatch<SetStateAction<DocumentationItem | null>>
-    item: DocumentationItem;
+    onSelect: Dispatch<SetStateAction<IDocumentationItem | null>>
+    item: IDocumentationItem;
     iconType?: ListItemIconType;
     isChild?: boolean;
 }
@@ -18,7 +18,7 @@ const ListItem = ({ item, onSelect, iconType = null, isChild = false, expanded, 
 
     const childrenWithTitleAndHref = children.filter((item: LinkHrefAndTitle) => item.title && item.href)
 
-    const handleSelect = (item: DocumentationItem) => {
+    const handleSelect = (item: IDocumentationItem) => {
         onSelect(item)
 
         // Prevent expanding on a list of it has no children

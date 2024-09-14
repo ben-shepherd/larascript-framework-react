@@ -1,11 +1,11 @@
 import { Dispatch, SetStateAction } from "react";
+import { IDocumentationItem, LinkHrefAndTitle } from "../../../../interfaces/IDocumentationItem.ts";
 import DefaultIcon from "../../../icons/DefaultIcon.tsx";
 import ExpandIcon from "../../../icons/ExpandIcon.tsx";
-import { DocumentationItem, LinkHrefAndTitle } from "../types/DocumentationTypes.t.ts";
 
 export type ListItemIconType = 'expand' | 'staticExpand' | 'dot' | null;
 type ListItemIcon = {
-    item: DocumentationItem;
+    item: IDocumentationItem;
     expanded: boolean;
     setExpanded: Dispatch<SetStateAction<string | null>>;
     onSelect: () => void;

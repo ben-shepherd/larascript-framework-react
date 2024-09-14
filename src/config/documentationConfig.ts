@@ -1,48 +1,48 @@
-import AuthConfiguration from "../components/docs/Authentication/AuthConfiguration"
-import AuthEndpoints from "../components/docs/Authentication/AuthEndpoints"
-import AuthGenerateJwt from "../components/docs/Authentication/AuthGenerateJwt"
-import AuthSummary from "../components/docs/Authentication/AuthSummary"
-import CodingStandards from "../components/docs/CodingStandards"
-import ConsoleCustomCommands from "../components/docs/Console/ConsoleCustomCommands"
-import ConsoleMake from "../components/docs/Console/ConsoleMake"
-import DatabaseClient from "../components/docs/Database/DatabaseClient"
-import DatabaseConfig from "../components/docs/Database/DatabaseConfig"
-import DatabaseDocumentManager from "../components/docs/Database/DatabaseDocumentManager"
-import DatabaseSchema from "../components/docs/Database/DatabaseSchema"
-import DatabaseService from "../components/docs/Database/DatabaseService"
-import EventDrivers from "../components/docs/Events/EventDrivers"
-import EventSubscribersAndListeners from "../components/docs/Events/EventSubscribersAndListeners"
-import EventSummary from "../components/docs/Events/EventSummary"
-import EventWorker from "../components/docs/Events/EventWorker"
-import ExpressAction from "../components/docs/Express/ExpressAction"
-import ExpressMiddleware from "../components/docs/Express/ExpressMiddleware"
-import ExpressResourceRoutes from "../components/docs/Express/ExpressResourceRoutes"
-import RoutingFiles from "../components/docs/Express/ExpressRouting"
-import ExpressSummary from "../components/docs/Express/ExpressSummary"
-import Extendables from "../components/docs/Extendables/ExtendableSummary"
-import InstallRunningApp from "../components/docs/Installation/InstallRunningApp"
-import InstallRunningDocker from "../components/docs/Installation/InstallRunningDocker"
-import InstallSetupCommand from "../components/docs/Installation/InstallSetupCommand"
-import { default as Installing } from "../components/docs/Installation/InstallSummary"
-import Requirements from "../components/docs/Installation/Requirements"
-import MigrationSummary from "../components/docs/Migrations/MigrationSummary"
-import ModelExamples from "../components/docs/Models/ModelMethods"
-import BelongsTo from "../components/docs/Models/ModelRelationships/BelongsTo"
-import HasMany from "../components/docs/Models/ModelRelationships/HasMany"
-import ModelSummary from "../components/docs/Models/ModelSummary"
-import ObserverModel from "../components/docs/Observers/ObserverModel"
-import ObserverSummary from "../components/docs/Observers/ObserverSummary"
-import PostmanCollection from "../components/docs/Postman/PostmanCollection"
-import ProviderSummary from "../components/docs/Providers/ProviderSummary"
-import RepositorySummary from "../components/docs/Repositories/RepositorySummary"
-import Testing from "../components/docs/Testing/Testing"
-import ValidatorCreating from '../components/docs/Validator/ValidatorCreating'
-import ValidatorJoi from "../components/docs/Validator/ValidatorJoi"
-import ValidatorMiddleware from "../components/docs/Validator/ValidatorMiddleware"
-import ValidatorSummary from "../components/docs/Validator/ValidatorSummary"
-import { DocumentationItem } from "../types/DocumentationTypes.t"
+import AuthConfiguration from "../components/sections/Documentation/components/docs/Authentication/AuthConfiguration"
+import AuthEndpoints from "../components/sections/Documentation/components/docs/Authentication/AuthEndpoints"
+import AuthGenerateJwt from "../components/sections/Documentation/components/docs/Authentication/AuthGenerateJwt"
+import AuthSummary from "../components/sections/Documentation/components/docs/Authentication/AuthSummary"
+import CodingStandards from "../components/sections/Documentation/components/docs/CodingStandards"
+import ConsoleCustomCommands from "../components/sections/Documentation/components/docs/Console/ConsoleCustomCommands"
+import ConsoleMake from "../components/sections/Documentation/components/docs/Console/ConsoleMake"
+import DatabaseClient from "../components/sections/Documentation/components/docs/Database/DatabaseClient"
+import DatabaseConfig from "../components/sections/Documentation/components/docs/Database/DatabaseConfig"
+import DatabaseDocumentManager from "../components/sections/Documentation/components/docs/Database/DatabaseDocumentManager"
+import DatabaseSchema from "../components/sections/Documentation/components/docs/Database/DatabaseSchema"
+import DatabaseService from "../components/sections/Documentation/components/docs/Database/DatabaseService"
+import EventDrivers from "../components/sections/Documentation/components/docs/Events/EventDrivers"
+import EventSubscribersAndListeners from "../components/sections/Documentation/components/docs/Events/EventSubscribersAndListeners"
+import EventSummary from "../components/sections/Documentation/components/docs/Events/EventSummary"
+import EventWorker from "../components/sections/Documentation/components/docs/Events/EventWorker"
+import ExpressAction from "../components/sections/Documentation/components/docs/Express/ExpressAction"
+import ExpressMiddleware from "../components/sections/Documentation/components/docs/Express/ExpressMiddleware"
+import ExpressResourceRoutes from "../components/sections/Documentation/components/docs/Express/ExpressResourceRoutes"
+import ExpressRouting from "../components/sections/Documentation/components/docs/Express/ExpressRouting"
+import ExpressSummary from "../components/sections/Documentation/components/docs/Express/ExpressSummary"
+import Extendables from "../components/sections/Documentation/components/docs/Extendables/ExtendableSummary"
+import InstallRunningApp from "../components/sections/Documentation/components/docs/Installation/InstallRunningApp"
+import InstallRunningDocker from "../components/sections/Documentation/components/docs/Installation/InstallRunningDocker"
+import InstallSetupCommand from "../components/sections/Documentation/components/docs/Installation/InstallSetupCommand"
+import Installing from "../components/sections/Documentation/components/docs/Installation/InstallSummary"
+import Requirements from "../components/sections/Documentation/components/docs/Installation/Requirements"
+import MigrationSummary from "../components/sections/Documentation/components/docs/Migrations/MigrationSummary"
+import ModelExamples from "../components/sections/Documentation/components/docs/Models/ModelMethods"
+import BelongsTo from "../components/sections/Documentation/components/docs/Models/ModelRelationships/BelongsTo"
+import HasMany from "../components/sections/Documentation/components/docs/Models/ModelRelationships/HasMany"
+import ModelSummary from "../components/sections/Documentation/components/docs/Models/ModelSummary"
+import ObserverModel from "../components/sections/Documentation/components/docs/Observers/ObserverModel"
+import ObserverSummary from "../components/sections/Documentation/components/docs/Observers/ObserverSummary"
+import PostmanCollection from "../components/sections/Documentation/components/docs/Postman/PostmanCollection"
+import ProviderSummary from "../components/sections/Documentation/components/docs/Providers/ProviderSummary"
+import RepositorySummary from "../components/sections/Documentation/components/docs/Repositories/RepositorySummary"
+import Testing from "../components/sections/Documentation/components/docs/Testing/Testing"
+import ValidatorCreating from "../components/sections/Documentation/components/docs/Validator/ValidatorCreating"
+import ValidatorJoi from "../components/sections/Documentation/components/docs/Validator/ValidatorJoi"
+import ValidatorMiddleware from "../components/sections/Documentation/components/docs/Validator/ValidatorMiddleware"
+import ValidatorSummary from "../components/sections/Documentation/components/docs/Validator/ValidatorSummary"
+import { IDocumentationItem } from "../interfaces/IDocumentationItem"
 
-const data: DocumentationItem[] = [
+const documentationConfig: IDocumentationItem[] = [
     {
         href: "#setup",
         title: "Setup",
@@ -92,7 +92,7 @@ const data: DocumentationItem[] = [
             {
                 href: "#http-express-routing",
                 title: "Routing",
-                content: RoutingFiles
+                content: ExpressRouting
             },
             {
                 href: "#http-express-middleware",
@@ -359,4 +359,4 @@ const data: DocumentationItem[] = [
     }
 ]
 
-export default data
+export default documentationConfig
