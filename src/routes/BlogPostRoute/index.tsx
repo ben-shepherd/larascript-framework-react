@@ -14,7 +14,7 @@ const BlogPostRoute = () => {
   }
 
   return (
-    <>
+    <div className='blog_theme'>
       <Header options={{
             ...config.headers['blog'],
             buttons: [
@@ -27,7 +27,7 @@ const BlogPostRoute = () => {
         }} />
 
       <BlogPost post={post} />
-    </>
+    </div>
   )
 }
 

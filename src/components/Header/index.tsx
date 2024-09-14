@@ -1,8 +1,7 @@
-import { Button } from "@headlessui/react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { IHeader, IHeaderButton } from "../interfaces/IHeader";
-import GithubStarModal from "./modals/GithubStarModal";
+import { IHeader, IHeaderButton } from "../../interfaces/IHeader";
+import GithubStarModal from "../modals/GithubStarModal";
+import HeaderLink from "./HeaderLink";
 
 const Header = ({ options }: { options: IHeader }) => {
   const {
@@ -23,9 +22,18 @@ const Header = ({ options }: { options: IHeader }) => {
 
   const [showModal, setShowModal] = useState<boolean>(false)
 
+
+  const handleButtonClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, button: IHeaderButton) => {
+    if (button.showGitHubModal) {
+      e.preventDefault();
+      setShowModal(true)
+    }
+  }
+
   return (
     <>
       <GithubStarModal open={showModal} onClose={() => setShowModal(false)} />
+
 
       <header id="header_container" className={`py-5 text-3xl ${addtionalClassNames ?? ''}`}>
         {showTitle && (
@@ -44,13 +52,7 @@ const Header = ({ options }: { options: IHeader }) => {
           <div id="header_container__buttons" className='p-5'>
             {buttons.map((button: IHeaderButton) => {
               return (
-                <div className="header_container__buttons_btn" key={button.text}>
-                  <Link to={button.to} target={button.target ?? '_self'}>
-                    <Button className="rounded bg-stone-200 text-gray-500 py-2 px-4 text-sm data-[hover]:bg-zinc-600 data-[hover]:text-gray-50">
-                      {button.text}
-                    </Button>
-                  </Link>
-                </div>
+                <HeaderLink key={button.text} button={button} onClick={(e) => handleButtonClick(e, button)} />
               )
             })}
           </div>

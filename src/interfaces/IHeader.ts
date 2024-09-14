@@ -10,6 +10,8 @@ export type IHeaderButton = {
     text: string,
     to: string,
     target?: string
+    asAnchorElement?: boolean;
+    showGitHubModal?: boolean;
 }
 
 export type IHeader = {

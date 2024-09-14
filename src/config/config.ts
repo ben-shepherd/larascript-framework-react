@@ -1,11 +1,12 @@
 import { IConfig } from "../interfaces/IConfig";
 
 const githubProfile = 'https://github.com/ben-shepherd/';
-const githubLarascript = `${githubProfile}larascript/`;
+const githubRepository = `${githubProfile}larascript-framework/`;
 
 const config: IConfig = {
   author: 'Benjamin S',
   githubProfile,
+  githubRepository,
   headers: {
     homepage: {
       title: 'Larascript Node',
@@ -19,13 +20,15 @@ const config: IConfig = {
       buttons: [
         {
           text: 'View on GitHub',
-          to: githubLarascript,
-          target: '_blank'
+          to: githubRepository,
+          target: '_blank',
+          showGitHubModal: true
         },
         {
           text: 'View Documentation',
-          to: '/#documentation',
+          to: '#documentation',
           target: '_self',
+          asAnchorElement: true,
         },
         {
           text: 'Developer Blog',

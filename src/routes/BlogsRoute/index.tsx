@@ -6,7 +6,7 @@ import config from '../../config/config'
 const BlogsRoute = () => {
 
   return (
-    <>
+    <div className='blog_theme'>
       <Header options={{
             ...config.headers['blog'],
             buttons: [
@@ -19,7 +19,7 @@ const BlogsRoute = () => {
         }} />
 
       <Blog posts={blogsConfig} />
-    </>
+    </div>
   )
 }
 
