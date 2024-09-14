@@ -9,7 +9,7 @@ const blogsConfig: IBlog[] = [
         author: "Benjamin S",
         updatedAt: new Date("2024-09-15T12:00:00.000Z"),
         imageUrl: "/images/stock/coding-1841550_1280.jpg",
-        link: "/blog/01-my-first-blog-post"
+        link: "/blog/15-09-2024-novice-typescript-to-framework-creator",
     }
 ]
 
