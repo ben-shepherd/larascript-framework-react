@@ -18,7 +18,6 @@ const BlogPostRoute = () => {
       <Header options={{
             ...config.headers['blog'],
             buttons: [
-              ...config.headers['blog'].buttons.filter((button) => button.text !== 'Go Back'),
               {
                 text: 'Go Back',
                 to: '/blog',

@@ -4,6 +4,7 @@ export type IHeaderVisibleParts = {
     showButtons?: boolean;
     showBetaWarning?: boolean;
     showArrowDown?: boolean;
+    showAbstractLines?: boolean;
 }
 export type IHeaderButton = {
     text: string,

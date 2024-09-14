@@ -35,27 +35,18 @@ const config: IConfig = {
       ]
     },
     blog: {
+    
       title: 'Developer Blog',
       subTitle: 'Insights, updates, and tips for Larascript Node developers',
-      addtionalClassNames: 'header_container_small',
+      addtionalClassNames: 'header_developer_blog',
       visibleParts: {
         showTitle: true,
         showSubTitle: true,
         showBetaWarning: false,
-        showArrowDown: false
+        showArrowDown: false,
+        showAbstractLines: false,
       },
-      buttons: [
-        {
-          text: 'View on GitHub',
-          to: githubLarascript,
-          target: '_blank'
-        },
-        {
-          text: 'Go Back',
-          to: '/',
-          target: '_self',
-        }
-      ]
+      buttons: []
     }
   }
 }

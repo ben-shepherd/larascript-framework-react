@@ -13,7 +13,7 @@ const Blog = ({ posts = blogsConfig}: Props) => {
 
     return (
         <section id="blog_container" className="blog_text_colors flex justify-center">
-            <div className="blog_container_posts py-10 w-full px-5 lg:px-0 lg:w-3/6 xl:w-3/5">
+            <div className="blog_container_posts py-10 w-full px-5 lg:px-0 md:w-4/5 lg:w-3/5 xl:w-2/5">
                 {orderedBlogPosts.map((post) => (
                     <BlogPreview key={post.title} {...post} />
                 ))}

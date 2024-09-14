@@ -7,7 +7,16 @@ const BlogsRoute = () => {
 
   return (
     <>
-      <Header options={config.headers['blog']} />
+      <Header options={{
+            ...config.headers['blog'],
+            buttons: [
+              {
+                text: 'Go Back',
+                to: '/',
+                target: '_self',
+              }
+            ]
+        }} />
 
       <Blog posts={blogsConfig} />
     </>
