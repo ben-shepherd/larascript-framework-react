@@ -20,7 +20,7 @@ const BlogPreview = (options: IBlog) => {
             <div className="blog_preview__author">
                 <div className="blog_preview_author__image" style={{ backgroundImage: "url('/images/author.jpg')"}}></div>
                 <div className="blog_preview__author__posted_by">Posted by</div>
-                <AuthorLink className="blog_preview__author__name" />
+                <AuthorLink className="blog_preview__author__name" author={author} />
                 <DateText date={updatedAt} className="blog_preview__author__updated_at" />
             </div>
         </div>
