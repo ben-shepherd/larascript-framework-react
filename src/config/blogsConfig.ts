@@ -7,7 +7,7 @@ const blogsConfig: IBlog[] = [
         subTitle: null,
         content: MyFirstBlog,
         author: "Benjamin S",
-        updatedAt: new Date("2023-01-01T12:00:00.000Z"), // TODO: UPDATE THIS
+        updatedAt: new Date("2024-09-15T12:00:00.000Z"),
         imageUrl: "/images/stock/coding-1841550_1280.jpg",
         link: "/blog/01-my-first-blog-post"
     }
