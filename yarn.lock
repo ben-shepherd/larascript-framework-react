@@ -2061,6 +2061,11 @@ react-dom@^18.3.1:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
 
+react-metatags-hook@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-metatags-hook/-/react-metatags-hook-2.0.0.tgz#6b2bd937fc1cdf9c6678415eb81d4897f5f969a0"
+  integrity sha512-YjQ0KWmZ55b2P64Ft9tBQxowyUmQSItDZEYqMwiNMTYaZyIeOpVaeHG0vbLlc7NtDQP7zyzpVI2KeM7uoLeBQw==
+
 react-refresh@^0.14.2:
   version "0.14.2"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.2.tgz#3833da01ce32da470f1f936b9d477da5c7028bf9"

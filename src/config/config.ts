@@ -2,15 +2,25 @@ import { IConfig } from "../interfaces/IConfig";
 
 const githubProfile = 'https://github.com/ben-shepherd/';
 const githubRepository = `${githubProfile}larascript-framework/`;
+const siteDescription = 'A Node.js framework inspired by Laravel, built with TypeScript.';
 
 const config: IConfig = {
   author: 'Benjamin S',
   githubProfile,
   githubRepository,
+  websiteUrl: 'https://www.larascriptnode.com',
+  siteName: 'Larascript Framework',
+  siteDescription,
+  meta: {
+    title: 'Larascript Framework | Homepage',
+    description: siteDescription,
+    charset: 'utf8',
+    lang: 'en'
+  },
   headers: {
     homepage: {
       title: 'Larascript Node',
-      subTitle: 'A Node.js framework inspired by Laravel, built with TypeScript.',
+      subTitle: siteDescription,
       visibleParts: {
         showTitle: true,
         showSubTitle: true,
