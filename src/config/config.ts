@@ -8,7 +8,8 @@ const config: IConfig = {
   author: 'Benjamin S',
   githubProfile,
   githubRepository,
-  websiteUrl: 'https://www.larascriptnode.com',
+  // websiteUrl: 'https://www.larascriptnode.com',
+  websiteUrl: 'http://localhost:5173',
   siteName: 'Larascript Framework',
   siteDescription,
   meta: {

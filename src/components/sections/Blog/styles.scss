@@ -99,10 +99,10 @@
         line-height:42px;
     }
     h1 {
-        font-size:1.5em;
+        font-size:2em;
     }
     h2 {
-        font-size:1.3em;
+        font-size:1.5em;
     }
     h3 {
         font-size:1.2em;
@@ -117,6 +117,13 @@
     ol, ul {
         list-style: disc;
         padding-left:35px;
+    }
+    code {
+    text-wrap: wrap;
+    background-color: #d1d1d1;
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: #434343;
     }
 }
 .blog_posts_container__image {
