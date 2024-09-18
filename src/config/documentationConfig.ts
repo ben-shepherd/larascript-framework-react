@@ -20,9 +20,8 @@ import ExpressResourceRoutes from "../components/sections/Documentation/componen
 import ExpressRouting from "../components/sections/Documentation/components/docs/Express/ExpressRouting"
 import ExpressSummary from "../components/sections/Documentation/components/docs/Express/ExpressSummary"
 import Extendables from "../components/sections/Documentation/components/docs/Extendables/ExtendableSummary"
-import InstallRunningApp from "../components/sections/Documentation/components/docs/Installation/InstallRunningApp"
-import InstallRunningDocker from "../components/sections/Documentation/components/docs/Installation/InstallRunningDocker"
-import InstallSetupCommand from "../components/sections/Documentation/components/docs/Installation/InstallSetupCommand"
+import InstallingProduction from "../components/sections/Documentation/components/docs/Installation/InstallProduction"
+import InstallTinker from "../components/sections/Documentation/components/docs/Installation/InstallRunningApp"
 import Installing from "../components/sections/Documentation/components/docs/Installation/InstallSummary"
 import Requirements from "../components/sections/Documentation/components/docs/Installation/Requirements"
 import MigrationSummary from "../components/sections/Documentation/components/docs/Migrations/MigrationSummary"
@@ -55,28 +54,31 @@ const documentationConfig: IDocumentationItem[] = [
             },
             {
                 href: "#setup-install",
-                title: "Install",
+                title: "Quick Setup (~5 minutes)",
+                titleSmall: "Quick Setup",
                 content: Installing,
             },
             {
-                href: "#setup-docker",
-                title: "Running Docker",
-                titleSmall: "Docker",
-                content: InstallRunningDocker,
+                href: "#setup-production",
+                title: "Running in production",
+                titleSmall: "Production",
+                content: InstallingProduction,
             },
             {
-                href: "#setup-app",
-                title: "Running App",
-                content: InstallRunningApp,
+                href: "#setup-tinker",
+                title: "Running Tinker",
+                titleSmall: "Tinker",
+                content: InstallTinker,
             },
-            {
-                href: "#setup-command",
-                title: "Setup Command",
-                content: InstallSetupCommand,
-            },
+            // {
+            //     href: "#setup-command",
+            //     title: "Setup Command",
+            //     content: InstallSetupCommand,
+            // },
             {
                 href: "#setup-postman",
-                title: "Postman",
+                title: "Postman Collection",
+                titleSmall: "Postman",
                 content: PostmanCollection
             },
         ]

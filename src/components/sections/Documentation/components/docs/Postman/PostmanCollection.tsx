@@ -14,7 +14,6 @@ const PostmanCollection = () => {
     return (
         <>
             <article>
-                <h2>Postman Configuration</h2>
 
                 <p>To facilitate easier testing and interaction with the API, we provide a pre-configured Postman collection. This collection includes basic endpoints that are already set up for immediate use.</p>
 
