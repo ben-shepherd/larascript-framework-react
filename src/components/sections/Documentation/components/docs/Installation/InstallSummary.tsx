@@ -1,37 +1,45 @@
-import config from "../../../../../../config/config";
+import CodeBlock from "../../../../../utils/CodeBlock";
 
 const Installing = () => {
   return (
     <article>
-      <p>Let's get you set up with your new project. Follow these simple steps to begin:</p>
+      <p>Follow these steps to quickly set up your project:</p>
 
-      <h2>Create Your Own Repository</h2>
-      <p>Start by creating a personalized repository using our base template:</p>
-      <ul className="list-disc py-3">
-        <li><a href={config.githubRepository} target="_blank" rel="noopener noreferrer">Visit the GitHub page for this project</a></li>
-        <li>Look for the "Use this template" button near the top of the page</li>
-        <li>Click the button to create a new repository based on our template</li>
-      </ul>
-      <img alt="Use this template button on GitHub" src="/images/install/useThisTemplate.png" />
+      <h3>1. Create a new repository</h3>
+      <p>
+        Use the following link to create a new repository with Larascript as the template:
+      </p>
+      <p>
+        <a href="https://github.com/new?template_name=larascript-framework&template_owner=ben-shepherd">
+          https://github.com/new?template_name=larascript-framework&template_owner=ben-shepherd
+        </a>
+      </p>
 
-      <h2>Clone and Set Up Your Repository</h2>
-      <p>After creating your repository, follow these steps to set it up locally:</p>
-      <ul className="list-disc py-3">
-        <li className="py-2">Open a terminal or command prompt on your system</li>
-        <li>Navigate to the folder where you want to store your project:
-          <code>cd path/to/your/desired/folder</code>
-        </li>
-        <li>Clone your newly created repository:
-          <code>git clone https://github.com/yourusername/your-repo-name.git</code>
-        </li>
-        <li>Change into the project directory:
-          <code>cd your-repo-name</code>
-        </li>
-        <li>Install all the project dependencies:
-          <code>yarn install</code>
-        </li>
-      </ul>
-      <p>After completing these steps, your project will be set up and ready for development!</p>
+      <h3>2. Install dependencies</h3>
+      <p>Once you've cloned your new repository, run the following command in your project directory:</p>
+      <CodeBlock>yarn install</CodeBlock>
+      <p>This will install all the necessary dependencies for your project.</p>
+
+      <h3>3. Start Database Containers</h3>
+      <p>To set up your database environment, run:</p>
+      <CodeBlock>yarn db:up</CodeBlock>
+      <p>This command will start the necessary database containers for your project.</p>
+
+      <h3>4. Run the setup command (optional)</h3>
+      <p>If you want to populate the .env file with configured settings, use:</p>
+      <CodeBlock>yarn setup</CodeBlock>
+      <p>This step is optional but can be helpful for quickly configuring your environment.</p>
+
+      <h3>5. Run database migrations</h3>
+      <p>To set up your database schema, run:</p>
+      <CodeBlock>yarn dev migrate:up</CodeBlock>
+      <p>This command will apply all pending database migrations.</p>
+
+      <h3>6. Start developing</h3>
+      <p>To start your development server, use:</p>
+      <CodeBlock>yarn dev</CodeBlock>
+      <p>This will launch your application in development mode.</p>
+
     </article>
   );
 }
