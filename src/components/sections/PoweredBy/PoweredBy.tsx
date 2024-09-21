@@ -79,18 +79,18 @@ const PoweredBy = () => {
             <h1 className='section__powered_by__h1 text-center pt-10 pb-3 mb-5'>Want to contribute?</h1>
             <div className="section__powered_by__contribute container flex justify-center">
                 <div className='text-center mb-10 text-slate-700 w-full lg:w-1/2'>
-                    <p className='mb-10'>The Larascript Node community is growing, and I'd love for you to be a part of
+                    <p className='mb-10'>The Larascript Framework community is growing, and I'd love for you to be a part of
                         it! If you've
                         been inspired by what this framework can do and want to help shape its future, I welcome your
                         contributions.</p>
 
                     <p className='mb-10'>Whether you've found a bug that needs squashing, an idea for a new feature, or
                         you simply want to
-                        lend your coding expertise - I'm eager to have you on board. Simply fork the Larascript Node
+                        lend your coding expertise - I'm eager to have you on board. Simply fork the Larascript Framework
                         repository on GitHub, work your magic, and submit a pull request. I'll review your
                         changes and get them integrated into the codebase.</p>
 
-                    <p className='mb-10'>Together, we can take Larascript Node to new heights and deliver an even more
+                    <p className='mb-10'>Together, we can take Larascript Framework to new heights and deliver an even more
                         powerful, flexible
                         and user-friendly Node.js framework for developers everywhere. So what are you waiting for?
                         Fork, code, and contribute today!</p>

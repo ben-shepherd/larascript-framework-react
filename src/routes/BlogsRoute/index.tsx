@@ -14,7 +14,7 @@ const BlogsRoute = () => {
   useMetaTags({
     ...(config.meta ?? {}),
     title,
-    description: 'Insights, updates, and tips for Larascript Node developers',
+    description: 'Insights, updates, and tips for Larascript Framework developers',
     openGraph: generateOpenGraphMetaTags({
       title: 'Developer Blog',
       site_name: config.siteName,
@@ -23,7 +23,7 @@ const BlogsRoute = () => {
     metas: [
       ...generateFacebookMetaTags({
         title,
-        description: 'Insights, updates, and tips for Larascript Node developers',
+        description: 'Insights, updates, and tips for Larascript Framework developers',
         image: `${config.websiteUrl}/images/stock/coding-1841550_1280.jpg`,
         type: 'website',
       }),
