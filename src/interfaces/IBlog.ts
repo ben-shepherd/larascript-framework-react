@@ -1,9 +1,12 @@
-export interface IBlog {
+
+export interface IBlogPost  {
     title: string;
     subTitle: string | null;
     imageUrl: string;
     link: string;
-    content: () => JSX.Element;
     author: string;
     updatedAt: Date;
+}
+export interface IBlogContent {
+    content: ({ post }: { post: IBlogPost }) => JSX.Element;
 }

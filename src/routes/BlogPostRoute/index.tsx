@@ -1,6 +1,5 @@
 import { useMetaTags } from 'react-metatags-hook'
 import Header from '../../components/Header'
-import BlogPost from '../../components/sections/Blog/components/BlogPost'
 import blogsConfig from '../../config/blogsConfig'
 import config from '../../config/config'
 import generateFacebookMetaTags from '../../utils/meta/generateFacebookMetaTags'
@@ -13,6 +12,7 @@ const BlogPostRoute = () => {
   const post = blogsConfig.find((post) => post.link === slug)
 
   const title = withSitename(post?.title ?? 'Developer Blog')
+  const content = post?.content
 
   useMetaTags({
     ...(config.meta ?? {}),
@@ -33,7 +33,7 @@ const BlogPostRoute = () => {
     ]
   }, [window.location.href, post])
 
-  if(typeof post === 'undefined') {
+  if(typeof post === 'undefined' || !content) {
     window.location.href = '/blog'
     return null;
   }
@@ -51,7 +51,9 @@ const BlogPostRoute = () => {
             ]
         }} />
 
-      <BlogPost post={post} />
+
+      {content({ post })}
+
     </div>
   )
 }

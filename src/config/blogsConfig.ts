@@ -1,9 +1,11 @@
-import BuildBlogBackendApi from "../components/sections/Blog/Posts/01/BuildBlogBackendApi"
-import MyFirstBlog from "../components/sections/Blog/Posts/01/MyFirstBlog"
-import { IBlog } from "../interfaces/IBlog"
-import config from "./config"
+import BuildBlogBackendApi from "../components/sections/Blog/Posts/01/BuildBlogBackendApi";
+import MyFirstBlog from "../components/sections/Blog/Posts/01/MyFirstBlog";
+import { IBlogContent, IBlogPost } from "../interfaces/IBlog";
+import config from "./config";
 
-const blogsConfig: IBlog[] = [
+type IBlogWithContent = IBlogPost & IBlogContent;
+
+const blogsConfig: IBlogWithContent[] = [
     {
         title: "From TypeScript Novice to Framework Creator: A Developer's Journey",
         subTitle: null,
