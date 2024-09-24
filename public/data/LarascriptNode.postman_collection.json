@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "b5472d06-d28e-40d7-a20a-877c2cf62538",
-		"name": "Larascript Node",
+		"name": "Larascript API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "6100245"
 	},
@@ -57,7 +57,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"{{testEmail}}\",\r\n    \"password\": \"{{testPassword}}\",\r\n    \"firstName\": \"Bob\"\r\n}",
+							"raw": "{\r\n    \"email\": \"{{testEmail}}\",\r\n    \"password\": \"{{testPassword}}\",\r\n    \"firstName\": \"{{testFirstName}}\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -65,13 +65,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/auth/users/create",
+							"raw": "{{baseUrl}}/auth/create",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"auth",
-								"users",
 								"create"
 							]
 						}
@@ -129,12 +128,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/api/auth/login",
+							"raw": "{{baseUrl}}/auth/login",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"api",
 								"auth",
 								"login"
 							]
@@ -179,12 +177,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/api/auth/user",
+							"raw": "{{baseUrl}}/auth/user",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"api",
 								"auth",
 								"user"
 							]
@@ -230,7 +227,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"lastName\": \"Bob\"\r\n}",
+							"raw": "{\r\n    \"lastName\": \"{{testLastName}}\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -358,33 +355,35 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "http://localhost:5000",
-			"type": "string"
+			"value": "http://localhost:5000"
 		},
 		{
 			"key": "token",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
 			"key": "userId",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
 			"key": "userEmail",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
 			"key": "testPassword",
-			"value": "password123",
-			"type": "string"
+			"value": "password123"
 		},
 		{
 			"key": "testEmail",
-			"value": "tony.stark@example.com",
-			"type": "string"
+			"value": "tony.stark@example.com"
+		},
+		{
+			"key": "testFirstName",
+			"value": "john"
+		},
+		{
+			"key": "testLastName",
+			"value": "doe"
 		}
 	]
 }
