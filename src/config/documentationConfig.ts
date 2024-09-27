@@ -1,6 +1,7 @@
 import AuthConfiguration from "../components/sections/Documentation/components/docs/Authentication/AuthConfiguration"
 import AuthEndpoints from "../components/sections/Documentation/components/docs/Authentication/AuthEndpoints"
 import AuthGenerateJwt from "../components/sections/Documentation/components/docs/Authentication/AuthGenerateJwt"
+import AuthPermissions from "../components/sections/Documentation/components/docs/Authentication/AuthPermissions"
 import AuthSummary from "../components/sections/Documentation/components/docs/Authentication/AuthSummary"
 import CodingStandards from "../components/sections/Documentation/components/docs/CodingStandards"
 import ConsoleCustomCommands from "../components/sections/Documentation/components/docs/Console/ConsoleCustomCommands"
@@ -131,39 +132,27 @@ const documentationConfig: IDocumentationItem[] = [
                 content: AuthSummary,
             },
             {
-                href: "#authentication-4-1",
+                href: "#authentication-endpoints",
                 title: "Endpoints",
                 content: AuthEndpoints,
             },
             {
-                href: "#authentication-4-2",
+                href: "#authentication-generate-jwt-secret",
                 title: "Generate JWT Secret",
                 titleSmall: "JWT Secret",
                 content: AuthGenerateJwt,
             },
             {
-                href: "#authentication-4-3",
+                href: "#authentication-configuration",
                 title: "Configuration",
                 content: AuthConfiguration,
             },
-            // {
-            //     href: "#authentication-4-4",
-            //     title: "Auth Container",
-            //     titleSmall: "Container",
-            //     content: AuthContainer
-            // },
-            // {
-            //     href: "#authentication-4-5",
-            //     title: "Auth Service",
-            //     titleSmall: "Service",
-            //     content: AuthService
-            // },
-            // {
-            //     href: "#authentication-4-6",
-            //     title: "Auth Models",
-            //     titleSmall: "Models",
-            //     content: AuthModels
-            // },
+            {
+                href: "#authentication-permissions",
+                title: "Scopes and Permissions",
+                titleSmall: "Permissions",
+                content: AuthPermissions,
+            }
         ],
     },
     {
