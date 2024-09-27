@@ -178,6 +178,8 @@ class BlogPostModel extends Model<IBlogPostModelData> {
                         </code>
                     </pre>
 
+                    <p>This will create a file in the <code className="code__secondary code__small">@src/app/migrations</code> directory.</p>
+
                     <p>Now that our migration file has been created, the first line we'll add is the schema helper service.</p>
 
                     <p>We can also retrieve the table name from our model.</p>
@@ -190,7 +192,7 @@ class BlogPostModel extends Model<IBlogPostModelData> {
     const tableName = (new BlogPostModel).table;`}
                     </CodeBlock>
 
-                    <p>Using this schema helper, we can define the rest of our table:</p>
+                    <p>Using this schema helper, define our up and down methods:</p>
 
                     <CodeBlock className='codeBlock__main'>
 {`export class CreateBlogPostTableMigration extends BaseMigration {
@@ -204,7 +206,7 @@ class BlogPostModel extends Model<IBlogPostModelData> {
         const tableName = (new BlogPostModel).table;
 
         // Define our schema
-        schema.createTable(tableName, {
+        await schema.createTable(tableName, {
             title: DataTypes.STRING,
             body: DataTypes.TEXT,
             userId: DataTypes.STRING
@@ -212,10 +214,23 @@ class BlogPostModel extends Model<IBlogPostModelData> {
 
     }
 
-    // ...
+    async down(): Promise<void> {
+
+        // Get the schema helper
+        const schema = App.container('db').schema();
+
+        // Get the table name from the model
+        const tableName = (new BlogPostModel).table;
+
+        // Drop the table
+        await schema.dropTable(tableName);
+    }
+
 }`}
                     </CodeBlock>
                 </section>
+
+                <p>Todo: Explain observer purpose</p>
             </article>
         </BlogPostContainer>
     );

@@ -1,5 +1,5 @@
-import BuildBlogBackendApi from "../components/sections/Blog/Posts/01/BuildBlogBackendApi";
 import MyFirstBlog from "../components/sections/Blog/Posts/01/MyFirstBlog";
+import BuildBlogBackendApi from "../components/sections/Blog/Posts/02/BuildBlogBackendApi";
 import { IBlogContent, IBlogPost } from "../interfaces/IBlog";
 import config from "./config";
 
