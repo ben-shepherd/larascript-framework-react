@@ -18,7 +18,6 @@ import EventWorker from "../components/sections/Documentation/components/docs/Ev
 import ExpressAction from "../components/sections/Documentation/components/docs/Express/ExpressAction"
 import ExpressMiddleware from "../components/sections/Documentation/components/docs/Express/ExpressMiddleware"
 import ExpressResourceRoutes from "../components/sections/Documentation/components/docs/Express/ExpressResourceRoutes"
-import ExpressRouting from "../components/sections/Documentation/components/docs/Express/ExpressRouting"
 import ExpressSummary from "../components/sections/Documentation/components/docs/Express/ExpressSummary"
 import Extendables from "../components/sections/Documentation/components/docs/Extendables/ExtendableSummary"
 import InstallingProduction from "../components/sections/Documentation/components/docs/Installation/InstallProduction"
@@ -35,6 +34,8 @@ import ObserverSummary from "../components/sections/Documentation/components/doc
 import PostmanCollection from "../components/sections/Documentation/components/docs/Postman/PostmanCollection"
 import ProviderSummary from "../components/sections/Documentation/components/docs/Providers/ProviderSummary"
 import RepositorySummary from "../components/sections/Documentation/components/docs/Repositories/RepositorySummary"
+import RoutingCreate from "../components/sections/Documentation/components/docs/Routing/RoutingCreate"
+import RoutingSummary from "../components/sections/Documentation/components/docs/Routing/RoutingSummary"
 import Testing from "../components/sections/Documentation/components/docs/Testing/Testing"
 import ValidatorCreating from "../components/sections/Documentation/components/docs/Validator/ValidatorCreating"
 import ValidatorJoi from "../components/sections/Documentation/components/docs/Validator/ValidatorJoi"
@@ -91,29 +92,39 @@ const documentationConfig: IDocumentationItem[] = [
         children: [
             {
                 content: ExpressSummary,
+            }
+        ],
+    },
+    {
+        href: "#routing",
+        title: "Routing",
+        children: [
+            {
+                content: RoutingSummary,
             },
             {
-                href: "#http-express-routing",
-                title: "Routing",
-                content: ExpressRouting
+                href: "#routing-files",
+                title: "Create Route Files",
+                titleSmall: "Files",
+                content: RoutingCreate,
             },
             {
-                href: "#http-express-middleware",
+                href: "#routing-middleware",
                 title: "Middleware",
                 content: ExpressMiddleware
             },
             {
-                href: "#http-express-actions",
+                href: "#routing-actions",
                 title: "Actions",
                 content: ExpressAction
             },
             {
-                href: "#http-express-resources",
-                title: "Routing Resources",
-                titleSmall: "Resources",
+                href: "#routing-resources",
+                title: "Automatically Generated Model Routes",
+                titleSmall: "Model Routes",
                 content: ExpressResourceRoutes
             }
-        ],
+        ]
     },
     {
         href: "#providers",
