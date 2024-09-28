@@ -19,7 +19,7 @@ const config: IConfig = {
   },
   headers: {
     homepage: {
-      title: 'Larascript Node',
+      title: 'Larascript Framework',
       subTitle: siteDescription,
       visibleParts: {
         showTitle: true,
@@ -50,7 +50,7 @@ const config: IConfig = {
     blog: {
     
       title: 'Developer Blog',
-      subTitle: 'Insights, updates, and tips for Larascript Node developers',
+      subTitle: 'Insights, updates, and tips for Larascript Framework developers',
       addtionalClassNames: 'header_developer_blog',
       visibleParts: {
         showTitle: true,

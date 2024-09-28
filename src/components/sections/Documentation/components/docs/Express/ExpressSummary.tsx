@@ -2,8 +2,6 @@
 const ExpressSummary = () => {
     return (
         <article>
-            <h2>Express Wrapper</h2>
-            
             <p>This project includes a custom wrapper for Express, streamlining development and enhancing productivity. While simplifying common tasks, you retain full access to Express's features when needed.</p>
 
             <h3>Express Provider</h3>
