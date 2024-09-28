@@ -3,6 +3,8 @@ import CodeBlock from "../../../../../utils/CodeBlock";
 const RoutingSecurityResourceOwner = () => {
     return (
         <article>
+            <p>Below are some examples of how to apply resource ownership to specific routes.</p>
+
             <h3>Full Resource Ownership</h3>
             <p>Example with full resource ownership:</p>
             <CodeBlock>

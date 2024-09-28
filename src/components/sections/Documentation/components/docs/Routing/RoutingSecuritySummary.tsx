@@ -54,7 +54,7 @@ const RoutingSecuritySummary = () => {
 {`Route({
     // ...
     security: [
-        Security.resourceOwner()
+        Security.resourceOwner('userId')
     ],`}
       </CodeBlock>
 
