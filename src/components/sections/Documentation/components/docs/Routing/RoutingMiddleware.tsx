@@ -1,6 +1,6 @@
 import CodeBlock from "../../../../../utils/CodeBlock";
 
-const ExpressMiddleware = () => {
+const RoutingMiddleware = () => {
     return (
         <article>
             <p>Middleware functions are an integral part of the Express.js ecosystem, allowing you to execute code, make changes to the request and response objects, end the request-response cycle, or call the next middleware function. This framework provides an easy way to set up and use middleware in your application.</p>
@@ -18,11 +18,11 @@ const ExpressMiddleware = () => {
             <h3>Middleware Example</h3>
             
             <CodeBlock language="typescript">
-                {`import { BaseRequest } from '@src/core/domains/express/types/BaseRequest.t';
+{`import { BaseRequest } from '@src/core/domains/express/types/BaseRequest.t';
 import { NextFunction, Response } from 'express';
 
-export const logger = () => async (req: BaseRequest, res: Response, next: NextFunction): Promise<void> => {
-    console.log('Request', 'Method: ' + req.method, 'URL: ' + req.url);
+export const basicLoggerMiddleware = () => async (req: BaseRequest, res: Response, next: NextFunction): Promise<void> => {
+    console.log('New request: ', 'Method: ', req.method, 'Path: ', req.path, 'Headers: ', req.headers);
     next();
 };`}
             </CodeBlock>
@@ -37,7 +37,7 @@ export const logger = () => async (req: BaseRequest, res: Response, next: NextFu
         method: 'get',
         path: '/health',
         action: health,
-        middlewares: [logger()], // Add one or more middleware
+        middlewares: [basicLoggerMiddleware()], // Add one or more middleware
     }
 ]
 
@@ -47,4 +47,4 @@ export default routes;`}
     );
 }
 
-export default ExpressMiddleware;
+export default RoutingMiddleware;

@@ -1,6 +1,7 @@
 import AuthConfiguration from "../components/sections/Documentation/components/docs/Authentication/AuthConfiguration"
 import AuthEndpoints from "../components/sections/Documentation/components/docs/Authentication/AuthEndpoints"
 import AuthGenerateJwt from "../components/sections/Documentation/components/docs/Authentication/AuthGenerateJwt"
+import AuthPermissions from "../components/sections/Documentation/components/docs/Authentication/AuthPermissions"
 import AuthSummary from "../components/sections/Documentation/components/docs/Authentication/AuthSummary"
 import CodingStandards from "../components/sections/Documentation/components/docs/CodingStandards"
 import ConsoleCustomCommands from "../components/sections/Documentation/components/docs/Console/ConsoleCustomCommands"
@@ -14,10 +15,6 @@ import EventDrivers from "../components/sections/Documentation/components/docs/E
 import EventSubscribersAndListeners from "../components/sections/Documentation/components/docs/Events/EventSubscribersAndListeners"
 import EventSummary from "../components/sections/Documentation/components/docs/Events/EventSummary"
 import EventWorker from "../components/sections/Documentation/components/docs/Events/EventWorker"
-import ExpressAction from "../components/sections/Documentation/components/docs/Express/ExpressAction"
-import ExpressMiddleware from "../components/sections/Documentation/components/docs/Express/ExpressMiddleware"
-import ExpressResourceRoutes from "../components/sections/Documentation/components/docs/Express/ExpressResourceRoutes"
-import ExpressRouting from "../components/sections/Documentation/components/docs/Express/ExpressRouting"
 import ExpressSummary from "../components/sections/Documentation/components/docs/Express/ExpressSummary"
 import Extendables from "../components/sections/Documentation/components/docs/Extendables/ExtendableSummary"
 import InstallingProduction from "../components/sections/Documentation/components/docs/Installation/InstallProduction"
@@ -34,6 +31,13 @@ import ObserverSummary from "../components/sections/Documentation/components/doc
 import PostmanCollection from "../components/sections/Documentation/components/docs/Postman/PostmanCollection"
 import ProviderSummary from "../components/sections/Documentation/components/docs/Providers/ProviderSummary"
 import RepositorySummary from "../components/sections/Documentation/components/docs/Repositories/RepositorySummary"
+import RoutingAction from "../components/sections/Documentation/components/docs/Routing/RoutingAction"
+import RoutingCreate from "../components/sections/Documentation/components/docs/Routing/RoutingCreate"
+import RoutingMiddleware from "../components/sections/Documentation/components/docs/Routing/RoutingMiddleware"
+import RoutingResourceRoutes from "../components/sections/Documentation/components/docs/Routing/RoutingResourceRoutes"
+import RoutingSecurityResourceOwner from "../components/sections/Documentation/components/docs/Routing/RoutingSecurityResourceOwner"
+import RoutingSecuritySummary from "../components/sections/Documentation/components/docs/Routing/RoutingSecuritySummary"
+import RoutingSummary from "../components/sections/Documentation/components/docs/Routing/RoutingSummary"
 import Testing from "../components/sections/Documentation/components/docs/Testing/Testing"
 import ValidatorCreating from "../components/sections/Documentation/components/docs/Validator/ValidatorCreating"
 import ValidatorJoi from "../components/sections/Documentation/components/docs/Validator/ValidatorJoi"
@@ -90,29 +94,51 @@ const documentationConfig: IDocumentationItem[] = [
         children: [
             {
                 content: ExpressSummary,
-            },
-            {
-                href: "#http-express-routing",
-                title: "Routing",
-                content: ExpressRouting
-            },
-            {
-                href: "#http-express-middleware",
-                title: "Middleware",
-                content: ExpressMiddleware
-            },
-            {
-                href: "#http-express-actions",
-                title: "Actions",
-                content: ExpressAction
-            },
-            {
-                href: "#http-express-resources",
-                title: "Routing Resources",
-                titleSmall: "Resources",
-                content: ExpressResourceRoutes
             }
         ],
+    },
+    {
+        href: "#routing",
+        title: "Routing",
+        children: [
+            {
+                content: RoutingSummary,
+            },
+            {
+                href: "#routing-files",
+                title: "Create Route Files",
+                titleSmall: "Files",
+                content: RoutingCreate,
+            },
+            {
+                href: "#routing-actions",
+                title: "Actions",
+                content: RoutingAction
+            },
+            {
+                href: "#routing-resources",
+                title: "Automatically Generated Model Routes",
+                titleSmall: "Model Routes",
+                content: RoutingResourceRoutes
+            },
+            {
+                href: "#routing-security",
+                title: "Route Security",
+                titleSmall: "Security",
+                content: RoutingSecuritySummary
+            },
+            {
+                href: "#routing-security-resource-owner",
+                title: "Security - Resource Owner",
+                titleSmall: "Resource Owner",
+                content: RoutingSecurityResourceOwner
+            },
+            {
+                href: "#routing-middleware",
+                title: "Middleware",
+                content: RoutingMiddleware
+            },
+        ]
     },
     {
         href: "#providers",
@@ -131,39 +157,28 @@ const documentationConfig: IDocumentationItem[] = [
                 content: AuthSummary,
             },
             {
-                href: "#authentication-4-1",
-                title: "Endpoints",
+                href: "#authentication-endpoints",
+                title: "Authentication Routes",
+                titleSmall: "Routes",
                 content: AuthEndpoints,
             },
             {
-                href: "#authentication-4-2",
+                href: "#authentication-generate-jwt-secret",
                 title: "Generate JWT Secret",
                 titleSmall: "JWT Secret",
                 content: AuthGenerateJwt,
             },
             {
-                href: "#authentication-4-3",
+                href: "#authentication-configuration",
                 title: "Configuration",
                 content: AuthConfiguration,
             },
-            // {
-            //     href: "#authentication-4-4",
-            //     title: "Auth Container",
-            //     titleSmall: "Container",
-            //     content: AuthContainer
-            // },
-            // {
-            //     href: "#authentication-4-5",
-            //     title: "Auth Service",
-            //     titleSmall: "Service",
-            //     content: AuthService
-            // },
-            // {
-            //     href: "#authentication-4-6",
-            //     title: "Auth Models",
-            //     titleSmall: "Models",
-            //     content: AuthModels
-            // },
+            {
+                href: "#authentication-permissions",
+                title: "Scopes and Permissions",
+                titleSmall: "Permissions",
+                content: AuthPermissions,
+            }
         ],
     },
     {

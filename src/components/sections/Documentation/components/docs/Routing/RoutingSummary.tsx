@@ -1,36 +1,34 @@
 import CodeBlock from "../../../../../utils/CodeBlock";
 
-const Routing = () => {
+const RoutingSummary = () => {
     return (
         <article>
-            <p>Routes are centralized in <code>@src/app/routes</code>.</p>
+            <p>
+                The routing system offers a powerful and flexible way to define your application's endpoints. It excels in three key areas: quick route definition, automatic CRUD route generation for models, and built-in security rules. This approach significantly reduces boilerplate code and enhances the overall structure and security of your application.
+            </p>
 
-            <p>Generate new route files using:</p>
-            
-            <CodeBlock language="bash">
-                yarn dev -- make:routes --name=Blog
-            </CodeBlock>
-
-            <p>This creates <code>@src/app/routes/userRoutes.ts</code> with boilerplate code.</p>
-            
-            <h3>Example Routing File</h3>
+            <h2>Quick Route Definition</h2>
+            <p>
+                Routes can be quickly defined using a declarative syntax. This method allows you to specify the route name, HTTP method, path, and action in a single, easy-to-read structure. For example:
+            </p>
+            <p>This file would exist here <code>@src/app/routes/userRoutes.ts</code>.</p>
             
             <CodeBlock language="typescript">
-{`const userRoutes = RouteGroup([
+{`const myRoutes = RouteGroup([
     Route({
         name: 'index',
         method: 'get',
-        path: '/blog/update',
-        action: updateBlog,
+        path: '/example-route',
+        action: exampleRouteAction,
         middlewares: [authorize()],
-        validator: UpdateBlogValidator,
+        validator: ExampleValidator,
     }),
 ])
 
 export default userRoutes;`}
             </CodeBlock>
         
-            <h3>Route Interface</h3>
+            <h2>Route Interface</h2>
 
             <p>Each route is defined using the following interface:</p>
 
@@ -56,9 +54,9 @@ export default userRoutes;`}
                 <li><strong>validateBeforeAction:</strong> Defaults to true. If set to false, validation will not occur before reaching the action, allowing manual handling of validation checks</li>
             </ul>
 
-            <h3>Binding Routes</h3>
+            <h2>Binding Routes to Express</h2>
 
-            <p>Bind routes to Express in your App provider:</p>
+            <p>Navigate to <code>@src/core/providers/AppProvider.ts</code> and use the following to bind your routes:</p>
 
             <CodeBlock language="typescript">
 {`export default class AppProvider extends BaseProvider {
@@ -70,7 +68,7 @@ export default userRoutes;`}
          * Register your routes 
          */
         App.container('express').bindRoutes(routes);
-        App.container('express').bindRoutes(userRoutes);    
+        App.container('express').bindRoutes(myRoutes);    
     }
 }`}
             </CodeBlock>
@@ -80,4 +78,4 @@ export default userRoutes;`}
     );
 }
 
-export default Routing;
+export default RoutingSummary;

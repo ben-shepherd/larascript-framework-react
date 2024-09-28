@@ -1,6 +1,6 @@
 import CodeBlock from "../../../../../utils/CodeBlock";
 
-const ExpressActions = () => {
+const RoutingAction = () => {
     return (
         <article>
             <p>Actions, equivalent to controllers in MVC, handle endpoint logic. They're located in <code>@src/app/actions</code>.</p>
@@ -28,17 +28,14 @@ const ExpressActions = () => {
 import responseError from '@src/core/domains/express/requests/responseError';
 import { BaseRequest } from '@src/core/domains/express/types/BaseRequest.t';
 
-export default (req: BaseRequest, res: Response) => {
+export const exampleRouteAction = (req: BaseRequest, res: Response) => {
     try {
-        const successfullyValidated = req.validator?.validate(req.body).success
-        const user = req.user?.getData({ excludeGuarded: true })
-        const apiToken = req.apiToken?.getData({ excludeGuarded: true })
-
-        res.send({ success: successfullyValidated, user, apiToken })
+        res.send({ success: true })
     }
     catch (error) {
         if(error instanceof Error) {
             responseError(req, res, error)   
+            return;
         }
     }
 }`}
@@ -49,4 +46,4 @@ export default (req: BaseRequest, res: Response) => {
     );
 }
 
-export default ExpressActions;
+export default RoutingAction;
