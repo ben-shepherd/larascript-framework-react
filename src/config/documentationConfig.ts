@@ -31,12 +31,13 @@ import ObserverSummary from "../components/sections/Documentation/components/doc
 import PostmanCollection from "../components/sections/Documentation/components/docs/Postman/PostmanCollection"
 import ProviderSummary from "../components/sections/Documentation/components/docs/Providers/ProviderSummary"
 import RepositorySummary from "../components/sections/Documentation/components/docs/Repositories/RepositorySummary"
-import ExpressAction from "../components/sections/Documentation/components/docs/Routing/RoutingAction"
+import RoutingAction from "../components/sections/Documentation/components/docs/Routing/RoutingAction"
 import RoutingCreate from "../components/sections/Documentation/components/docs/Routing/RoutingCreate"
 import RoutingMiddleware from "../components/sections/Documentation/components/docs/Routing/RoutingMiddleware"
 import RoutingResourceRoutes from "../components/sections/Documentation/components/docs/Routing/RoutingResourceRoutes"
-import { default as RoutingSecurityResourceOwner, default as RoutingSummary } from "../components/sections/Documentation/components/docs/Routing/RoutingSecurityResourceOwner"
+import RoutingSecurityResourceOwner from "../components/sections/Documentation/components/docs/Routing/RoutingSecurityResourceOwner"
 import RoutingSecuritySummary from "../components/sections/Documentation/components/docs/Routing/RoutingSecuritySummary"
+import RoutingSummary from "../components/sections/Documentation/components/docs/Routing/RoutingSummary"
 import Testing from "../components/sections/Documentation/components/docs/Testing/Testing"
 import ValidatorCreating from "../components/sections/Documentation/components/docs/Validator/ValidatorCreating"
 import ValidatorJoi from "../components/sections/Documentation/components/docs/Validator/ValidatorJoi"
@@ -110,14 +111,9 @@ const documentationConfig: IDocumentationItem[] = [
                 content: RoutingCreate,
             },
             {
-                href: "#routing-middleware",
-                title: "Middleware",
-                content: RoutingMiddleware
-            },
-            {
                 href: "#routing-actions",
                 title: "Actions",
-                content: ExpressAction
+                content: RoutingAction
             },
             {
                 href: "#routing-resources",
@@ -136,7 +132,12 @@ const documentationConfig: IDocumentationItem[] = [
                 title: "Security - Resource Owner",
                 titleSmall: "Resource Owner",
                 content: RoutingSecurityResourceOwner
-            }
+            },
+            {
+                href: "#routing-middleware",
+                title: "Middleware",
+                content: RoutingMiddleware
+            },
         ]
     },
     {

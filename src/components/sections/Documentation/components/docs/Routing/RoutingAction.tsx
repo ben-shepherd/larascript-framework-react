@@ -28,15 +28,14 @@ const RoutingAction = () => {
 import responseError from '@src/core/domains/express/requests/responseError';
 import { BaseRequest } from '@src/core/domains/express/types/BaseRequest.t';
 
-export default (req: BaseRequest, res: Response) => {
+export const exampleRouteAction = (req: BaseRequest, res: Response) => {
     try {
-        // Action logic
-
         res.send({ success: true })
     }
     catch (error) {
         if(error instanceof Error) {
             responseError(req, res, error)   
+            return;
         }
     }
 }`}

@@ -24,6 +24,8 @@ const RoutingSecuritySummary = () => {
     security: [
         Security.enableScopes()
     ],
+    // OR
+    enableScopes: true
     // ...`}
       </CodeBlock>
 
