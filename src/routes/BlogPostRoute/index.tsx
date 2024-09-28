@@ -17,7 +17,7 @@ const BlogPostRoute = () => {
   useMetaTags({
     ...(config.meta ?? {}),
     title,
-    description: 'Insights, updates, and tips for Larascript Node developers',
+    description: 'Insights, updates, and tips for Larascript Framework developers',
     openGraph: generateOpenGraphMetaTags({
       title,
       site_name: config.siteName,
@@ -26,7 +26,7 @@ const BlogPostRoute = () => {
     metas: [
       ...generateFacebookMetaTags({
         title,
-        description: 'Insights, updates, and tips for Larascript Node developers',
+        description: 'Insights, updates, and tips for Larascript Framework developers',
         image: post?.imageUrl ?? `${config.websiteUrl}/images/stock/coding-1841550_1280.jpg`,
         type: 'website',
       }),
