@@ -1,6 +1,6 @@
 import CodeBlock from "../../../../../utils/CodeBlock";
 
-const ExpressMiddleware = () => {
+const RoutingMiddleware = () => {
     return (
         <article>
             <p>Middleware functions are an integral part of the Express.js ecosystem, allowing you to execute code, make changes to the request and response objects, end the request-response cycle, or call the next middleware function. This framework provides an easy way to set up and use middleware in your application.</p>
@@ -47,4 +47,4 @@ export default routes;`}
     );
 }
 
-export default ExpressMiddleware;
+export default RoutingMiddleware;

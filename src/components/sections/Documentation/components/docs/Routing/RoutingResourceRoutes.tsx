@@ -1,6 +1,6 @@
 import CodeBlock from "../../../../../utils/CodeBlock";
 
-const ExpressResourceRoutes = () => (
+const RoutingResourceRoutes = () => (
   <div>
     <p>Resource Routing offers a more efficient approach to building CRUD (Create, Read, Update, Delete) endpoints. It streamlines development by automatically generating routes for common operations, ensuring consistency in API design across resources, allowing easy customization of default behaviors, and simplifying route management through grouping related endpoints. This approach significantly reduces boilerplate code and enhances overall API structure.</p>
 
@@ -62,4 +62,4 @@ export default routes`}
   </div>
 );
 
-export default ExpressResourceRoutes;
+export default RoutingResourceRoutes;

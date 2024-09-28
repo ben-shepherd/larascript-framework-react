@@ -15,9 +15,6 @@ import EventDrivers from "../components/sections/Documentation/components/docs/E
 import EventSubscribersAndListeners from "../components/sections/Documentation/components/docs/Events/EventSubscribersAndListeners"
 import EventSummary from "../components/sections/Documentation/components/docs/Events/EventSummary"
 import EventWorker from "../components/sections/Documentation/components/docs/Events/EventWorker"
-import ExpressAction from "../components/sections/Documentation/components/docs/Express/ExpressAction"
-import ExpressMiddleware from "../components/sections/Documentation/components/docs/Express/ExpressMiddleware"
-import ExpressResourceRoutes from "../components/sections/Documentation/components/docs/Express/ExpressResourceRoutes"
 import ExpressSummary from "../components/sections/Documentation/components/docs/Express/ExpressSummary"
 import Extendables from "../components/sections/Documentation/components/docs/Extendables/ExtendableSummary"
 import InstallingProduction from "../components/sections/Documentation/components/docs/Installation/InstallProduction"
@@ -34,8 +31,12 @@ import ObserverSummary from "../components/sections/Documentation/components/doc
 import PostmanCollection from "../components/sections/Documentation/components/docs/Postman/PostmanCollection"
 import ProviderSummary from "../components/sections/Documentation/components/docs/Providers/ProviderSummary"
 import RepositorySummary from "../components/sections/Documentation/components/docs/Repositories/RepositorySummary"
+import ExpressAction from "../components/sections/Documentation/components/docs/Routing/RoutingAction"
 import RoutingCreate from "../components/sections/Documentation/components/docs/Routing/RoutingCreate"
-import RoutingSummary from "../components/sections/Documentation/components/docs/Routing/RoutingSummary"
+import RoutingMiddleware from "../components/sections/Documentation/components/docs/Routing/RoutingMiddleware"
+import RoutingResourceRoutes from "../components/sections/Documentation/components/docs/Routing/RoutingResourceRoutes"
+import { default as RoutingSecurityResourceOwner, default as RoutingSummary } from "../components/sections/Documentation/components/docs/Routing/RoutingSecurityResourceOwner"
+import RoutingSecuritySummary from "../components/sections/Documentation/components/docs/Routing/RoutingSecuritySummary"
 import Testing from "../components/sections/Documentation/components/docs/Testing/Testing"
 import ValidatorCreating from "../components/sections/Documentation/components/docs/Validator/ValidatorCreating"
 import ValidatorJoi from "../components/sections/Documentation/components/docs/Validator/ValidatorJoi"
@@ -111,7 +112,7 @@ const documentationConfig: IDocumentationItem[] = [
             {
                 href: "#routing-middleware",
                 title: "Middleware",
-                content: ExpressMiddleware
+                content: RoutingMiddleware
             },
             {
                 href: "#routing-actions",
@@ -122,7 +123,19 @@ const documentationConfig: IDocumentationItem[] = [
                 href: "#routing-resources",
                 title: "Automatically Generated Model Routes",
                 titleSmall: "Model Routes",
-                content: ExpressResourceRoutes
+                content: RoutingResourceRoutes
+            },
+            {
+                href: "#routing-security",
+                title: "Route Security",
+                titleSmall: "Security",
+                content: RoutingSecuritySummary
+            },
+            {
+                href: "#routing-security-resource-owner",
+                title: "Security - Resource Owner",
+                titleSmall: "Resource Owner",
+                content: RoutingSecurityResourceOwner
             }
         ]
     },
