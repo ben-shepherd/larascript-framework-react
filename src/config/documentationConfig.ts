@@ -158,7 +158,8 @@ const documentationConfig: IDocumentationItem[] = [
             },
             {
                 href: "#authentication-endpoints",
-                title: "Endpoints",
+                title: "Authentication Routes",
+                titleSmall: "Routes",
                 content: AuthEndpoints,
             },
             {

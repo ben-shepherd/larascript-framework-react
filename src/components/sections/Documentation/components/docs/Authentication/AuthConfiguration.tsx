@@ -11,6 +11,7 @@ const AuthConfiguration = () => {
                 <li><strong>repositories</strong> A reference to the repositories used by the authentication service.</li>
                 <li><strong>validators</strong> The validators used by the authentication service.</li>
                 <li><strong>jwtSecret</strong> The JWT Secret used to sign tokens.</li>
+                <li><strong>expiresInMinutes</strong> The expiration time of tokens in minutes.</li>
                 <li><strong>enableAuthRoutes:</strong> Enable or disable authentication routes.</li>
                 <li><strong>enableAuthRoutesAllowCreate:</strong> Enable or disable the endpoint for creating new users.</li>
                 <li><strong>permissions</strong> The place to define your user permissions.</li>
