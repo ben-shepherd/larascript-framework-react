@@ -3,7 +3,7 @@ import { IConfig } from "../interfaces/IConfig";
 const githubProfile = 'https://github.com/ben-shepherd/';
 const githubRepository = `${githubProfile}larascript-framework/`;
 const siteDescription = 'A Node.js framework inspired by Laravel, built with TypeScript.';
-const env = process.env.REACT_APP_ENV ?? 'production';
+const env = import.meta.env.VITE_REACT_APP_ENV ?? 'production';
 const isDevelopment = env === 'dev' || env === 'development';
 
 const config: IConfig = {
