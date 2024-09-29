@@ -38,7 +38,7 @@ const PostmanCollection = () => {
                 <p><strong>Note:</strong> Remember to update the collection whenever significant changes are made to your API to ensure it remains in sync with your current implementation.</p>
             </article>
             <article>
-                <a href="/data/LarascriptNode.postman_collection.json" download="LarascriptNode.postman_collection.json" className="postman__download__link" ref={linkRef}>Download Postman Collection (Hidden Link)</a>
+                <a href="/data/LarascriptFramework.postman_collection.json" download="LarascriptFramework.postman_collection.json" className="postman__download__link" ref={linkRef}>Download Postman Collection (Hidden Link)</a>
 
                 <button className="mt-5 transition-colors duration-300 rounded bg-slate-500 text-stone-100 py-2 px-4 text-sm hover:bg-stone-200 hover:text-stone-800 postman__download__button" onClick={handleClick}>Download Postman Collection</button>
             </article>
