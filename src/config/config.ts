@@ -3,13 +3,15 @@ import { IConfig } from "../interfaces/IConfig";
 const githubProfile = 'https://github.com/ben-shepherd/';
 const githubRepository = `${githubProfile}larascript-framework/`;
 const siteDescription = 'A Node.js framework inspired by Laravel, built with TypeScript.';
+const env = process.env.REACT_APP_ENV ?? 'production';
+const isDevelopment = env === 'dev' || env === 'development';
 
 const config: IConfig = {
+  isDevelopment,
   author: 'Benjamin S',
   githubProfile,
   githubRepository,
-  // websiteUrl: 'https://www.larascriptnode.com',
-  websiteUrl: 'http://localhost:5173',
+  websiteUrl: isDevelopment ? 'http://localhost:5173' : 'https://www.larascriptnode.com',
   siteName: 'Larascript Framework',
   siteDescription,
   meta: {

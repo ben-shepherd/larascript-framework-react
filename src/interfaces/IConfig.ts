@@ -3,6 +3,7 @@ import { IHeader } from "./IHeader";
 
 
 export interface IConfig {
+    isDevelopment: boolean;
     author: string;
     githubProfile: string;
     githubRepository: string;
