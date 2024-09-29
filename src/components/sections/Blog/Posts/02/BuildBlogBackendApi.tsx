@@ -1,3 +1,4 @@
+import config from '../../../../../config/config';
 import { IBlogPost } from '../../../../../interfaces/IBlog';
 import '../../../../../styles/components/CodeBlock.scss';
 import CodeBlock from "../../../../utils/CodeBlock";
@@ -347,9 +348,9 @@ private addApiRoutes(): void {
 }`}
                     </CodeBlock>
 
-                    <p>Now if we run the <code className="code__secondary code__small">yarn dev</code> command, our routes will be registered.</p>
+                    <p>Lets confirm everything is working by running our app with <code className="code__secondary code__small">yarn dev</code> command.</p>
 
-                    <p>These new routes will now appear in our terminal output during the boot process:</p>
+                    <p>We should see the blog routes now appear in the console during the boot process:</p>
 
                     <CodeBlock className='codeBlock__main'>
 {`[Express] binding route GET: '/health' as 'health'
@@ -360,18 +361,52 @@ private addApiRoutes(): void {
 [Express] binding route POST: '/auth/revoke' as 'authRevoke'
 [Express] binding route GET: '/' as 'index'
 [Express] binding route GET: '/blog/posts' as 'blog/posts.index'
- SECURITY:  with partial scopes: [BlogPostModel:read, BlogPostModel:all] (scopes disabled)
+  SECURITY:  with partial scopes: [BlogPostModel:read, BlogPostModel:all]  (scopes disabled)
+  SECURITY:  authorized  with never: [show, all]
+  SECURITY:  resourceOwner
 [Express] binding route GET: '/blog/posts/:id' as 'blog/posts.show'
- SECURITY:  with partial scopes: [BlogPostModel:read, BlogPostModel:all] (scopes disabled)
+  SECURITY:  with partial scopes: [BlogPostModel:read, BlogPostModel:all]  (scopes disabled)
+  SECURITY:  authorized  with never: [show, all]
+  SECURITY:  resourceOwner
 [Express] binding route PUT: '/blog/posts/:id' as 'blog/posts.update'
- SECURITY:  with partial scopes: [BlogPostModel:write, BlogPostModel:all] (scopes disabled)
+  SECURITY:  with partial scopes: [BlogPostModel:write, BlogPostModel:all]  (scopes disabled)
+  SECURITY:  authorized  with never: [show, all]
+  SECURITY:  resourceOwner
 [Express] binding route DELETE: '/blog/posts/:id' as 'blog/posts.destroy'
- SECURITY:  with partial scopes: [BlogPostModel:delete, BlogPostModel:all] (scopes disabled)
+  SECURITY:  with partial scopes: [BlogPostModel:delete, BlogPostModel:all]  (scopes disabled)
+  SECURITY:  authorized  with never: [show, all]
+  SECURITY:  resourceOwner
 [Express] binding route POST: '/blog/posts' as 'blog/posts.create'
- SECURITY:  with partial scopes: [BlogPostModel:create, BlogPostModel:all] (scopes disabled)
+  SECURITY:  with partial scopes: [BlogPostModel:create, BlogPostModel:all]  (scopes disabled)
+  SECURITY:  authorized  with never: [show, all]
+  SECURITY:  resourceOwner
 [App]: Started`}
                     </CodeBlock>
                 </section>
+
+                <h2 className="underline">Postman Collection</h2>
+
+                <p>Now that all your routes are registered, we can start testing them with Postman.</p>
+
+                <p>Download the postman collection below:</p>
+
+                <a href={`${config.websiteUrl}/data/LarascriptFramework.blog_tutorial_example.postman_collection.json`} download="LarascriptFramework.blog_tutorial_example.postman_collection.json" target="_blank">
+                    <button>
+                        Download Collection
+                    </button>
+                </a>
+
+                <p>Once imported with Postman, we recommend this flow:</p>
+
+                <ul>
+                    <li>Make sure your App is running in development mode with <code className="code__secondary code__small">yarn dev</code></li>
+                    <li>Create an account using 'Auth Create'. The credentials are prefilled, and the authorization token will be saved to the collection variables.</li>
+                    <li>You can now use 'Create blog post', the blogPostId will be saved to the collection variables.</li>
+                    <li>You can now use the 'show', 'update' and 'delete' endpoints</li>
+                </ul>
+
+
+                <p></p>
             </article>
         </BlogPostContainer>
     );

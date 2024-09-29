@@ -118,6 +118,10 @@
         list-style: disc;
         padding-left:35px;
     }
+    .codeBlock button svg {
+        color:#fff !important;
+        fill: white;
+    }
     .code__primary,
     .code__secondary {
         font-size:14px;
@@ -142,7 +146,6 @@
     button {
         text-wrap: wrap;
         background-color: #4072af;
-        padding: 1px 25px;
         border-radius: 5px;
         color: #ffffff;
         transition:all 0.5s ease-in-out;
