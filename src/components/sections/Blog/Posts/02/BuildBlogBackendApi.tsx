@@ -27,7 +27,8 @@ const BuildBlogBackendApi = ({ post }: Props) => {
                         In this tutorial, we'll walk through the process of creating a robust backend API for a blog using Larascript. This guide is designed for developers who are interested in learning how to build APIs with the Larascript framework.
                     </p>
                     <p>
-                        We'll cover the entire journey, starting from setting up a new repository to implementing the necessary logic for a fully functional blog API. By the end of this tutorial, you'll have a solid understanding of how to leverage Larascript to create efficient and scalable backend solutions for your API projects.
+                        We'll cover the entire journey, starting from setting up Models and Routes, to implement the necessary logic for a fully functional blog API.
+                        By the end of this tutorial, you'll have a solid understanding of how to leverage Larascript to create efficient and scalable backend solutions for your API projects.
                     </p>
                 </section>
 
@@ -328,7 +329,7 @@ export default blogRoutes;`}
 
                     <p>The next step is step is to go to our <code className="code__secondary code__small">@src/app/providers/AppProvider.ts</code> file register these routes with Express.</p>
 
-                    <p>We will add a new line at the end of our addApiMethods function to register our routes.</p>
+                    <p>We will add a new line at the end of our <code className="code__secondary code__small">addApiMethods()</code> function to register our routes.</p>
 
                     <CodeBlock className='codeBlock__main'>
 {`/**
@@ -344,7 +345,7 @@ private addApiRoutes(): void {
     expressService.bindRoutes(healthRoutes);
     expressService.bindRoutes(authService.getAuthRoutes() ?? [])
     expressService.bindRoutes(apiRoutes);
-    expressService.bindRoutes(blogRoutes);
+    expressService.bindRoutes(blogRoutes); // Addded this line
 }`}
                     </CodeBlock>
 
@@ -384,7 +385,7 @@ private addApiRoutes(): void {
                     </CodeBlock>
                 </section>
 
-                <h2 className="underline">Postman Collection</h2>
+                <h2 className="underline">Testing with Postman Collection</h2>
 
                 <p>Now that all your routes are registered, we can start testing them with Postman.</p>
 
@@ -402,7 +403,7 @@ private addApiRoutes(): void {
                     <li>Make sure your App is running in development mode with <code className="code__secondary code__small">yarn dev</code></li>
                     <li>Create an account using 'Auth Create'. The credentials are prefilled, and the authorization token will be saved to the collection variables.</li>
                     <li>You can now use 'Create blog post', the blogPostId will be saved to the collection variables.</li>
-                    <li>You can now use the 'show', 'update' and 'delete' endpoints</li>
+                    <li>You can now use the 'show', 'update' and 'delete' endpoints.</li>
                 </ul>
 
 
