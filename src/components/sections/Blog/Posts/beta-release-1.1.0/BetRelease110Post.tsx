@@ -15,7 +15,6 @@ const BetRelease110Post = ({ post }: { post: IBlogPost }) => {
                     <h2 className="underline">Authentication and Authorization</h2>
                     <ul>
                         <li>Added permission groups, user groups, roles, and ApiToken scopes</li>
-                        <li>Removed hasScope from Security</li>
                         <li>Made tokens configurable for expiration</li>
                     </ul>
 
