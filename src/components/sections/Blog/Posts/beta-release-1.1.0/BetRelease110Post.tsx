@@ -170,6 +170,7 @@ App.container('logger').error('[App]: Failed to start', err);`}
                         <li>Set app environment before loading providers</li>
                         <li>Added ResourceErrorService</li>
                         <li>Allow configurable migration model, uses different table for tests</li>
+                        <li>Validator strips unknown properties from request body</li>
                         <li>Added changelist.md and bumped version to 1.1.0</li>
                     </ul>
 
