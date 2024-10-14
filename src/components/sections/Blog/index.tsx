@@ -1,10 +1,10 @@
 import blogsConfig from "../../../config/blogsConfig";
-import { IBlog } from "../../../interfaces/IBlog";
+import { IBlogPost } from "../../../interfaces/IBlog";
 import BlogPreview from "./components/BlogPreview";
 import './styles.scss';
 
 type Props = {
-    posts?: IBlog[]
+    posts?: IBlogPost[]
 }
 
 const Blog = ({ posts = blogsConfig }: Props) => {

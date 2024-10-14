@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { IBlog } from "../../../../interfaces/IBlog";
+import { IBlogPost } from "../../../../interfaces/IBlog";
 import AuthorLink from "../../../AuthorLink";
 import DateText from "../../../DateText";
 
-const BlogPreview = (options: IBlog) => {
+const BlogPreview = (options: IBlogPost) => {
     const { title, subTitle, author, updatedAt, imageUrl, link } = options;
 
     return (

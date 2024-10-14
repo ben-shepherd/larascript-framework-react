@@ -11,7 +11,7 @@ type Props = {
 
 const initialResponsiveClassNames = 'w-full lg:px-0 md:w-4/5 lg:w-3/5 xl:w-2/5';
 
-const BlogPost = ({ post, responsiveClassNames = initialResponsiveClassNames, children }: Props) => {
+const BlogPostContainer = ({ post, responsiveClassNames = initialResponsiveClassNames, children }: Props) => {
     const { title, subTitle, author, updatedAt, imageUrl } = post
 
     return (
@@ -52,4 +52,4 @@ const BlogPost = ({ post, responsiveClassNames = initialResponsiveClassNames, ch
     )
 }
 
-export default BlogPost
+export default BlogPostContainer

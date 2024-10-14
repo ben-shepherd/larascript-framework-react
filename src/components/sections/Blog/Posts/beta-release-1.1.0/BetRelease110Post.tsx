@@ -1,3 +1,4 @@
+import { IBlogPost } from '../../../../../interfaces/IBlog';
 import '../../../../../styles/components/CodeBlock.scss';
 import CodeBlock from "../../../../utils/CodeBlock";
 import BlogPostContainer from "../../components/BlogPostContainer";
