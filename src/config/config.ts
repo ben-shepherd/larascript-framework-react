@@ -11,7 +11,7 @@ const config: IConfig = {
   author: 'Benjamin S',
   githubProfile,
   githubRepository,
-  websiteUrl: isDevelopment ? 'http://localhost:5173' : 'https://www.larascriptnode.com',
+  websiteUrl: 'https://www.larascriptnode.com',
   siteName: 'Larascript Framework',
   siteDescription,
   meta: {
