@@ -7,7 +7,7 @@ const AuthGenerateJwt = () => {
 
             <h3>1. Using the Specific Generate Command</h3>
             <CodeBlock>
-                yarn dev -- app:generate-jwt-secret --no-db --no-auth
+                yarn dev app:generate-jwt-secret --no-db --no-auth
             </CodeBlock>
             <p>This command generates a JWT secret and updates your .env file. The <code>--no-db</code> and <code>--no-auth</code> flags prevent loading the database and authentication system, respectively.</p>
 
