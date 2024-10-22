@@ -20,6 +20,14 @@ const Migrations = () => {
         <CodeBlock language="bash">
             {`yarn dev make:seed --name=UserSeeder`}
         </CodeBlock>
+
+        <p className='mt-3'>Running seeds:</p>
+        <CodeBlock language="bash">
+            {`yarn dev db:seed`}
+        </CodeBlock>
+
+        <p className='mt-3'>Seeds behave exactly the same as migrations, but the down method is optional. There is currently no way to undo a seed. It is recommended that you run <code>migrate:fresh</code> to clear the database and rerun all seeds.</p>
+
                 
         <div>
           <h2>Example</h2>

@@ -10,7 +10,7 @@ const Migrations = () => {
             <p>To create a new migration, use the following command:</p>
 
             <CodeBlock language="bash">
-                {`yarn dev -- make:migration --name=CreateModelTable`}
+                {`yarn dev make:migration --name=CreateModelTable`}
             </CodeBlock>
 
             <p>This will create a new file in the <code>@src/app/migrations</code> directory.</p>
@@ -22,27 +22,32 @@ const Migrations = () => {
             <ul className="list-disc py-3">
                 <li>Run all migrations up:
                     <CodeBlock language="bash">
-                        {`yarn dev -- migrate:up`}
+                        {`yarn dev migrate:up`}
                     </CodeBlock>
                 </li>
                 <li>Run migrations for a specific group:
                     <CodeBlock language="bash">
-                        {`yarn dev -- migrate:up --group=<group value>`}
+                        {`yarn dev migrate:up --group=<group value>`}
                     </CodeBlock>
                 </li>
                 <li>Run a specific migration file:
                     <CodeBlock language="bash">
-                        {`yarn dev -- migrate:up --file=2024-09-06-create-user-table.ts`}
+                        {`yarn dev migrate:up --file=2024-09-06-create-user-table.ts`}
                     </CodeBlock>
                 </li>
                 <li>Reverse all migrations:
                     <CodeBlock language="bash">
-                        {`yarn dev -- migrate:down`}
+                        {`yarn dev migrate:down`}
                     </CodeBlock>
                 </li>
                 <li>Reverse migrations by batch:
                     <CodeBlock language="bash">
-                        {`yarn dev -- migrate:down --batch=1`}
+                        {`yarn dev migrate:down --batch=1`}
+                    </CodeBlock>
+                </li>
+                <li>Clear database schema and refresh migrations:
+                    <CodeBlock language="bash">
+                        {`yarn dev migrate:fresh`}
                     </CodeBlock>
                 </li>
             </ul>
