@@ -8,7 +8,7 @@ const RoutingAction = () => {
             <p>Generate a new action:</p>
             
             <CodeBlock language="bash">
-                yarn dev -- make:action --name=UpdateUser
+                yarn dev make:action --name=UpdateUser
             </CodeBlock>
             
             <p>This creates <code>@src/app/actions/updateUserAction.ts</code> with boilerplate code.</p>

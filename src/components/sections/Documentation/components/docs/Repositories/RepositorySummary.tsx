@@ -22,7 +22,7 @@ const RepositorySummary = () => {
             <p>You can generate a new repository using the following command:</p>
 
             <CodeBlock language="bash">
-                {`yarn dev -- make:repository --name=MovieRepository`}
+                {`yarn dev make:repository --name=MovieRepository`}
             </CodeBlock>
 
             <p>This command creates a new file at <code>@src/app/repositories/MovieRepository.ts</code></p>
@@ -64,7 +64,7 @@ export default class MovieRepository extends Repository<MovieModel> {
             </ol>
 
             <SimpleCodeBlock>
-                {`constructor(collectionName: string, modelConstructor: ModelConstructor<Model>)`}
+                {`constructor(modelConstructor: ModelConstructor<Model>, collectionName?: string)`}
             </SimpleCodeBlock>
 
             <h3>Type Hinting</h3>

@@ -101,7 +101,7 @@ export interface ICoreContainers {
             <p>By default, your AppProvider (located in <code>@src/app/providers/AppProvider.ts</code>) might contain most of your service logic. However, if you wish to split out this logic, you can create a new provider:</p>
             
             <CodeBlock language="bash">
-{`yarn dev -- make:provider --name=MyServiceProvider`}
+{`yarn dev make:provider --name=MyServiceProvider`}
             </CodeBlock>
 
             <p>This approach helps maintain a clean separation of concerns by centralizing service initialization and configuration. It makes it easier to manage dependencies and swap out implementations as needed.</p>

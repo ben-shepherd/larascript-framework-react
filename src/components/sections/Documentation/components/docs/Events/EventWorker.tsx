@@ -64,7 +64,7 @@ const EventWorker = () => {
 
             <h3>Development Environment</h3>
             <CodeBlock language="bash">
-                yarn dev -- worker
+                yarn dev worker
             </CodeBlock>
 
             <h3>Production Environment</h3>

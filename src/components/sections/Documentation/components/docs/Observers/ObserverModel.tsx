@@ -17,7 +17,7 @@ const ObserverModel = () => {
             <h3>Creating an Observer</h3>
             <p>Before enabling the observer, you need to create an Observer class for your model. You can do this manually or use our CLI tool:</p>
             <CodeBlock language="bash">
-                yarn dev -- make:model --name=MovieObserver
+                yarn dev make:model --name=MovieObserver
             </CodeBlock>
             <p>This will create a new Observer file at <code>@src/app/observers/MovieObserver.ts</code></p>
 

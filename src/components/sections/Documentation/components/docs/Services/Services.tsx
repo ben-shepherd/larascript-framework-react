@@ -6,11 +6,11 @@ const Services = () => {
             <p>Your own services can utilise the in built <code>@src/core/base/Service</code> or <code>@src/core/base/Singleton</code> modules.</p>
             <p>You can also run the following commands to automatically create these files for you:</p>
             <code>
-                yarn dev -- make:service --name=MyService                
+                yarn dev make:service --name=MyService                
             </code>
             <br />
             <code>
-                yarn dev -- make:singleton --name=MySingleton
+                yarn dev make:singleton --name=MySingleton
             </code>
             <h2>Constructor Signature</h2>
             <p>Services can be provided optional config.</p>

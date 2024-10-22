@@ -11,7 +11,7 @@ const Models = () => {
             <p>You can create a new model using the following command:</p>
 
             <CodeBlock language="bash">
-                {`yarn dev -- make:model --name=YourModelName`}
+                {`yarn dev make:model --name=YourModelName`}
             </CodeBlock>
 
             <p>This command will generate the necessary files in the <code>@src/app/models</code> directory. These files typically include the model class itself and any associated interfaces or types.</p>

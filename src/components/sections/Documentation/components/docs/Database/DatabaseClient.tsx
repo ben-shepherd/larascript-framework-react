@@ -19,13 +19,13 @@ const DatabaseClient = () => {
             <p>For type safety when working with multiple databases, you should specify the client type:</p>
 
             <CodeBlock language="typescript">
-{`import MongoDB from './core/domains/database/providers-db/MongoDB';
+{`import MongoDB from '@src/core/domains/database/providers-db/MongoDB';
 
 const mongoClient = App.container('db').getClient<MongoDB>('mongoConnectionName');`}
             </CodeBlock>
 
             <CodeBlock language="typescript">
-{`import Postgres from './core/domains/database/providers-db/Postgres';
+{`import Postgres from '@src/core/domains/database/providers-db/Postgres';
 
 const sequelize = App.container('db').getClient<Postgres>('postgresConnectionName');`}
             </CodeBlock>

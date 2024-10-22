@@ -6,7 +6,7 @@ const CustomConsoleCommandsGuide = () => (
 
         <h3>1. Generate the Command File</h3>
         <p>Use the <code>make:command</code> command to generate a new custom command file:</p>
-        <pre><code>yarn dev -- make:command --name=MigrationUpCommand</code></pre>
+        <pre><code>yarn dev make:command --name=MigrationUpCommand</code></pre>
         <p>This will create a new file in the <code>@src/app/commands/</code> directory. It's important to note that all new commands are created in this directory, not in <code>@src/commands/</code> as previously stated.</p>
 
         <h3>2. Implement the Command</h3>

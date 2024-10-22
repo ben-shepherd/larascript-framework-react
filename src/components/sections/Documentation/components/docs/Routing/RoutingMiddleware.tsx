@@ -10,7 +10,7 @@ const RoutingMiddleware = () => {
             <p>To quickly create a new middleware file, you can use the provided command-line tool:</p>
             
             <CodeBlock language="bash">
-                yarn dev -- make:middleware --name=User
+                yarn dev make:middleware --name=User
             </CodeBlock>
             
             <p>This command will generate a new middleware file named <code>@src/app/middleware/userMiddleware.ts</code> with basic boilerplate code, saving you time and ensuring consistency across your middleware files.</p>

@@ -5,7 +5,7 @@ const Registering = () => {
             <section>
                 <p>Example: Register a new provider</p>
                 <p>We will create a new provider in <code>@src/app/providers/WeatherProvider.ts</code></p>
-                <p>You can also run <code>yarn dev -- make:provider --name=WeatherProvider</code> to automatically create the file.</p>
+                <p>You can also run <code>yarn dev make:provider --name=WeatherProvider</code> to automatically create the file.</p>
 
                 <CodeBlock language="typescript">
 {`import BaseProvider from "@src/core/base/Provider";
