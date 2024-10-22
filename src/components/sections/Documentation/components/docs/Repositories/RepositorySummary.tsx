@@ -32,12 +32,12 @@ const RepositorySummary = () => {
             <p>Here's an example of a typical repository structure:</p>
 
             <CodeBlock language="typescript">
-{`import MovieModel from "@src/app/models/Movie";
+{`import MovieModel from "@src/app/models/MovieModel";
 import Repository from "@src/core/base/Repository";
 
 export default class MovieRepository extends Repository<MovieModel> {
     constructor() {
-        super('movies', MovieModel)
+        super(MovieModel)
     }
 
     findByAuthor(author: string) {

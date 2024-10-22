@@ -23,6 +23,7 @@ import Installing from "../components/sections/Documentation/components/docs/Ins
 import Requirements from "../components/sections/Documentation/components/docs/Installation/Requirements"
 import MigrationSummary from "../components/sections/Documentation/components/docs/Migrations/MigrationSummary"
 import ModelExamples from "../components/sections/Documentation/components/docs/Models/ModelMethods"
+import ModelObserver from "../components/sections/Documentation/components/docs/Models/ModelObserver"
 import BelongsTo from "../components/sections/Documentation/components/docs/Models/ModelRelationships/BelongsTo"
 import HasMany from "../components/sections/Documentation/components/docs/Models/ModelRelationships/HasMany"
 import ModelSummary from "../components/sections/Documentation/components/docs/Models/ModelSummary"
@@ -276,6 +277,12 @@ const documentationConfig: IDocumentationItem[] = [
                 title: "HasMany Relationship",
                 titleSmall: "HasMany",
                 content: HasMany
+            },
+            {
+                href: "#models-observer",
+                title: "Observer Pattern",
+                titleSmall: "Observer",
+                content: ModelObserver,
             },
         ],
     },

@@ -10,12 +10,6 @@ const BelongsTo = () => {
             <CodeBlock>
 {`class ApiToken extends Model<IApiTokenData> implements IApiTokenModel {
 
-    // ...
-
-    /**
-     * Finds the related user for this ApiToken
-     * @returns The user model if found, or null if not
-     */
     public async user(): Promise<IUserModel | null> {
         return this.belongsTo(User, {
             localKey: 'userId',

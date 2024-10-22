@@ -10,13 +10,6 @@ const HasMany = () => {
             <CodeBlock>
 {`export default class User extends Model<IUserData> implements IUserModel {
 
-    // ...
-
-    /**
-     * @returns The tokens associated with this user
-     *
-     * Retrieves the ApiToken models associated with this user.
-     */
     async tokens(): Promise<ApiToken[]> {
         return this.hasMany(ApiToken, {
             localKey: 'id',
