@@ -21,6 +21,7 @@ import InstallingProduction from "../components/sections/Documentation/component
 import InstallTinker from "../components/sections/Documentation/components/docs/Installation/InstallRunningApp"
 import Installing from "../components/sections/Documentation/components/docs/Installation/InstallSummary"
 import Requirements from "../components/sections/Documentation/components/docs/Installation/Requirements"
+import MigrationSeeder from "../components/sections/Documentation/components/docs/Migrations/MigrationSeeder"
 import MigrationSummary from "../components/sections/Documentation/components/docs/Migrations/MigrationSummary"
 import ModelExamples from "../components/sections/Documentation/components/docs/Models/ModelMethods"
 import ModelObserver from "../components/sections/Documentation/components/docs/Models/ModelObserver"
@@ -251,6 +252,12 @@ const documentationConfig: IDocumentationItem[] = [
             {
                 href: "#migrations-summary",
                 content: MigrationSummary
+            },
+            {
+                title: 'Database Seeders',
+                titleSmall: 'Seeders',
+                href: "#migrations-seeders",
+                content: MigrationSeeder
             },
         ],
     },
