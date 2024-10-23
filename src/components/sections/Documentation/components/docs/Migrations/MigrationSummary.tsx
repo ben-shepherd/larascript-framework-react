@@ -45,9 +45,9 @@ const Migrations = () => {
                         {`yarn dev migrate:down --batch=1`}
                     </CodeBlock>
                 </li>
-                <li>Clear database schema and refresh migrations:
+                <li>Clear database schema and refresh migrations and run seeders:
                     <CodeBlock language="bash">
-                        {`yarn dev migrate:fresh`}
+                        {`yarn dev migrate:fresh --seed`}
                     </CodeBlock>
                 </li>
             </ul>
